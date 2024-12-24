@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Metopedia</title>
+  <!-- Basic Meta Tags for SEO -->
+  <meta
+    name="description"
+    content="Metopedia - A structured repository of interconnected knowledge focusing on meta-information across various domains."
+  />
+  <meta
+    name="keywords"
+    content="Metopedia, knowledge repository, meta-discipline, meta-philosophy, interconnected knowledge, empirical research, evidence"
+  />
+  <meta name="author" content="Andrew Lehti" />
+  
+  <!-- Inline CSS -->
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Body styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5dc; /* Cream-like background */
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    /* Header styling */
+    header {
+      background-color: #4a90e2; /* Blue shade */
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: #fff;
+      font-size: 2.5em;
+    }
+    /* Main content styling */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    /* Grid container for dynamic boxes */
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "video"
+        "figshare"
+        "cognitive"
+        "flickr";
+      grid-gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+    @media (min-width: 768px) {
+      .grid-container {
+        grid-template-areas:
+          "video video video"
+          "figshare cognitive flickr";
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    .grid-item {
+      background-color: #ffffff;
+      border: 2px solid #4a90e2;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+    }
+    /* Assign grid areas */
+    .video-box {
+      grid-area: video;
+    }
+    .figshare-box {
+      grid-area: figshare;
+    }
+    .cognitive-box {
+      grid-area: cognitive;
+    }
+    .flickr-box {
+      grid-area: flickr;
+    }
+    /* Video container styling */
+    .video-container {
+      width: 100%;
+      height: 100%;
+    }
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+    /* Buttons styling */
+    .btn {
+      background-color: #ffffff;
+      border: 2px solid #4a90e2;
+      color: #4a90e2;
+      padding: 15px 25px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+      width: 100%;
+      text-align: center;
+    }
+    .btn:hover:not(:disabled) {
+      background-color: #4a90e2;
+      color: #ffffff;
+    }
+    .btn:disabled {
+      background-color: #cccccc;
+      border-color: #999999;
+      color: #666666;
+      cursor: not-allowed;
+    }
+    /* Bio Section Styling */
+    .bio-section {
+      background-color: #ffffff;
+      border: 2px solid #4a90e2;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 40px;
+      max-width: 1200px;
+      width: 100%;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .bio-section p {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+    }
+    /* Markdown Posts Section Styling */
+    .posts-section {
+      background-color: #ffffff;
+      border: 2px solid #4a90e2;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 40px;
+      max-width: 1200px;
+      width: 100%;
+      line-height: 1.6;
+    }
+    .posts-section h2 {
+      color: #4a90e2;
+      margin-bottom: 15px;
+    }
+    .posts-section .post {
+      margin-bottom: 30px;
+    }
+    /* Credits Section Styling */
+    .credits-section {
+      background-color: #ffffff;
+      border: 2px solid #4a90e2;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 40px;
+      max-width: 1200px;
+      width: 100%;
+      line-height: 1.6;
+    }
+    .credits-section h2 {
+      color: #4a90e2;
+      margin-bottom: 15px;
+    }
+    .credits-section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .credits-section li {
+      margin-bottom: 10px;
+    }
+    .credits-section a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+    .credits-section a:hover {
+      text-decoration: underline;
+    }
+    /* Footer styling */
+    footer {
+      background-color: #4a90e2;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+    /* Responsive Design for smaller devices */
+    @media (max-width: 767px) {
+      .grid-container {
+        grid-template-areas:
+          "video"
+          "figshare"
+          "cognitive"
+          "flickr";
+      }
+      .bio-section,
+      .posts-section,
+      .credits-section {
+        margin-top: 20px;
+      }
+    }
+  </style>
+  
+  <!-- Include Marked.js for Markdown Parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Metopedia</h1>
+  </header>
+
+  <main>
+    <!-- Dynamic Boxes (Video + Buttons) -->
+    <div class="grid-container">
+      <!-- Video Area -->
+      <div class="grid-item video-box">
+        <div class="video-container">
+          <!-- YouTube video: https://www.youtube.com/watch?v=a9-hiEwe5es -->
+          <iframe
+            src="https://www.youtube.com/embed/a9-hiEwe5es"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Figshare Button Area -->
+      <div class="grid-item figshare-box">
+        <button
+          id="figshareBtn"
+          class="btn"
+          aria-label="View Andrew Lehti's Figshare"
+        >
+          View Figshare Repository
+        </button>
+      </div>
+
+      <!-- Cognitive Impasse Button Area -->
+      <div class="grid-item cognitive-box">
+        <div style="width: 100%;">
+          <button
+            id="cognitiveBtn"
+            class="btn"
+            aria-label="Cognitive Impasse Self Assessment"
+          >
+            Cognitive Impasse Self Assessment
+          </button>
+          <p style="text-align:center; margin-top: 8px;">
+            <a
+              href="https://CognitiveInertia.com"
+              target="_blank"
+              style="color: #4a90e2; text-decoration: none; font-weight: bold;"
+            >
+              CognitiveInertia.com
+            </a>
+            <br/>
+            <span style="font-size:0.9em;">
+              (Direct access to the self assessment)
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Flickr Button Area (Random Photo) -->
+      <div class="grid-item flickr-box">
+        <button
+          id="randomFlickrBtn"
+          class="btn"
+          aria-label="Random Flickr Photo from photo_ids.csv"
+        >
+          Random Flickr Photo
+        </button>
+      </div>
+    </div>
+
+    <!-- Bio Section -->
+    <section class="bio-section">
+      <p>
+        Andrew Lehti, an independent researcher, explores cognitive science, education, and human behavior through the lenses of cognitive psychology, mathematics (data science), and linguistics, along with their histories and underlying philosophies. His works, including <em>Cognitive Impasse</em> and <em>The Puppet Master of Society</em> (2024), uncover how we unknowingly shape the systems that bind us. With over 30,000 hours devoted to self-guided study, Lehti replaces entertainment with a relentless pursuit of understanding and achievement.
+      </p>
+    </section>
+
+    <!-- Markdown Posts Section -->
+    <section class="posts-section" id="postsSection">
+      <!-- Posts will be dynamically inserted here -->
+    </section>
+
+    <!-- Credits Section -->
+    <section class="credits-section">
+      <h2>Credits</h2>
+      <ul>
+        <li>2022-2025 © Andrew Lehti</li>
+        <li>Astrophotographs: 1961–2023 © NASA, ESA</li>
+        <li>
+          Software: PEMi
+          (<a href="https://github.com/andylehti/PEMi.git" target="_blank"
+            >GitHub: andylehti/PEMi.git</a
+          >)
+        </li>
+        <li>
+          Explore PEM-I:
+          <a href="https://pemimage.streamlit.app" target="_blank"
+            >https://pemimage.streamlit.app</a
+          >
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2019-2025 Metopedia</p>
+  </footer>
+
+  <!-- Inline JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Buttons
+      const figshareBtn = document.getElementById('figshareBtn');
+      const cognitiveBtn = document.getElementById('cognitiveBtn');
+      const randomFlickrBtn = document.getElementById('randomFlickrBtn');
+      const postsSection = document.getElementById('postsSection');
+
+      // Figshare Button: https://figshare.com/authors/Andrew_Lehti/19424050
+      figshareBtn.addEventListener('click', () => {
+        window.open('https://figshare.com/authors/Andrew_Lehti/19424050', '_blank');
+      });
+
+      // Cognitive Impasse Button:
+      // Linking to https://andylehti.github.io/cognitive-impasse/
+      cognitiveBtn.addEventListener('click', () => {
+        window.open('https://andylehti.github.io/cognitive-impasse/', '_blank');
+      });
+
+      // Random Flickr Photo from CSV (local fetch)
+      // Must be in the same directory as index.html
+      const csvUrl = './photo_ids.csv';
+
+      randomFlickrBtn.addEventListener('click', async () => {
+        try {
+          const response = await fetch(csvUrl);
+          if (!response.ok) {
+            throw new Error('CSV file could not be fetched. Status: ' + response.status);
+          }
+          const csvText = await response.text();
+          // Split into lines
+          const lines = csvText.split('\n').map(line => line.trim()).filter(Boolean);
+
+          // Filter valid lines (second value == 'true')
+          // e.g., "52848626264,true" => ID=52848626264, allow=true
+          const validIds = [];
+          for (const line of lines) {
+            const parts = line.split(',');
+            if (parts.length >= 2) {
+              const photoId = parts[0].trim();
+              const allow = parts[1].trim().toLowerCase();
+              if (allow === 'true') {
+                validIds.push(photoId);
+              }
+            }
+          }
+
+          if (validIds.length === 0) {
+            alert('No valid photo IDs found in CSV.');
+            return;
+          }
+
+          // Pick a random ID
+          const randomIndex = Math.floor(Math.random() * validIds.length);
+          const randomId = validIds[randomIndex];
+
+          // Construct the flickr URL
+          const flickrUrl = `https://www.flickr.com/photos/gitresearch/${randomId}`;
+
+          // Open in new tab
+          window.open(flickrUrl, '_blank');
+        } catch (error) {
+          console.error('Error fetching or parsing photo_ids.csv:', error);
+          alert('Unable to load random photo at this time.');
+        }
+      });
+
+      // Markdown Posts Rendering
+      async function renderMarkdownPosts() {
+        const repoOwner = 'andylehti';
+        const repoName = 'metopedia';
+        const mdFilesPath = 'mdFiles';
+        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${mdFilesPath}`;
+
+        try {
+          const response = await fetch(apiUrl);
+          if (!response.ok) {
+            throw new Error('Could not fetch markdown files list. Status: ' + response.status);
+          }
+          const files = await response.json();
+
+          // Filter only .md files
+          const mdFiles = files.filter(file => file.name.endsWith('.md'));
+
+          if (mdFiles.length === 0) {
+            console.log('No markdown files found in /mdFiles/ directory.');
+            return;
+          }
+
+          // Sort files alphanumerically by name
+          mdFiles.sort((a, b) => a.name.localeCompare(b.name));
+
+          // Fetch and render each markdown file
+          for (const file of mdFiles) {
+            const rawUrl = file.download_url;
+            if (!rawUrl) continue;
+
+            const mdResponse = await fetch(rawUrl);
+            if (!mdResponse.ok) {
+              console.warn(`Could not fetch ${file.name}. Status: ${mdResponse.status}`);
+              continue;
+            }
+            const mdText = await mdResponse.text();
+
+            // Convert markdown to HTML using marked.js
+            const htmlContent = marked.parse(mdText);
+
+            // Create a div to hold the post
+            const postDiv = document.createElement('div');
+            postDiv.classList.add('post');
+            postDiv.innerHTML = htmlContent;
+
+            // Append to posts section
+            postsSection.appendChild(postDiv);
+          }
+        } catch (error) {
+          console.error('Error fetching or rendering markdown posts:', error);
+        }
+      }
+
+      // Call the function to render markdown posts
+      renderMarkdownPosts();
+    });
+  </script>
+</body>
+</html>
