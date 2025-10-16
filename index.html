@@ -424,33 +424,41 @@
     </footer>
 
     <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
+<script>
         const menuBtn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
         const navLinks = menu.querySelectorAll('a');
 
-        menuBtn.addEventListener('click', () => {
-            const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-            menu.classList.toggle('hidden');
-            // Mobile menu appears below the nav bar
-            menu.classList.toggle('absolute');
-            menu.classList.toggle('w-full');
-            menu.classList.toggle('left-0');
-            menu.classList.toggle('bg-white');
-            menu.classList.toggle('shadow-lg');
-            menu.classList.toggle('py-2');
-            menu.classList.toggle('space-y-2');
-            
-            menuBtn.setAttribute('aria-expanded', !isExpanded);
-        });
+        // Classes to apply when the mobile menu is open
+        const openMenuClasses = [
+            'absolute', 'top-full', 'left-0', 'w-full', 
+            'bg-white', 'shadow-lg', 'py-2', 
+            'flex', 'flex-col', 'space-y-2'
+        ];
 
-        // Close menu when a link is clicked (for single-page navigation)
+        function toggleMenu() {
+            // Toggle visibility by adding/removing 'hidden'
+            menu.classList.toggle('hidden');
+            
+            const isOpen = !menu.classList.contains('hidden');
+            menuBtn.setAttribute('aria-expanded', isOpen);
+
+            // Add or remove all styling classes at once
+            if (isOpen) {
+                menu.classList.add(...openMenuClasses);
+            } else {
+                menu.classList.remove(...openMenuClasses);
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+
+        // Close menu when a link is clicked on mobile
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth < 768) { // md breakpoint in Tailwind
-                    menu.classList.add('hidden');
-                    menu.classList.remove('absolute', 'w-full', 'left-0', 'bg-white', 'shadow-lg', 'py-2', 'space-y-2');
-                    menuBtn.setAttribute('aria-expanded', 'false');
+                // Check if the menu is in its mobile state (not showing md:flex)
+                if (window.innerWidth < 768) {
+                    toggleMenu(); // Use the same toggle function to close it
                 }
             });
         });
