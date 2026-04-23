@@ -1,0 +1,189 @@
+[
+  {
+    "slug": "About",
+    "title": "About Metopedia",
+    "description": "About the structure and purpose of the Metopedia repository.",
+    "keywords": "Metopedia, about, structure, reference project",
+    "categories": [
+      "Metopedia",
+      "System Core"
+    ],
+    "path": "./Articles/About.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Cognitive_Impasse",
+    "title": "Cognitive Impasse",
+    "description": "An interdisciplinary framework describing mental rigidity, dissonance management, and the preservation of entrenched beliefs.",
+    "keywords": "Cognitive Impasse, cognitive rigidity, belief perseverance, cognitive dissonance",
+    "categories": [
+      "Metopedia",
+      "Research"
+    ],
+    "path": "./Articles/Cognitive_Impasse.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Editorial_Guide",
+    "title": "Editorial guide",
+    "description": "Basic editorial guidance for writing and organizing pages in Metopedia.",
+    "keywords": "editorial guide, Metopedia, article structure",
+    "categories": [
+      "Metopedia",
+      "Methodology"
+    ],
+    "path": "./Articles/Editorial_Guide.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Featured_Page",
+    "title": "Featured page",
+    "description": "The current featured page in Metopedia.",
+    "keywords": "Metopedia featured page, featured article",
+    "categories": [
+      "Metopedia",
+      "Main Pages"
+    ],
+    "path": "./Articles/Featured_Page.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Help:Wiki_markup",
+    "title": "Help: Wiki markup",
+    "description": "A practical guide to the wiki markup currently supported by Metopedia.",
+    "keywords": "Metopedia help, wiki markup, syntax guide, markup cheat sheet",
+    "categories": [
+      "Help",
+      "Markup Showcase"
+    ],
+    "path": "./Articles/Help/Wiki_markup.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Kardashian_By-Product_Effect",
+    "title": "Kardashian By-Product Effect",
+    "description": "A social-psychological model concerning the rejection of competence and the elevation of mediocrity.",
+    "keywords": "Kardashian By-Product Effect, KBP Effect, mediocrity, social psychology",
+    "categories": [
+      "Metopedia",
+      "Research"
+    ],
+    "path": "./Articles/Kardashian_By-Product_Effect.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Lehti-Feynman_Method",
+    "title": "Lehti-Feynman Method",
+    "description": "A shorthand title for extrapolative trial by error as used in Metopedia.",
+    "keywords": "Lehti-Feynman Method, extrapolative trial by error, methodology",
+    "categories": [
+      "Metopedia",
+      "Methodology"
+    ],
+    "path": "./Articles/Lehti-Feynman_Method.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Main_Page",
+    "title": "Metopedia",
+    "description": "An interdisciplinary reference project for cognitive rigidity, textual study, mathematical logic, and institutional analysis.",
+    "keywords": "Metopedia, cognitive rigidity, textual study, mathematical logic, institutional analysis, reference project",
+    "categories": [
+      "Metopedia",
+      "Main Pages"
+    ],
+    "path": "./Articles/Main_Page.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Methodology",
+    "title": "Methodology",
+    "description": "Methodological principles used in Metopedia, including extrapolative trial by error and bias reassessment.",
+    "keywords": "methodology, Lehti-Feynman Method, extrapolative trial by error, cognitive bias",
+    "categories": [
+      "Metopedia",
+      "Methodology"
+    ],
+    "path": "./Articles/Methodology.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Research_Areas",
+    "title": "Research areas",
+    "description": "The primary areas of inquiry represented in Metopedia.",
+    "keywords": "research areas, Metopedia, cognition, linguistics, mathematics, institutional analysis",
+    "categories": [
+      "Metopedia",
+      "Research"
+    ],
+    "path": "./Articles/Research_Areas.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Standardized_Obedience",
+    "title": "Standardized Obedience",
+    "description": "A framework describing conformity-driven education and the suppression of critical thought.",
+    "keywords": "Standardized Obedience, education, conformity, critical thought",
+    "categories": [
+      "Metopedia",
+      "Research"
+    ],
+    "path": "./Articles/Standardized_Obedience.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Contact",
+    "title": "Contact Metopedia",
+    "description": "Contact information for Metopedia.",
+    "keywords": "",
+    "categories": [
+      "Site Policies"
+    ],
+    "path": "./Footer/Contact.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Cookies",
+    "title": "Cookie statement",
+    "description": "Cookie statement for Metopedia.",
+    "keywords": "",
+    "categories": [
+      "Site Policies"
+    ],
+    "path": "./Footer/Cookies.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Mobile",
+    "title": "Mobile view",
+    "description": "Notes about the responsive mobile view in Metopedia.",
+    "keywords": "",
+    "categories": [
+      "Site Policies"
+    ],
+    "path": "./Footer/Mobile.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Privacy_Policy",
+    "title": "Privacy policy",
+    "description": "Privacy policy for the Metopedia repository.",
+    "keywords": "",
+    "categories": [
+      "Site Policies"
+    ],
+    "path": "./Footer/Privacy_Policy.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Terms_of_Use",
+    "title": "Terms of Use",
+    "description": "Terms of use for the Metopedia repository.",
+    "keywords": "",
+    "categories": [
+      "Site Policies"
+    ],
+    "path": "./Footer/Terms_of_Use.md",
+    "lastModified": "2026-04-23"
+  }
+]

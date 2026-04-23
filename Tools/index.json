@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Sitemap",
+    "link": "Special:Sitemap"
+  },
+  {
+    "label": "All pages",
+    "link": "Special:AllPages"
+  },
+  {
+    "label": "Categories",
+    "link": "Special:Categories"
+  },
+  {
+    "label": "What links here",
+    "link": "Special:WhatLinksHere/Main_Page"
+  },
+  {
+    "label": "Random article",
+    "link": "Special:Random"
+  },
+  {
+    "label": "Printable version",
+    "link": "javascript:window.print()"
+  }
+]

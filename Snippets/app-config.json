@@ -1,0 +1,39 @@
+{
+  "siteName": "Metopedia",
+  "siteTagline": "From Metopedia, the free encyclopedia",
+  "defaultPage": "Main_Page",
+  "indexPath": "./Snippets/site-index.json",
+  "contentBasePath": "./Articles",
+  "pageExtensions": [
+    ".md",
+    ".wiki",
+    ".txt"
+  ],
+  "canonicalBaseUrl": "",
+  "sourceBaseUrl": "",
+  "licenseHtml": "Text is available under the <a href=\"#/Terms_of_Use\">Terms of Use</a>; additional terms may apply. By using this site, you agree to the <a href=\"#/Terms_of_Use\">Terms of Use</a> and <a href=\"#/Privacy_Policy\">Privacy Policy</a>. Metopedia is an independent reference project.",
+  "defaultSeo": {
+    "title": "Metopedia",
+    "description": "An interdisciplinary reference project for cognitive rigidity, textual study, mathematical logic, and institutional analysis.",
+    "keywords": "Metopedia, cognition, textual study, mathematics, institutional analysis",
+    "author": "Metopedia",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg",
+    "robots": "index,follow,max-image-preview:large"
+  },
+  "collections": {
+    "articlesFolder": "./Articles",
+    "imagesFolder": "./Images",
+    "assetsFolder": "./Assets",
+    "footerFolder": "./Footer",
+    "toolsFolder": "./Tools",
+    "contributeFolder": "./Contribute",
+    "navigationFolder": "./Navigation",
+    "snippetsFolder": "./Snippets"
+  },
+  "githubRepo": {
+    "enabled": false,
+    "owner": "",
+    "repo": "",
+    "branch": "main"
+  }
+}

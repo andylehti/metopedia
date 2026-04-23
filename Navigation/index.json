@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Main page",
+    "link": "Main_Page"
+  },
+  {
+    "label": "Featured page",
+    "link": "Featured_Page"
+  },
+  {
+    "label": "Research areas",
+    "link": "Research_Areas"
+  },
+  {
+    "label": "About Metopedia",
+    "link": "About"
+  }
+]
