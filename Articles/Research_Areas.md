@@ -1,7 +1,10 @@
 ---
 title: "Research areas"
-description: "The primary areas of inquiry represented in Metopedia."
-keywords: "research areas, Metopedia, cognition, linguistics, mathematics, institutional analysis"
+description: "The principal fields of inquiry represented in Metopedia, including cognitive psychology, textual studies, mathematical logic, and institutional analysis."
+keywords: "research areas, cognitive psychology, textual studies, philology, mathematical logic, institutional analysis"
+author: "Metopedia Editorial"
+robots: "index,follow,max-image-preview:large"
+ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|The primary areas of inquiry represented in Metopedia.}}
 = Research areas =

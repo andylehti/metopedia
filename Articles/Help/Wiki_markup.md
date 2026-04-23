@@ -1,7 +1,10 @@
 ---
 title: "Help: Wiki markup"
-description: "A practical guide to the wiki markup currently supported by Metopedia."
-keywords: "Metopedia help, wiki markup, syntax guide, markup cheat sheet"
+description: "A practical guide to the wiki markup supported by Metopedia."
+keywords: "wiki markup help, Metopedia syntax, wiki formatting guide, help page"
+author: "Metopedia Editorial"
+robots: "index,follow,max-image-preview:large"
+ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|A practical guide to the wiki markup currently supported by Metopedia.}}
 = Help: Wiki markup =

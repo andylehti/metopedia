@@ -1,7 +1,10 @@
 ---
 title: "Methodology"
-description: "Methodological principles used in Metopedia, including extrapolative trial by error and bias reassessment."
-keywords: "methodology, Lehti-Feynman Method, extrapolative trial by error, cognitive bias"
+description: "Methodological principles used in Metopedia, including independent modeling, staged reassessment, and later comparison with academic literature."
+keywords: "methodology, extrapolative trial by error, Lehti-Feynman Method, research method, bias reassessment, independent modeling"
+author: "Metopedia Editorial"
+robots: "index,follow,max-image-preview:large"
+ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|Methodological principles used in Metopedia, including extrapolative trial by error and bias reassessment.}}
 = Methodology =

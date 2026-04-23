@@ -1,7 +1,10 @@
 ---
 title: "Lehti-Feynman Method"
-description: "A shorthand title for extrapolative trial by error as used in Metopedia."
-keywords: "Lehti-Feynman Method, extrapolative trial by error, methodology"
+description: "A recursive research method centered on independent modeling, later validation, and deliberate reassessment of bias and assumptions."
+keywords: "Lehti-Feynman Method, extrapolative trial by error, research method, iterative refinement, bias reassessment"
+author: "Metopedia Editorial"
+robots: "index,follow,max-image-preview:large"
+ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|A shorthand title for extrapolative trial by error as used in Metopedia.}}
 = Lehti-Feynman Method =

@@ -2,8 +2,11 @@
   {
     "slug": "About",
     "title": "About Metopedia",
-    "description": "About the structure and purpose of the Metopedia repository.",
-    "keywords": "Metopedia, about, structure, reference project",
+    "description": "About the structure, editorial purpose, and repository-backed publication model of Metopedia.",
+    "keywords": "about Metopedia, editorial structure, static reference site, repository-backed publishing",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Metopedia",
       "System Core"
@@ -14,8 +17,11 @@
   {
     "slug": "Cognitive_Impasse",
     "title": "Cognitive Impasse",
-    "description": "An interdisciplinary framework describing mental rigidity, dissonance management, and the preservation of entrenched beliefs.",
-    "keywords": "Cognitive Impasse, cognitive rigidity, belief perseverance, cognitive dissonance",
+    "description": "A framework in Metopedia describing defensive mental rigidity, dissonance management, and the preservation of entrenched assumptions.",
+    "keywords": "Cognitive Impasse, cognitive rigidity, cognitive dissonance, belief perseverance, defensive reasoning",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Metopedia",
       "Research"
@@ -26,8 +32,11 @@
   {
     "slug": "Editorial_Guide",
     "title": "Editorial guide",
-    "description": "Basic editorial guidance for writing and organizing pages in Metopedia.",
-    "keywords": "editorial guide, Metopedia, article structure",
+    "description": "Editorial standards for tone, structure, sourcing, and cross-linking in Metopedia.",
+    "keywords": "editorial guide, style guide, reference writing, sourcing standards, Metopedia editorial",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Metopedia",
       "Methodology"
@@ -38,8 +47,11 @@
   {
     "slug": "Featured_Page",
     "title": "Featured page",
-    "description": "The current featured page in Metopedia.",
-    "keywords": "Metopedia featured page, featured article",
+    "description": "The featured entry in Metopedia, selected for broad methodological and conceptual importance across the project.",
+    "keywords": "Metopedia featured page, featured article, reference entry",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Metopedia",
       "Main Pages"
@@ -50,8 +62,11 @@
   {
     "slug": "Help:Wiki_markup",
     "title": "Help: Wiki markup",
-    "description": "A practical guide to the wiki markup currently supported by Metopedia.",
-    "keywords": "Metopedia help, wiki markup, syntax guide, markup cheat sheet",
+    "description": "A practical guide to the wiki markup supported by Metopedia.",
+    "keywords": "wiki markup help, Metopedia syntax, wiki formatting guide, help page",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Help",
       "Markup Showcase"
@@ -62,8 +77,11 @@
   {
     "slug": "Kardashian_By-Product_Effect",
     "title": "Kardashian By-Product Effect",
-    "description": "A social-psychological model concerning the rejection of competence and the elevation of mediocrity.",
-    "keywords": "Kardashian By-Product Effect, KBP Effect, mediocrity, social psychology",
+    "description": "A social-psychological framework describing the defense of mediocrity through the rejection of perceived competence.",
+    "keywords": "Kardashian By-Product Effect, mediocrity, social psychology, competence aversion, status defense",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Metopedia",
       "Research"
@@ -74,8 +92,11 @@
   {
     "slug": "Lehti-Feynman_Method",
     "title": "Lehti-Feynman Method",
-    "description": "A shorthand title for extrapolative trial by error as used in Metopedia.",
-    "keywords": "Lehti-Feynman Method, extrapolative trial by error, methodology",
+    "description": "A recursive research method centered on independent modeling, later validation, and deliberate reassessment of bias and assumptions.",
+    "keywords": "Lehti-Feynman Method, extrapolative trial by error, research method, iterative refinement, bias reassessment",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Metopedia",
       "Methodology"
@@ -86,8 +107,11 @@
   {
     "slug": "Main_Page",
     "title": "Metopedia",
-    "description": "An interdisciplinary reference project for cognitive rigidity, textual study, mathematical logic, and institutional analysis.",
-    "keywords": "Metopedia, cognitive rigidity, textual study, mathematical logic, institutional analysis, reference project",
+    "description": "Metopedia is an interdisciplinary reference project examining cognitive rigidity, textual study, mathematical logic, and institutional analysis.",
+    "keywords": "Metopedia, interdisciplinary reference, cognitive rigidity, cognitive bias, textual criticism, mathematical logic, institutional analysis",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Metopedia",
       "Main Pages"
@@ -98,8 +122,11 @@
   {
     "slug": "Methodology",
     "title": "Methodology",
-    "description": "Methodological principles used in Metopedia, including extrapolative trial by error and bias reassessment.",
-    "keywords": "methodology, Lehti-Feynman Method, extrapolative trial by error, cognitive bias",
+    "description": "Methodological principles used in Metopedia, including independent modeling, staged reassessment, and later comparison with academic literature.",
+    "keywords": "methodology, extrapolative trial by error, Lehti-Feynman Method, research method, bias reassessment, independent modeling",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Metopedia",
       "Methodology"
@@ -110,8 +137,11 @@
   {
     "slug": "Research_Areas",
     "title": "Research areas",
-    "description": "The primary areas of inquiry represented in Metopedia.",
-    "keywords": "research areas, Metopedia, cognition, linguistics, mathematics, institutional analysis",
+    "description": "The principal fields of inquiry represented in Metopedia, including cognitive psychology, textual studies, mathematical logic, and institutional analysis.",
+    "keywords": "research areas, cognitive psychology, textual studies, philology, mathematical logic, institutional analysis",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Metopedia",
       "Research"
@@ -122,8 +152,11 @@
   {
     "slug": "Standardized_Obedience",
     "title": "Standardized Obedience",
-    "description": "A framework describing conformity-driven education and the suppression of critical thought.",
-    "keywords": "Standardized Obedience, education, conformity, critical thought",
+    "description": "A framework describing conformity-driven educational conditioning and its role in preserving intellectual inertia.",
+    "keywords": "Standardized Obedience, educational conditioning, conformity, intellectual inertia, critical thinking",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Metopedia",
       "Research"
@@ -134,8 +167,11 @@
   {
     "slug": "Contact",
     "title": "Contact Metopedia",
-    "description": "Contact information for Metopedia.",
-    "keywords": "",
+    "description": "Contact information and editorial contact guidance for Metopedia.",
+    "keywords": "contact Metopedia, editorial contact, reference project contact",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Site Policies"
     ],
@@ -145,8 +181,11 @@
   {
     "slug": "Cookies",
     "title": "Cookie statement",
-    "description": "Cookie statement for Metopedia.",
-    "keywords": "",
+    "description": "Cookie and client-side storage notes for Metopedia.",
+    "keywords": "cookie statement, cookies, client-side storage, Metopedia policy",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Site Policies"
     ],
@@ -156,8 +195,11 @@
   {
     "slug": "Mobile",
     "title": "Mobile view",
-    "description": "Notes about the responsive mobile view in Metopedia.",
-    "keywords": "",
+    "description": "Notes on the responsive mobile view and navigation behavior in Metopedia.",
+    "keywords": "mobile view, responsive design, Metopedia mobile navigation",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Site Policies"
     ],
@@ -167,8 +209,11 @@
   {
     "slug": "Privacy_Policy",
     "title": "Privacy policy",
-    "description": "Privacy policy for the Metopedia repository.",
-    "keywords": "",
+    "description": "Privacy and data-handling information for Metopedia.",
+    "keywords": "privacy policy, data handling, Metopedia privacy",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Site Policies"
     ],
@@ -178,8 +223,11 @@
   {
     "slug": "Terms_of_Use",
     "title": "Terms of Use",
-    "description": "Terms of use for the Metopedia repository.",
-    "keywords": "",
+    "description": "Terms governing access to and use of Metopedia.",
+    "keywords": "terms of use, Metopedia terms, site policy",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
       "Site Policies"
     ],

@@ -1,7 +1,11 @@
 ---
 title: "Cookie statement"
-description: "Cookie statement for Metopedia."
+description: "Cookie and client-side storage notes for Metopedia."
+keywords: "cookie statement, cookies, client-side storage, Metopedia policy"
+author: "Metopedia Editorial"
+robots: "index,follow"
+ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 = Cookie statement =
-This is a placeholder cookie statement page. Replace it with repository content when ready.
+This page should document any cookies, local storage, preference storage, or third-party scripts used by Metopedia.
 [[Category:Site Policies]]

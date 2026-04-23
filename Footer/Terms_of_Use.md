@@ -1,7 +1,11 @@
 ---
 title: "Terms of Use"
-description: "Terms of use for the Metopedia repository."
+description: "Terms governing access to and use of Metopedia."
+keywords: "terms of use, Metopedia terms, site policy"
+author: "Metopedia Editorial"
+robots: "index,follow"
+ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 = Terms of Use =
-This is a placeholder terms page. Replace it with repository content when ready.
+This page should define acceptable use, attribution expectations, and any limitations or disclaimers attached to the material published on Metopedia.
 [[Category:Site Policies]]

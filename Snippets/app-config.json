@@ -9,15 +9,15 @@
     ".wiki",
     ".txt"
   ],
-  "canonicalBaseUrl": "",
+  "canonicalBaseUrl": "https://metopedia.com",
   "sourceBaseUrl": "",
   "licenseHtml": "Text is available under the <a href=\"#/Terms_of_Use\">Terms of Use</a>; additional terms may apply. By using this site, you agree to the <a href=\"#/Terms_of_Use\">Terms of Use</a> and <a href=\"#/Privacy_Policy\">Privacy Policy</a>. Metopedia is an independent reference project.",
   "defaultSeo": {
     "title": "Metopedia",
-    "description": "An interdisciplinary reference project for cognitive rigidity, textual study, mathematical logic, and institutional analysis.",
-    "keywords": "Metopedia, cognition, textual study, mathematics, institutional analysis",
-    "author": "Metopedia",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg",
+    "description": "Metopedia is an interdisciplinary reference project focused on cognitive rigidity, textual study, mathematical logic, and institutional analysis.",
+    "keywords": "Metopedia, interdisciplinary research, cognitive rigidity, cognitive bias, textual study, philology, mathematical logic, institutional analysis",
+    "author": "Metopedia Editorial",
+    "image": "https://metopedia.com/Assets/metopedia-og.png",
     "robots": "index,follow,max-image-preview:large"
   },
   "collections": {

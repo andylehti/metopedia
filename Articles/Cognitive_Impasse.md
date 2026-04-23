@@ -1,7 +1,10 @@
 ---
 title: "Cognitive Impasse"
-description: "An interdisciplinary framework describing mental rigidity, dissonance management, and the preservation of entrenched beliefs."
-keywords: "Cognitive Impasse, cognitive rigidity, belief perseverance, cognitive dissonance"
+description: "A framework in Metopedia describing defensive mental rigidity, dissonance management, and the preservation of entrenched assumptions."
+keywords: "Cognitive Impasse, cognitive rigidity, cognitive dissonance, belief perseverance, defensive reasoning"
+author: "Metopedia Editorial"
+robots: "index,follow,max-image-preview:large"
+ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|An interdisciplinary framework describing mental rigidity and belief preservation.}}
 = Cognitive Impasse =

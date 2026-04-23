@@ -1,8 +1,10 @@
 ---
 title: "Metopedia"
-description: "An interdisciplinary reference project for cognitive rigidity, textual study, mathematical logic, and institutional analysis."
-keywords: "Metopedia, cognitive rigidity, textual study, mathematical logic, institutional analysis, reference project"
-ogImage: "https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg"
+description: "Metopedia is an interdisciplinary reference project examining cognitive rigidity, textual study, mathematical logic, and institutional analysis."
+keywords: "Metopedia, interdisciplinary reference, cognitive rigidity, cognitive bias, textual criticism, mathematical logic, institutional analysis"
+author: "Metopedia Editorial"
+robots: "index,follow,max-image-preview:large"
+ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|An interdisciplinary reference project devoted to difficult questions in cognition, language, logic, and institutions.}}
 <div class="wiki-col-container">

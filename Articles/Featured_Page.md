@@ -1,7 +1,10 @@
 ---
 title: "Featured page"
-description: "The current featured page in Metopedia."
-keywords: "Metopedia featured page, featured article"
+description: "The featured entry in Metopedia, selected for broad methodological and conceptual importance across the project."
+keywords: "Metopedia featured page, featured article, reference entry"
+author: "Metopedia Editorial"
+robots: "index,follow,max-image-preview:large"
+ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|The current featured page in Metopedia.}}
 = Featured page =
