@@ -15,226 +15,6 @@
     "lastModified": "2026-04-23"
   },
   {
-    "slug": "Cognitive_Impasse",
-    "title": "Cognitive Impasse",
-    "description": "A framework in Metopedia describing defensive mental rigidity, dissonance management, and the preservation of entrenched assumptions.",
-    "keywords": "Cognitive Impasse, cognitive rigidity, cognitive dissonance, belief perseverance, defensive reasoning",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Research"
-    ],
-    "path": "./Articles/Cognitive_Impasse.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Editorial_Guide",
-    "title": "Editorial guide",
-    "description": "Editorial standards for tone, structure, sourcing, and cross-linking in Metopedia.",
-    "keywords": "editorial guide, style guide, reference writing, sourcing standards, Metopedia editorial",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Methodology"
-    ],
-    "path": "./Articles/Editorial_Guide.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Featured_Page",
-    "title": "Featured page",
-    "description": "The featured entry in Metopedia, selected for broad methodological and conceptual importance across the project.",
-    "keywords": "Metopedia featured page, featured article, reference entry",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Main Pages"
-    ],
-    "path": "./Articles/Featured_Page.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Help:Wiki_markup",
-    "title": "Help: Wiki markup",
-    "description": "A practical guide to the wiki markup supported by Metopedia.",
-    "keywords": "wiki markup help, Metopedia syntax, wiki formatting guide, help page",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Help",
-      "Markup Showcase"
-    ],
-    "path": "./Articles/Help/Wiki_markup.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Kardashian_By-Product_Effect",
-    "title": "Kardashian By-Product Effect",
-    "description": "A social-psychological framework describing the defense of mediocrity through the rejection of perceived competence.",
-    "keywords": "Kardashian By-Product Effect, mediocrity, social psychology, competence aversion, status defense",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Research"
-    ],
-    "path": "./Articles/Kardashian_By-Product_Effect.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Lehti-Feynman_Method",
-    "title": "Lehti-Feynman Method",
-    "description": "A recursive research method centered on independent modeling, later validation, and deliberate reassessment of bias and assumptions.",
-    "keywords": "Lehti-Feynman Method, extrapolative trial by error, research method, iterative refinement, bias reassessment",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Methodology"
-    ],
-    "path": "./Articles/Lehti-Feynman_Method.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Main_Page",
-    "title": "Metopedia",
-    "description": "Metopedia is an interdisciplinary reference project examining cognitive rigidity, textual study, mathematical logic, and institutional analysis.",
-    "keywords": "Metopedia, interdisciplinary reference, cognitive rigidity, cognitive bias, textual criticism, mathematical logic, institutional analysis",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Main Pages"
-    ],
-    "path": "./Articles/Main_Page.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Methodology",
-    "title": "Methodology",
-    "description": "Methodological principles used in Metopedia, including independent modeling, staged reassessment, and later comparison with academic literature.",
-    "keywords": "methodology, extrapolative trial by error, Lehti-Feynman Method, research method, bias reassessment, independent modeling",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Methodology"
-    ],
-    "path": "./Articles/Methodology.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Research_Areas",
-    "title": "Research areas",
-    "description": "The principal fields of inquiry represented in Metopedia, including cognitive psychology, textual studies, mathematical logic, and institutional analysis.",
-    "keywords": "research areas, cognitive psychology, textual studies, philology, mathematical logic, institutional analysis",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Research"
-    ],
-    "path": "./Articles/Research_Areas.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Standardized_Obedience",
-    "title": "Standardized Obedience",
-    "description": "A framework describing conformity-driven educational conditioning and its role in preserving intellectual inertia.",
-    "keywords": "Standardized Obedience, educational conditioning, conformity, intellectual inertia, critical thinking",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Research"
-    ],
-    "path": "./Articles/Standardized_Obedience.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Contact",
-    "title": "Contact Metopedia",
-    "description": "Contact information and editorial contact guidance for Metopedia.",
-    "keywords": "contact Metopedia, editorial contact, reference project contact",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Site Policies"
-    ],
-    "path": "./Footer/Contact.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Cookies",
-    "title": "Cookie statement",
-    "description": "Cookie and client-side storage notes for Metopedia.",
-    "keywords": "cookie statement, cookies, client-side storage, Metopedia policy",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Site Policies"
-    ],
-    "path": "./Footer/Cookies.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Mobile",
-    "title": "Mobile view",
-    "description": "Notes on the responsive mobile view and navigation behavior in Metopedia.",
-    "keywords": "mobile view, responsive design, Metopedia mobile navigation",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Site Policies"
-    ],
-    "path": "./Footer/Mobile.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Privacy_Policy",
-    "title": "Privacy policy",
-    "description": "Privacy and data-handling information for Metopedia.",
-    "keywords": "privacy policy, data handling, Metopedia privacy",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Site Policies"
-    ],
-    "path": "./Footer/Privacy_Policy.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Terms_of_Use",
-    "title": "Terms of Use",
-    "description": "Terms governing access to and use of Metopedia.",
-    "keywords": "terms of use, Metopedia terms, site policy",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Site Policies"
-    ],
-    "path": "./Footer/Terms_of_Use.md",
-    "lastModified": "2026-04-23"
-  },
-  {
     "slug": "Argument_for_the_Removal_of_the_Radical_Symbol",
     "title": "Argument for the Removal of the Radical Symbol",
     "description": "A canonical-mathematics argument that radical notation should be replaced by fractional exponents.",
@@ -272,8 +52,8 @@
   {
     "slug": "Canonical_Order_of_Operations",
     "title": "Canonical Order of Operations",
-    "description": "A proposed mathematical convention intended to make exponentiation, roots, signs, and grouping more explicit.",
-    "keywords": "Canonical Order of Operations, COO, Standard Order of Operations, SOO, order of operations, law of indices, radical symbol, fractional exponents, implicit unity",
+    "description": "A proposed convention in arithmetic notation intended to make exponentiation, roots, negative signs, and implicit grouping more explicit.",
+    "keywords": "Canonical Order of Operations, order of operations, arithmetic notation, exponents, roots, radical symbol, mathematical convention",
     "author": "Metopedia Editorial",
     "robots": "index,follow,max-image-preview:large",
     "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
@@ -282,7 +62,7 @@
       "Mathematical notation",
       "Order of operations",
       "Canonical mathematics",
-      "Mathematics education"
+      "Proposed frameworks"
     ],
     "path": "./Articles/Canonical_Order_of_Operations.md",
     "lastModified": "2026-04-24"
@@ -305,10 +85,83 @@
     "lastModified": "2026-04-24"
   },
   {
+    "slug": "Cognitive_Impasse",
+    "title": "Cognitive Impasse",
+    "description": "A framework in Metopedia describing defensive mental rigidity, dissonance management, and the preservation of entrenched assumptions.",
+    "keywords": "Cognitive Impasse, cognitive rigidity, cognitive dissonance, belief perseverance, defensive reasoning",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia",
+      "Research"
+    ],
+    "path": "./Articles/Cognitive_Impasse.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Contact",
+    "title": "Contact Metopedia",
+    "description": "Contact information and editorial contact guidance for Metopedia.",
+    "keywords": "contact Metopedia, editorial contact, reference project contact",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Site Policies"
+    ],
+    "path": "./Footer/Contact.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Cookies",
+    "title": "Cookie statement",
+    "description": "Cookie and client-side storage notes for Metopedia.",
+    "keywords": "cookie statement, cookies, client-side storage, Metopedia policy",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Site Policies"
+    ],
+    "path": "./Footer/Cookies.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Editorial_Guide",
+    "title": "Editorial guide",
+    "description": "Editorial standards for tone, structure, sourcing, and cross-linking in Metopedia.",
+    "keywords": "editorial guide, style guide, reference writing, sourcing standards, Metopedia editorial",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia",
+      "Methodology"
+    ],
+    "path": "./Articles/Editorial_Guide.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Featured_Page",
+    "title": "Featured page",
+    "description": "The featured entry in Metopedia, selected for broad methodological and conceptual importance across the project.",
+    "keywords": "Metopedia featured page, featured article, reference entry",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia",
+      "Main Pages"
+    ],
+    "path": "./Articles/Featured_Page.md",
+    "lastModified": "2026-04-23"
+  },
+  {
     "slug": "Fractional_Exponents_and_Roots",
     "title": "Fractional Exponents and Roots",
-    "description": "A canonical-mathematics page explaining roots as fractional exponents.",
-    "keywords": "fractional exponents, roots, radical symbol, canonical arithmetic, square root, cube root",
+    "description": "A page explaining the canonical treatment of roots as fractional exponents.",
+    "keywords": "fractional exponents, roots, radical symbol, square root, cube root, canonical arithmetic",
     "author": "Metopedia Editorial",
     "robots": "index,follow,max-image-preview:large",
     "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
@@ -320,6 +173,36 @@
     ],
     "path": "./Articles/Fractional_Exponents_and_Roots.md",
     "lastModified": "2026-04-24"
+  },
+  {
+    "slug": "Help:Wiki_markup",
+    "title": "Help: Wiki markup",
+    "description": "A practical guide to the wiki markup supported by Metopedia.",
+    "keywords": "wiki markup help, Metopedia syntax, wiki formatting guide, help page",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Help",
+      "Markup Showcase"
+    ],
+    "path": "./Articles/Help/Wiki_markup.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Kardashian_By-Product_Effect",
+    "title": "Kardashian By-Product Effect",
+    "description": "A social-psychological framework describing the defense of mediocrity through the rejection of perceived competence.",
+    "keywords": "Kardashian By-Product Effect, mediocrity, social psychology, competence aversion, status defense",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia",
+      "Research"
+    ],
+    "path": "./Articles/Kardashian_By-Product_Effect.md",
+    "lastModified": "2026-04-23"
   },
   {
     "slug": "Law_of_Implicit_Unity",
@@ -339,6 +222,51 @@
     "lastModified": "2026-04-24"
   },
   {
+    "slug": "Lehti-Feynman_Method",
+    "title": "Lehti-Feynman Method",
+    "description": "A recursive research method centered on independent modeling, later validation, and deliberate reassessment of bias and assumptions.",
+    "keywords": "Lehti-Feynman Method, extrapolative trial by error, research method, iterative refinement, bias reassessment",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia",
+      "Methodology"
+    ],
+    "path": "./Articles/Lehti-Feynman_Method.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Methodology",
+    "title": "Methodology",
+    "description": "Methodological principles used in Metopedia, including independent modeling, staged reassessment, and later comparison with academic literature.",
+    "keywords": "methodology, extrapolative trial by error, Lehti-Feynman Method, research method, bias reassessment, independent modeling",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia",
+      "Methodology"
+    ],
+    "path": "./Articles/Methodology.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Main_Page",
+    "title": "Metopedia",
+    "description": "Metopedia is an interdisciplinary reference project examining cognitive rigidity, textual study, mathematical logic, and institutional analysis.",
+    "keywords": "Metopedia, interdisciplinary reference, cognitive rigidity, cognitive bias, textual criticism, mathematical logic, institutional analysis",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia",
+      "Main Pages"
+    ],
+    "path": "./Articles/Main_Page.md",
+    "lastModified": "2026-04-23"
+  },
+  {
     "slug": "Misconceptions_on_Mathematical_Operations",
     "title": "Misconceptions on Mathematical Operations",
     "description": "A reference page listing common misconceptions about multiplication, exponentiation, roots, signs, and grouping in the Canonical Order framework.",
@@ -354,6 +282,20 @@
     ],
     "path": "./Articles/Misconceptions_on_Mathematical_Operations.md",
     "lastModified": "2026-04-24"
+  },
+  {
+    "slug": "Mobile",
+    "title": "Mobile view",
+    "description": "Notes on the responsive mobile view and navigation behavior in Metopedia.",
+    "keywords": "mobile view, responsive design, Metopedia mobile navigation",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Site Policies"
+    ],
+    "path": "./Footer/Mobile.md",
+    "lastModified": "2026-04-23"
   },
   {
     "slug": "Negative_Bases_and_Exponentiation",
@@ -373,6 +315,35 @@
     "lastModified": "2026-04-24"
   },
   {
+    "slug": "Privacy_Policy",
+    "title": "Privacy policy",
+    "description": "Privacy and data-handling information for Metopedia.",
+    "keywords": "privacy policy, data handling, Metopedia privacy",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Site Policies"
+    ],
+    "path": "./Footer/Privacy_Policy.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Research_Areas",
+    "title": "Research areas",
+    "description": "The principal fields of inquiry represented in Metopedia, including cognitive psychology, textual studies, mathematical logic, and institutional analysis.",
+    "keywords": "research areas, cognitive psychology, textual studies, philology, mathematical logic, institutional analysis",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia",
+      "Research"
+    ],
+    "path": "./Articles/Research_Areas.md",
+    "lastModified": "2026-04-23"
+  },
+  {
     "slug": "Standard_Order_of_Operations",
     "title": "Standard Order of Operations",
     "description": "A reference page on the conventional order of operations and its comparison with the Canonical Order of Operations.",
@@ -388,5 +359,34 @@
     ],
     "path": "./Articles/Standard_Order_of_Operations.md",
     "lastModified": "2026-04-24"
+  },
+  {
+    "slug": "Standardized_Obedience",
+    "title": "Standardized Obedience",
+    "description": "A framework describing conformity-driven educational conditioning and its role in preserving intellectual inertia.",
+    "keywords": "Standardized Obedience, educational conditioning, conformity, intellectual inertia, critical thinking",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia",
+      "Research"
+    ],
+    "path": "./Articles/Standardized_Obedience.md",
+    "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Terms_of_Use",
+    "title": "Terms of Use",
+    "description": "Terms governing access to and use of Metopedia.",
+    "keywords": "terms of use, Metopedia terms, site policy",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Site Policies"
+    ],
+    "path": "./Footer/Terms_of_Use.md",
+    "lastModified": "2026-04-23"
   }
 ]

@@ -1,144 +1,153 @@
 ---
 title: "Canonical Order of Operations"
-description: "A proposed mathematical convention intended to make exponentiation, roots, signs, and grouping more explicit."
-keywords: "Canonical Order of Operations, COO, Standard Order of Operations, SOO, order of operations, law of indices, radical symbol, fractional exponents, implicit unity"
+description: "A proposed convention in arithmetic notation intended to make exponentiation, roots, negative signs, and implicit grouping more explicit."
+keywords: "Canonical Order of Operations, order of operations, arithmetic notation, exponents, roots, radical symbol, mathematical convention"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
 ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
-{{short description|Proposed convention for interpreting arithmetic expressions by explicitly separating grouping, signs, roots, and exponentiation.}}
-= Canonical Order of Operations =
-{{About|the proposed arithmetic convention. For the conventional classroom rule set, see [[Standard_Order_of_Operations]].}}
+{{short description|A proposed convention in arithmetic notation intended to make exponentiation, roots, negative signs, and implicit grouping more explicit.}}
+{{About|the proposed arithmetic convention|the inherited convention|Standard_Order_of_Operations}}
 {{Infobox
 | title = Canonical Order of Operations
-| header1 = Proposed mathematical convention
-| field = Arithmetic, algebra, mathematical notation
-| abbreviation = COO
-| contrasted_with = [[Standard_Order_of_Operations|Standard Order of Operations]] (SOO)
-| associated_terms = [[Law_of_Implicit_Unity|Law of Implicit Unity]], [[Canonical_Law_of_Indices|Canonical Law of Indices]]
-| related_notation = [[Fractional_Exponents_and_Roots|Fractional exponents]], [[Argument_for_the_Removal_of_the_Radical_Symbol|radical-symbol removal]]
-| authorial_source = Andrew Lehti, ''The Canonical Order of Operations''
+| subheader = Proposed convention in arithmetic notation
+| label1 = Abbreviation
+| data1 = COO
+| label2 = Contrasted with
+| data2 = [[Standard_Order_of_Operations|Standard Order of Operations]] (SOO)
+| label3 = Central topics
+| data3 = [[Canonical_Law_of_Indices|indices]], [[Law_of_Implicit_Unity|implicit unity]], [[Fractional_Exponents_and_Roots|fractional exponents]], [[Negative_Bases_and_Exponentiation|negative bases]]
+| label4 = Associated manuscript
+| data4 = ''The Canonical Order of Operations'', first edition
+| label5 = Author
+| data5 = Andrew Lehti
 }}
 
-The '''Canonical Order of Operations''' ('''COO''') is a proposed convention for interpreting arithmetic and algebraic expressions. It was developed as an alternative to the [[Standard_Order_of_Operations|Standard Order of Operations]] ('''SOO'''), especially in cases involving exponentiation, roots, unary negative signs, and grouped expressions. In its own terminology, the Standard Order is treated as a legacy convention, while the Canonical Order is presented as a more explicit grammar of arithmetic.
+'''Canonical Order of Operations''' ('''COO''') is a proposed convention for writing and evaluating arithmetic expressions. It is presented as an alternative to the inherited [[Standard_Order_of_Operations|Standard Order of Operations]] (SOO), not as a change to arithmetic itself. The proposal argues that several common ambiguities in elementary notation arise from the way signs, powers, roots, and implicit grouping are written rather than from the underlying quantities.
 
-The central claim of the Canonical Order is that many disputed or confusing expressions arise because ordinary notation allows several ideas to overlap: grouping, multiplication, exponentiation, the sign of a quantity, and the use of root notation. COO attempts to separate these functions into a consistent sequence. Its proponents argue that this produces a convention that is easier to inspect, less dependent on memorized exceptions, and more faithful to the laws of indices.<ref name="manuscript">Andrew Lehti, ''The Canonical Order of Operations'', First Edition, 2021–2025. DOI: 10.6084/m9.figshare.27661734.</ref>
+The convention is associated with Andrew Lehti's manuscript ''The Canonical Order of Operations'', which describes COO as a repair to inconsistencies in ordinary arithmetic grammar.<ref name="lehti">Andrew Lehti, ''The Canonical Order of Operations'', first edition, 2024–2025.</ref> Its central claim is that an expression should preserve the unity of its visible base before exponentiation or root extraction is applied. This claim is formalized in the [[Law_of_Implicit_Unity|Law of Implicit Unity]].
 
-== Overview ==
-The Canonical Order is not presented merely as a new mnemonic. It is a proposed reinterpretation of how written arithmetic should identify the object being acted upon by an operation. Its basic emphasis is that an operation should not silently absorb nearby symbols unless the notation explicitly makes those symbols part of the same mathematical unit.
+COO is best understood as a notation-first framework. It does not deny the usefulness of the Standard Order in ordinary instruction, nor does it remove accepted mathematical structures from fields that already use them. Instead, it separates convention from quantity and asks whether some familiar rules are products of historical notation rather than necessary facts of arithmetic.
 
-In this view, the conventional classroom sequence of parentheses, exponents, multiplication and division, then addition and subtraction is incomplete. It tells students which broad class of operation comes first, but it does not always define the base of an exponent, the scope of a negative sign, or the relation between radicals and fractional powers.
+== Summary ==
+
+The Canonical Order of Operations is built around three principles:
+
+* signs attached to a number are treated as part of that written base unless separated by notation;
+* roots are written as [[Fractional_Exponents_and_Roots|fractional exponents]] rather than with the radical sign;
+* ambiguous expressions are rewritten before evaluation instead of resolved by a mnemonic.
+
+The result is a convention in which expressions such as negative powers and nested roots are handled by one family of index rules.
+
+<math display="block">
+(-x)^2 \ne -x^2
+</math>
+
+Under COO, the first expression explicitly squares the negative base. The second expression places a negation outside the square. The distinction is not treated as a matter of memory, but as a matter of written structure.
 
 == Background ==
-Order-of-operations rules were created to reduce ambiguity in linear notation. They allow expressions such as <math>2+3\times4</math> to be read without additional parentheses. The Canonical Order accepts the usefulness of such conventions but argues that the traditional rule set becomes unstable in edge cases where signs, powers, and roots are compressed into short notation.
 
-The manuscript for COO identifies several recurring trouble points: negative values, roots written with the radical symbol, fractional exponents, and expressions where a negative sign is treated sometimes as an operator and sometimes as part of a base.<ref name="manuscript"/> It also introduces the [[Law_of_Implicit_Unity|Law of Implicit Unity]], which states that every base or grouped term can be treated as carrying an implicit exponent of one before further exponent rules are applied.<ref name="implicit">Lehti, ''The Canonical Order of Operations'', section titled "The Law of Implicit Unity in Exponential Powers".</ref>
+The Standard Order of Operations is commonly taught through mnemonics such as PEMDAS, BEDMAS, BIDMAS, and BODMAS. These mnemonics are useful for classroom arithmetic, but they do not explain every convention used in mathematical writing. In particular, they often compress several questions into one rule: whether a minus sign is a subtraction operator or a sign, whether multiplication by juxtaposition has priority, whether a root symbol introduces grouping, and whether an exponent applies to a sign or only to a numeral.
 
-== Terminology ==
-; Standard Order of Operations
-: The inherited convention represented by classroom mnemonics such as PEMDAS, BEDMAS, or BODMAS. COO literature often abbreviates this as '''SOO'''.
-; Canonical Order of Operations
-: The proposed convention that attempts to make expression structure explicit before evaluation. It is abbreviated as '''COO'''.
-; Canonical Law of Indices
-: A name for applying exponent laws in a way that treats implicit exponents, sign scope, and base identity as part of a single interpretive rule.
-; Law of Implicit Unity
-: The rule that a visible term or grouped base is implicitly raised to the first power unless another exponent is explicitly attached.
-; Radical removal
-: The proposed replacement of radical notation with fractional exponents, so that roots are written as powers rather than as a separate symbol family.
+These issues are old notation problems. Modern notation developed over centuries, and symbols such as the radical sign, the superscript exponent, and the leading minus sign did not originate as one coordinated system. COO treats that historical layering as the source of several ordinary disputes about calculation.
 
-== Core principles ==
+== Core claim ==
+
+The central claim of COO is that a visible arithmetic unit should not be split by an operation unless the notation explicitly separates it. This is the function of the [[Law_of_Implicit_Unity|Law of Implicit Unity]].
+
+<math display="block">
+(-2)^2 = 4
+</math>
+
+<math display="block">
+-(2^2) = -4
+</math>
+
+In standard notation, the expression <math>-2^2</math> is often interpreted as <math>-(2^2)</math>. COO treats that convention as avoidable shorthand. In canonical notation, the writer must choose one structure and write it clearly.
+
+== Relation to indices ==
+
+The [[Canonical_Law_of_Indices|Canonical Law of Indices]] is the index rule set used by COO. It keeps powers, roots, reciprocal powers, and reciprocal roots in one notation family.
+
+<math display="block">
+x^{m/n}=\left(x^m\right)^{1/n}
+</math>
+
+<math display="block">
+\sqrt[n]{x^m}\equiv x^{m/n}
+</math>
+
+The use of a fractional exponent is not presented as a new operation. It is presented as a clearer spelling of an old one.
+
+== Radical notation ==
+
+One of the more visible proposals in COO is the [[Argument_for_the_Removal_of_the_Radical_Symbol|removal of the radical symbol]] from canonical arithmetic. The argument is not that the radical sign is unusable. It is that the sign hides the fact that a root is an exponent.
+
 {| class="wikitable"
-|+ Summary of COO principles
-! Principle !! Description !! Related page
+! Standard form !! Canonical form !! Meaning
 |-
-| Explicit base identification || The expression must identify what object an exponent acts upon before the exponent is evaluated. || [[Negative_Bases_and_Exponentiation]]
+| <math>\sqrt{x}</math> || <math>x^{1/2}</math> || square root
 |-
-| Implicit exponent of one || A term such as <math>x</math> is treated as <math>x^1</math> when exponent laws require a visible exponent. || [[Law_of_Implicit_Unity]]
+| <math>\sqrt[3]{x}</math> || <math>x^{1/3}</math> || cube root
 |-
-| Roots as fractional powers || A root is treated as an exponent with a fractional value, such as <math>x^{1/2}</math> or <math>x^{1/3}</math>. || [[Fractional_Exponents_and_Roots]]
+| <math>\sqrt{x^5}</math> || <math>x^{5/2}</math> || fifth power under a square root
 |-
-| Separation of sign and base || A negative sign is not assumed to be part of an exponential base unless the notation explicitly makes it part of that base. || [[Negative_Bases_and_Exponentiation]]
-|-
-| Reduction of symbolic redundancy || The radical symbol is considered unnecessary when fractional exponents can express the same operation more systematically. || [[Argument_for_the_Removal_of_the_Radical_Symbol]]
+| <math>1/\sqrt{x}</math> || <math>x^{-1/2}</math> || reciprocal square root
 |}
 
-== Difference from the Standard Order ==
-The Standard Order and Canonical Order usually agree in ordinary arithmetic. Their differences become visible where notation compresses several interpretive choices into one expression. COO treats those cases as evidence that the notation itself needs a stricter grammar.
+This rewrite gives roots the same syntax as powers and reciprocals. It also makes nested roots easier to combine.
+
+<math display="block">
+\sqrt{\sqrt{x}} = \left(x^{1/2}\right)^{1/2}=x^{1/4}
+</math>
+
+== Negative bases ==
+
+COO gives special attention to [[Negative_Bases_and_Exponentiation|negative bases and exponentiation]]. Its argument is that a written negative number should remain a unit unless notation breaks it apart.
 
 {| class="wikitable"
-|+ General comparison
-! Topic !! Standard Order tendency !! Canonical Order tendency
+! Expression !! Standard reading often taught !! Canonical reading
 |-
-| Parentheses || Resolve grouped expressions first. || Resolve grouping, but also define the grouped term as an exponential unit when powers are involved.
+| <math>-3^2</math> || <math>-(3^2)</math> || ambiguous unless rewritten
 |-
-| Exponents || Apply exponentiation before multiplication and division. || Identify the base of the exponent before applying exponentiation.
+| <math>(-3)^2</math> || <math>9</math> || <math>9</math>
 |-
-| Unary negatives || Often handled by local convention or calculator behavior. || Treated as a sign operation unless explicitly included in the base.
+| <math>-(3^2)</math> || <math>-9</math> || <math>-9</math>
 |-
-| Roots || Written with radical notation or fractional exponents. || Written as fractional exponents for one unified notation system.
-|-
-| Ambiguous expressions || Often answered by convention, textbook precedent, or calculator syntax. || Rewritten until the base, sign, and exponent are explicit.
+| <math>-\left(3^2\right)</math> || <math>-9</math> || <math>-9</math>
 |}
 
-== Law of Implicit Unity ==
-{{Main|Law_of_Implicit_Unity}}
-The Law of Implicit Unity states that a term has an unstated first power. The rule is simple in ordinary notation:
+The canonical convention does not rely on the reader remembering whether a sign is included in a base. It requires the writer to make the intended base visible.
 
-<math>x = x^1</math>
+== Comparison with the Standard Order ==
 
-In COO, the importance of this rule is not that it changes the value of a term, but that it gives the term an explicit exponent before later exponent rules are applied. This is used to interpret expressions such as powers of powers, grouped bases, and signed values.
+COO differs from SOO in purpose. SOO is a widely taught convention for evaluating ordinary expressions. COO is a proposed stricter convention for reducing notational ambiguity.
 
-== Treatment of roots ==
-{{Main|Fractional_Exponents_and_Roots|Argument_for_the_Removal_of_the_Radical_Symbol}}
-COO argues that radical notation separates roots from the laws of indices even though roots can be expressed as exponents. Under this approach:
-
-<math>\sqrt{x}=x^{1/2}</math>
-
-<math>\sqrt[3]{x}=x^{1/3}</math>
-
-<math>\sqrt[n]{x^m}=x^{m/n}</math>
-
-The argument for removing the radical symbol is therefore not aesthetic alone. It is an argument that one notation family should govern both powers and roots, reducing the chance that learners treat them as unrelated operations.
-
-== Treatment of negative bases ==
-{{Main|Negative_Bases_and_Exponentiation}}
-The Canonical Order distinguishes a negative sign from the base of an exponent unless the notation requires them to be read together. In ordinary notation, an expression such as <math>-x^2</math> is often distinguished from <math>(-x)^2</math>. COO extends that distinction into a more general principle: the operation must first identify whether the base is <math>x</math>, <math>-x</math>, or a grouped expression containing a sign.
-
-This distinction is central to the COO critique of the Standard Order. In the manuscript, negative bases and fractional exponents are treated as one of the main sites where the inherited notation produces confusion.<ref name="manuscript"/>
-
-== Examples ==
-{{Main|Canonical_Order_of_Operations_Examples}}
 {| class="wikitable"
-|+ Rewriting examples
-! Conventional form !! Canonical rewrite !! Purpose
+! Topic !! Standard Order of Operations !! Canonical Order of Operations
 |-
-| <math>\sqrt{x}</math> || <math>x^{1/2}</math> || Replaces radical notation with a fractional exponent.
+| Educational role || common classroom convention || proposed clarity convention
 |-
-| <math>\sqrt[3]{x^2}</math> || <math>x^{2/3}</math> || Places root and power in one index expression.
+| Roots || radical notation is retained || roots are expressed as fractional exponents
 |-
-| <math>x</math> || <math>x^1</math> || Makes the implicit exponent visible.
+| Negatives || leading signs may be separated by exponentiation convention || visible signed bases are preserved unless separated
 |-
-| <math>(x)^n</math> || <math>(x^1)^n=x^n</math> || Applies the power-of-a-power rule.
+| Ambiguous expressions || resolved by inherited rule or mnemonic || rewritten before evaluation
 |-
-| <math>-x^2</math> || <math>-(x^2)</math> || Separates sign operation from exponentiation unless grouped otherwise.
+| Main goal || standardized procedure || structural consistency
 |}
 
-== Educational argument ==
-The educational argument for COO is that students often memorize rules before they understand the structure of operations. The framework attempts to make arithmetic notation behave more like grammar: every sign, group, exponent, and root should have a defined scope. The aim is to reduce reliance on local convention and to make the same rule apply in elementary arithmetic, algebra, and later symbolic manipulation.
+== Reception and status ==
 
-== Criticism and limitations ==
-A reference account must distinguish the proposal from established mathematical convention. COO is not the dominant convention in mathematics education or professional notation. Most textbooks, calculators, programming languages, and symbolic systems already follow established precedence rules, even where those rules require users to add parentheses for clarity.
+The Canonical Order of Operations is a proposed framework. It is not a governing standard in school curricula, publishing, engineering, or computer algebra systems. Its value therefore depends on whether one judges the benefits of stricter notation to outweigh the disruption of changing familiar practice.
 
-Critics would likely argue that the Standard Order is not broken but conventional: ambiguity can be removed by writing clearer expressions. From this view, the problem is not the order of operations itself, but careless notation, inconsistent calculator input, or insufficient instruction.
+Supporters may argue that COO makes arithmetic more internally consistent and easier to extend from elementary notation to powers and roots. Critics may object that existing notation already works when parentheses and definitions are used carefully, and that replacing entrenched conventions would create confusion across education and computation.
 
-The COO reply is that a convention which repeatedly requires rescue by parentheses, exceptions, or teacher explanation is not as canonical as it appears. The strength of COO therefore depends on whether one values backward compatibility with inherited notation or a more explicit notation system that revises inherited practice.
+== See also ==
+{{See also|Canonical_Law_of_Indices|Law_of_Implicit_Unity|Argument_for_the_Removal_of_the_Radical_Symbol|Misconceptions_on_Mathematical_Operations}}
 
 == References ==
-{{reflist}}
-
-== External resources ==
-* [https://canonical.streamlit.app Online calculator demo]
-* [https://github.com/andylehti/canonical-order GitHub Python code]
+<references />
 
 {| class="navbox"
 ! colspan="2" class="navbox-title" | [[Canonical_Order_of_Operations|Canonical Order of Operations]]
@@ -157,4 +166,4 @@ The COO reply is that a convention which repeatedly requires rescue by parenthes
 [[Category:Mathematical notation]]
 [[Category:Order of operations]]
 [[Category:Canonical mathematics]]
-[[Category:Mathematics education]]
+[[Category:Proposed frameworks]]

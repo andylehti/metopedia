@@ -7,7 +7,6 @@ robots: "index,follow,max-image-preview:large"
 ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|Proposed formulation of index laws inside the Canonical Order of Operations.}}
-= Canonical Law of Indices =
 {{Main|Canonical_Order_of_Operations}}
 
 The '''Canonical Law of Indices''' is the name used in Metopedia for the application of exponent laws under the [[Canonical_Order_of_Operations|Canonical Order of Operations]]. It treats powers, roots, grouping, and the sign of a term as parts of one interpretive system rather than as unrelated classroom rules.
@@ -41,7 +40,7 @@ In canonical usage, an index law is not merely a rule for simplifying exponents.
 {{Main|Law_of_Implicit_Unity}}
 The Law of Implicit Unity gives ordinary terms a visible index before index laws are applied. For example:
 
-<math>(x)^n=(x^1)^n=x^n</math>
+<math display="block">(x)^n=(x^1)^n=x^n</math>
 
 This rule is central to COO because it prevents the exponent from silently extending beyond its intended base.
 
@@ -49,9 +48,9 @@ This rule is central to COO because it prevents the exponent from silently exten
 {{Main|Fractional_Exponents_and_Roots}}
 The Canonical Law of Indices treats roots as a subset of exponentiation. The radical symbol is therefore viewed as redundant notation rather than a distinct operation:
 
-<math>\sqrt{x^3}=x^{3/2}</math>
+<math display="block">\sqrt{x^3}=x^{3/2}</math>
 
-<math>\sqrt[4]{x^7}=x^{7/4}</math>
+<math display="block">\sqrt[4]{x^7}=x^{7/4}</math>
 
 == Sign and base identity ==
 The proposed law requires the sign of a term to be distinguished from the base being exponentiated. This does not mean that negative values cannot be exponentiated. It means the notation must indicate whether the negative sign belongs to the base or operates outside the power.

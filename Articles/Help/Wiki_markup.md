@@ -51,3 +51,15 @@ Reuse only.<ref name="same"/>
 
 [[Category:Help]]
 [[Category:Markup Showcase]]
+
+
+== Mathematics ==
+Use inline KaTeX-compatible math with <code>&lt;math&gt;</code>. Use display math for larger centered equations.
+
+{| class="wikitable"
+! Source !! Result
+|-
+| <code>&lt;math&gt;x^{1/2}&lt;/math&gt;</code> || inline math
+|-
+| <code>&lt;math display="block"&gt;x^{m/n}=\sqrt[n]{x^m}&lt;/math&gt;</code> || centered display math
+|}

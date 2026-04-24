@@ -7,7 +7,6 @@ robots: "index,follow,max-image-preview:large"
 ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|Worked examples illustrating canonical rewrites of roots, exponents, signs, and grouping.}}
-= Canonical Order of Operations Examples =
 {{Main|Canonical_Order_of_Operations}}
 
 This page collects examples of rewrites used in the Canonical Order of Operations. The aim is not to show every possible calculation, but to show how COO makes the base, sign, exponent, and root structure explicit.

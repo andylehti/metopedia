@@ -29,7 +29,6 @@ The project is organized as a reference environment rather than a blog. Its page
 * [[Standardized_Obedience]]
 * [[Kardashian_By-Product_Effect]]
 * [[Lehti-Feynman_Method|Lehti-Feynman Method]]
-* [[Canonical_Order_of_Operations|Canonical Order of Operations]]
 </div>
 </div>
 
@@ -41,3 +40,9 @@ The site favors definitional clarity, explicit structure, open categories, and s
 
 [[Category:Metopedia]]
 [[Category:Main Pages]]
+
+
+== Mathematical notation ==
+* [[Canonical_Order_of_Operations|Canonical Order of Operations]] — proposed notation-first convention for powers, roots, signs, and implicit grouping.
+* [[Canonical_Law_of_Indices|Canonical Law of Indices]] — canonical index rules for powers, roots, and reciprocal roots.
+* [[Argument_for_the_Removal_of_the_Radical_Symbol|Argument for the removal of the radical symbol]] — reasons for replacing radical notation with fractional exponents.

@@ -7,7 +7,6 @@ robots: "index,follow,max-image-preview:large"
 ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|Conventional arithmetic precedence system contrasted with the Canonical Order of Operations.}}
-= Standard Order of Operations =
 {{About|the conventional classroom rule set. For the proposed alternative, see [[Canonical_Order_of_Operations]].}}
 
 The '''Standard Order of Operations''' ('''SOO''') is the conventional rule set used to evaluate arithmetic expressions written in linear notation. It is commonly taught through mnemonics such as PEMDAS, BEDMAS, BIDMAS, or BODMAS.

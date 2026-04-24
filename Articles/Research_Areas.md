@@ -22,9 +22,13 @@ This area includes formal structure, notation, symbolic convention, order of ope
 == Institutional and forensic inquiry ==
 This area addresses how institutions frame, preserve, defend, and sometimes insulate official narratives, with attention to records, methods, and evidentiary standards.
 
-
-== Mathematical logic and notation ==
-This area includes proposed reforms to mathematical grammar, notation, and the interpretation of ambiguous expressions. Core pages include [[Canonical_Order_of_Operations]], [[Canonical_Law_of_Indices]], [[Law_of_Implicit_Unity]], and [[Argument_for_the_Removal_of_the_Radical_Symbol]].
-
 [[Category:Metopedia]]
 [[Category:Research]]
+
+
+== Canonical mathematics ==
+Canonical mathematics pages examine arithmetic notation, inherited order-of-operations conventions, and proposed repairs to ambiguity in signs, roots, and exponents.
+
+* [[Canonical_Order_of_Operations|Canonical Order of Operations]]
+* [[Canonical_Law_of_Indices|Canonical Law of Indices]]
+* [[Misconceptions_on_Mathematical_Operations|Misconceptions on mathematical operations]]

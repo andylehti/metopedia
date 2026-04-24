@@ -7,7 +7,6 @@ robots: "index,follow,max-image-preview:large"
 ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|Argument that radical notation should be replaced by fractional exponents.}}
-= Argument for the Removal of the Radical Symbol =
 {{Main|Canonical_Order_of_Operations}}
 
 The '''argument for the removal of the radical symbol''' is a proposed notation reform within the [[Canonical_Order_of_Operations|Canonical Order of Operations]]. It holds that radical notation is redundant because roots can be expressed as fractional exponents.
@@ -37,7 +36,7 @@ The radical symbol makes roots look separate from powers. A learner may therefor
 
 COO argues that replacing radicals with fractional exponents produces one notation family:
 
-<math>x^a</math>, <math>x^{-a}</math>, <math>x^{1/n}</math>, and <math>x^{m/n}</math>
+<math display="block">x^a</math>, <math>x^{-a}</math>, <math>x^{1/n}</math>, and <math>x^{m/n}</math>
 
 This unifies positive powers, negative powers, roots, and reciprocal roots.
 

@@ -7,7 +7,6 @@ robots: "index,follow,max-image-preview:large"
 ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|List of common misconceptions about multiplication, exponentiation, roots, signs, and grouping.}}
-= Misconceptions on Mathematical Operations =
 {{Main|Canonical_Order_of_Operations}}
 
 '''Misconceptions on mathematical operations''' are recurring interpretive errors that arise when arithmetic notation is taught as a sequence of mechanical rules rather than as a grammar of operations. In the Canonical Order framework, these misconceptions are treated as evidence that the Standard Order is often too compressed to explain what an expression is doing.
@@ -40,7 +39,7 @@ The expression <math>-x^2</math> is not the same as <math>(-x)^2</math>. The dif
 == Roots and fractional powers ==
 Root notation often conceals its connection to exponentiation. The canonical rewrite makes that connection immediate:
 
-<math>\sqrt[5]{x^2}=x^{2/5}</math>
+<math display="block">\sqrt[5]{x^2}=x^{2/5}</math>
 
 Once roots are written as powers, the ordinary laws of indices can be applied without switching notation systems.
 

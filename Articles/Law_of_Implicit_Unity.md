@@ -7,12 +7,11 @@ robots: "index,follow,max-image-preview:large"
 ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|Canonical rule stating that a term carries an implicit first power.}}
-= Law of Implicit Unity =
 {{Main|Canonical_Order_of_Operations}}
 
 The '''Law of Implicit Unity''' is a rule in the [[Canonical_Order_of_Operations|Canonical Order of Operations]] stating that a number, variable, or grouped term may be treated as having an implicit exponent of one. The rule is expressed as:
 
-<math>x=x^1</math>
+<math display="block">x=x^1</math>
 
 The law does not change the value of a term. Its purpose is interpretive: it makes the base of an exponent visible before exponent rules are applied.
 

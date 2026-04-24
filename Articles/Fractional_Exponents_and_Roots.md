@@ -1,57 +1,77 @@
 ---
 title: "Fractional Exponents and Roots"
-description: "A canonical-mathematics page explaining roots as fractional exponents."
-keywords: "fractional exponents, roots, radical symbol, canonical arithmetic, square root, cube root"
+description: "A page explaining the canonical treatment of roots as fractional exponents."
+keywords: "fractional exponents, roots, radical symbol, square root, cube root, canonical arithmetic"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
 ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
-{{short description|Canonical-mathematics explanation of roots as fractional exponents.}}
-= Fractional Exponents and Roots =
+{{short description|A page explaining the canonical treatment of roots as fractional exponents.}}
 {{Main|Canonical_Order_of_Operations}}
 
-'''Fractional exponents and roots''' are treated in the Canonical Order of Operations as one operation family. A fractional exponent expresses both a power and a root. The denominator gives the root; the numerator gives the power.
+'''Fractional exponents and roots''' are treated in the Canonical Order of Operations as one operation family. A fractional exponent contains both a power and a root: the numerator gives the power, and the denominator gives the root.
 
 == Basic rule ==
-<math>x^{m/n}=\sqrt[n]{x^m}</math>
 
-In canonical notation, the same idea is usually written without the radical symbol:
+<math display="block">
+x^{m/n}=\sqrt[n]{x^m}
+</math>
 
-<math>\sqrt[n]{x^m}\rightarrow x^{m/n}</math>
+In canonical notation, the radical form is rewritten as an index form.
+
+<math display="block">
+\sqrt[n]{x^m}\;\longrightarrow\;x^{m/n}
+</math>
 
 == Examples ==
+
 {| class="wikitable"
-! Root expression !! Fractional-exponent expression !! Reading
+! Root expression !! Canonical expression !! Reading
 |-
 | <math>\sqrt{x}</math> || <math>x^{1/2}</math> || square root of <math>x</math>
 |-
 | <math>\sqrt[3]{x}</math> || <math>x^{1/3}</math> || cube root of <math>x</math>
 |-
-| <math>\sqrt{x^5}</math> || <math>x^{5/2}</math> || square root after fifth power, expressed as one exponent
+| <math>\sqrt{x^5}</math> || <math>x^{5/2}</math> || fifth power under a square root
 |-
-| <math>\sqrt[7]{x^3}</math> || <math>x^{3/7}</math> || seventh root with third power
+| <math>\sqrt[7]{x^3}</math> || <math>x^{3/7}</math> || seventh root with a third power
 |-
 | <math>1/\sqrt{x}</math> || <math>x^{-1/2}</math> || reciprocal square root
 |}
 
 == Combined power and root ==
-A fractional exponent combines two instructions. In <math>x^{3/5}</math>, the numerator <math>3</math> is the power and the denominator <math>5</math> is the root. The canonical advantage is that both instructions remain attached to one base.
+
+In <math>x^{3/5}</math>, the numerator <math>3</math> is the power and the denominator <math>5</math> is the root. The canonical form keeps both instructions attached to one base.
+
+<math display="block">
+x^{3/5}=\sqrt[5]{x^3}
+</math>
 
 == Nested roots ==
-Nested roots become powers of powers:
 
-<math>\sqrt{\sqrt{x}}=(x^{1/2})^{1/2}=x^{1/4}</math>
+Nested roots become powers of powers.
 
-<math>\sqrt[3]{\sqrt{x}}=(x^{1/2})^{1/3}=x^{1/6}</math>
+<math display="block">
+\sqrt{\sqrt{x}}=\left(x^{1/2}\right)^{1/2}=x^{1/4}
+</math>
+
+<math display="block">
+\sqrt[3]{\sqrt{x}}=\left(x^{1/2}\right)^{1/3}=x^{1/6}
+</math>
 
 == Negative and reciprocal roots ==
-Negative exponents and fractional exponents can be combined:
 
-<math>x^{-1/2}=1/x^{1/2}</math>
+Negative exponents and fractional exponents can be combined.
 
-<math>x^{-m/n}=1/x^{m/n}</math>
+<math display="block">
+x^{-1/2}=\frac{1}{x^{1/2}}
+</math>
 
-This gives the same notation family for powers, roots, reciprocal powers, and reciprocal roots.
+<math display="block">
+x^{-m/n}=\frac{1}{x^{m/n}}
+</math>
+
+This gives one notation family for powers, roots, reciprocal powers, and reciprocal roots.
 
 == See also ==
 {{See also|Argument_for_the_Removal_of_the_Radical_Symbol|Canonical_Law_of_Indices|Negative_Bases_and_Exponentiation}}

@@ -7,7 +7,6 @@ robots: "index,follow,max-image-preview:large"
 ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|Canonical-mathematics treatment of signs, bases, and powers in expressions containing negative quantities.}}
-= Negative Bases and Exponentiation =
 {{Main|Canonical_Order_of_Operations}}
 
 '''Negative bases and exponentiation''' are a central issue in the Canonical Order of Operations. The problem is not that negative values cannot be raised to powers. The problem is that linear notation often fails to state whether the negative sign is part of the base or an external sign operation.
