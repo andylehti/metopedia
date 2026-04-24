@@ -233,5 +233,160 @@
     ],
     "path": "./Footer/Terms_of_Use.md",
     "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Argument_for_the_Removal_of_the_Radical_Symbol",
+    "title": "Argument for the Removal of the Radical Symbol",
+    "description": "A canonical-mathematics argument that radical notation should be replaced by fractional exponents.",
+    "keywords": "radical symbol, fractional exponents, roots, square root, canonical order of operations, mathematical notation",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Mathematics",
+      "Mathematical notation",
+      "Radicals",
+      "Canonical mathematics",
+      "Mathematics education"
+    ],
+    "path": "./Articles/Argument_for_the_Removal_of_the_Radical_Symbol.md",
+    "lastModified": "2026-04-24"
+  },
+  {
+    "slug": "Canonical_Law_of_Indices",
+    "title": "Canonical Law of Indices",
+    "description": "A proposed formulation of index laws inside the Canonical Order of Operations.",
+    "keywords": "Canonical Law of Indices, index laws, exponent laws, canonical arithmetic, implicit unity, fractional exponents",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Mathematics",
+      "Mathematical notation",
+      "Order of operations",
+      "Canonical mathematics"
+    ],
+    "path": "./Articles/Canonical_Law_of_Indices.md",
+    "lastModified": "2026-04-24"
+  },
+  {
+    "slug": "Canonical_Order_of_Operations",
+    "title": "Canonical Order of Operations",
+    "description": "A proposed mathematical convention intended to make exponentiation, roots, signs, and grouping more explicit.",
+    "keywords": "Canonical Order of Operations, COO, Standard Order of Operations, SOO, order of operations, law of indices, radical symbol, fractional exponents, implicit unity",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Mathematics",
+      "Mathematical notation",
+      "Order of operations",
+      "Canonical mathematics",
+      "Mathematics education"
+    ],
+    "path": "./Articles/Canonical_Order_of_Operations.md",
+    "lastModified": "2026-04-24"
+  },
+  {
+    "slug": "Canonical_Order_of_Operations_Examples",
+    "title": "Canonical Order of Operations Examples",
+    "description": "Worked examples illustrating canonical rewrites of roots, exponents, signs, and grouping.",
+    "keywords": "Canonical Order of Operations examples, exponent examples, radical examples, implicit unity examples, mathematical notation",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Mathematics",
+      "Mathematics education",
+      "Order of operations",
+      "Canonical mathematics"
+    ],
+    "path": "./Articles/Canonical_Order_of_Operations_Examples.md",
+    "lastModified": "2026-04-24"
+  },
+  {
+    "slug": "Fractional_Exponents_and_Roots",
+    "title": "Fractional Exponents and Roots",
+    "description": "A canonical-mathematics page explaining roots as fractional exponents.",
+    "keywords": "fractional exponents, roots, radical symbol, canonical arithmetic, square root, cube root",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Mathematics",
+      "Mathematical notation",
+      "Radicals",
+      "Canonical mathematics"
+    ],
+    "path": "./Articles/Fractional_Exponents_and_Roots.md",
+    "lastModified": "2026-04-24"
+  },
+  {
+    "slug": "Law_of_Implicit_Unity",
+    "title": "Law of Implicit Unity",
+    "description": "A rule in the Canonical Order of Operations stating that a term carries an implicit first power.",
+    "keywords": "Law of Implicit Unity, implicit exponent, exponentiation, canonical arithmetic, order of operations",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Mathematics",
+      "Mathematical notation",
+      "Order of operations",
+      "Canonical mathematics"
+    ],
+    "path": "./Articles/Law_of_Implicit_Unity.md",
+    "lastModified": "2026-04-24"
+  },
+  {
+    "slug": "Misconceptions_on_Mathematical_Operations",
+    "title": "Misconceptions on Mathematical Operations",
+    "description": "A reference page listing common misconceptions about multiplication, exponentiation, roots, signs, and grouping in the Canonical Order framework.",
+    "keywords": "mathematical misconceptions, order of operations, exponentiation, roots, negative signs, canonical arithmetic",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Mathematics",
+      "Mathematics education",
+      "Order of operations",
+      "Canonical mathematics"
+    ],
+    "path": "./Articles/Misconceptions_on_Mathematical_Operations.md",
+    "lastModified": "2026-04-24"
+  },
+  {
+    "slug": "Negative_Bases_and_Exponentiation",
+    "title": "Negative Bases and Exponentiation",
+    "description": "A canonical-mathematics page on signs, bases, and powers in expressions containing negative quantities.",
+    "keywords": "negative bases, exponentiation, unary minus, order of operations, canonical order of operations",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Mathematics",
+      "Mathematical notation",
+      "Order of operations",
+      "Canonical mathematics"
+    ],
+    "path": "./Articles/Negative_Bases_and_Exponentiation.md",
+    "lastModified": "2026-04-24"
+  },
+  {
+    "slug": "Standard_Order_of_Operations",
+    "title": "Standard Order of Operations",
+    "description": "A reference page on the conventional order of operations and its comparison with the Canonical Order of Operations.",
+    "keywords": "Standard Order of Operations, PEMDAS, BODMAS, arithmetic precedence, Canonical Order of Operations",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Mathematics",
+      "Mathematics education",
+      "Order of operations",
+      "Mathematical notation"
+    ],
+    "path": "./Articles/Standard_Order_of_Operations.md",
+    "lastModified": "2026-04-24"
   }
 ]

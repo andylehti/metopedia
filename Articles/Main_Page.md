@@ -29,6 +29,7 @@ The project is organized as a reference environment rather than a blog. Its page
 * [[Standardized_Obedience]]
 * [[Kardashian_By-Product_Effect]]
 * [[Lehti-Feynman_Method|Lehti-Feynman Method]]
+* [[Canonical_Order_of_Operations|Canonical Order of Operations]]
 </div>
 </div>
 
