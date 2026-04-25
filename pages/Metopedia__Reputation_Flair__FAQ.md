@@ -5,7 +5,7 @@ description: "Frequently asked questions for the Reputation Flair Metopedia serv
 keywords: "Reputation Flair FAQ, reputation scoring, flair, Reddit Devvit, Bot Shield, human verification, moderation app"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/assets/metopedia-og.png"
+og_image: "https://metopedia.com/Assets/metopedia-og.png"
 permalink: "/Metopedia/Reputation_Flair/FAQ/"
 canonical_url: "/Metopedia/Reputation_Flair/FAQ/"
 wiki_page: true

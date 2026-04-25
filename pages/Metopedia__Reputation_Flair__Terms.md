@@ -5,7 +5,7 @@ description: "Terms governing use of the Reputation Flair Metopedia service and 
 keywords: "Reputation Flair terms, Metopedia service terms, Reddit Devvit app terms, moderation app terms"
 author: "Metopedia Policy"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/assets/metopedia-og.png"
+og_image: "https://metopedia.com/Assets/metopedia-og.png"
 permalink: "/Metopedia/Reputation_Flair/Terms/"
 canonical_url: "/Metopedia/Reputation_Flair/Terms/"
 wiki_page: true

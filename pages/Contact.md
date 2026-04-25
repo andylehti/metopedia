@@ -5,7 +5,7 @@ description: "Contact information and editorial contact guidance for Metopedia."
 keywords: "contact Metopedia, editorial contact, reference project contact"
 author: "Metopedia Editorial"
 robots: "index,follow"
-og_image: "https://metopedia.com/assets/metopedia-og.png"
+og_image: "https://metopedia.com/Assets/metopedia-og.png"
 permalink: "/Contact/"
 canonical_url: "/Contact/"
 wiki_page: true

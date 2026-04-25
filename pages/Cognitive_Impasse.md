@@ -5,7 +5,7 @@ description: "A framework in Metopedia describing defensive mental rigidity, dis
 keywords: "Cognitive Impasse, cognitive rigidity, cognitive dissonance, belief perseverance, defensive reasoning"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/assets/metopedia-og.png"
+og_image: "https://metopedia.com/Assets/metopedia-og.png"
 permalink: "/Cognitive_Impasse/"
 canonical_url: "/Cognitive_Impasse/"
 wiki_page: true
