@@ -19,6 +19,14 @@
     <meta id="meta-twitter-description" name="twitter:description" content="Metopedia is an interdisciplinary reference project focused on cognitive rigidity, textual study, mathematical logic, and institutional analysis.">
     <meta id="meta-twitter-image" name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg">
     <link id="meta-canonical" rel="canonical" href="">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3YFRYPVTK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E3YFRYPVTK', { 'send_page_view': false });
+    </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
@@ -112,12 +120,11 @@
         .wikitable > tbody > tr > th, .wikitable > tbody > tr > td, .wikitable tr th, .wikitable tr td { border: 1px solid #a2a9b1; padding: 0.2em 0.4em; vertical-align: top; }
         .wikitable > tbody > tr > th, .wikitable tr th { background-color: #eaecf0; text-align: center; }
 
-        .infobox { float: right; clear: right; margin: 0 0 1em 1em; border: 1px solid var(--border-color); background-color: #f8f9fa; padding: 0.2em; font-size: 88%; width: 24em; max-width: 100%; line-height: 1.5em; table-layout: auto; }
-        .infobox th, .infobox td { vertical-align: top; padding: 0.2em 0.6em; overflow-wrap: normal; word-break: normal; hyphens: none; }
-        .infobox td { overflow-wrap: break-word; }
+        .infobox { float: right; clear: right; margin: 0 0 1em 1em; border: 1px solid var(--border-color); background-color: #f8f9fa; padding: 0.2em; font-size: 88%; width: 22em; line-height: 1.5em; }
+        .infobox th, .infobox td { vertical-align: top; padding: 0.2em 0.6em; }
         .infobox .infobox-header { text-align: center; font-size: 125%; font-weight: bold; background-color: #e0e0e0; }
         .infobox .infobox-subheader { text-align: center; background-color: #f0f0f0; font-weight: bold; border-top: 1px solid #ccc; }
-        .infobox .infobox-label { text-align: left; background-color: #eaecf0; width: 9.25em; min-width: 9.25em; max-width: 12em; font-weight: bold; white-space: normal; overflow-wrap: normal; word-break: keep-all; hyphens: none; }
+        .infobox .infobox-label { text-align: left; background-color: #eaecf0; width: 35%; font-weight: bold; }
         .infobox .infobox-image { text-align: center; padding: 0.8em !important; background: #fff; }
 
         .thumb { border: 1px solid #c8ccd1; background-color: #f8f9fa; padding: 3px; margin: 0.5em 0 1.3em 0; clear: both; }
@@ -176,7 +183,6 @@
         body.theme-dark .infobox .infobox-subheader,
         body.theme-dark .infobox .infobox-label { color: var(--text-color); }
         body.theme-dark .thumbcaption { background-color: #151b21; color: var(--muted-color); }
-        body.theme-dark .infobox .infobox-image { background-color: #151b21; }
 
         .search-results-list { margin-left: 0; padding-left: 1.4em; }
         .search-hit-meta { font-size: 0.9em; color: var(--muted-color); }
@@ -538,6 +544,9 @@
     "owner": "",
     "repo": "",
     "branch": "main"
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-E3YFRYPVTK"
   }
 }
     
@@ -545,75 +554,75 @@
 
     <script type="application/json" id="repo-sidebar">
     {
-      "Navigation": [
-        {
-          "label": "Main page",
-          "link": "Main_Page"
-        },
-        {
-          "label": "Featured page",
-          "link": "Featured_Page"
-        },
-        {
-          "label": "Research areas",
-          "link": "Research_Areas"
-        },
-        {
-          "label": "About Metopedia",
-          "link": "About"
-        }
-      ],
-      "Contribute": [
-        {
-          "label": "Help",
-          "link": "Help:Wiki_markup"
-        },
-        {
-          "label": "Methodology",
-          "link": "Methodology"
-        },
-        {
-          "label": "Editorial guide",
-          "link": "Editorial_Guide"
-        }
-      ],
-      "Projects": [
-        {
-          "label": "Metopedia services",
-          "link": "Metopedia:Applications"
-        },
-        {
-          "label": "Reputation Flair",
-          "link": "Reputation_Flair"
-        }
-      ],
-      "Tools": [
-        {
-          "label": "Sitemap",
-          "link": "Special:Sitemap"
-        },
-        {
-          "label": "All pages",
-          "link": "Special:AllPages"
-        },
-        {
-          "label": "Categories",
-          "link": "Special:Categories"
-        },
-        {
-          "label": "What links here",
-          "link": "Special:WhatLinksHere/Main_Page"
-        },
-        {
-          "label": "Random article",
-          "link": "Special:Random"
-        },
-        {
-          "label": "Printable version",
-          "link": "javascript:window.print()"
-        }
-      ]
+  "Navigation": [
+    {
+      "label": "Main page",
+      "link": "Main_Page"
+    },
+    {
+      "label": "Featured page",
+      "link": "Featured_Page"
+    },
+    {
+      "label": "Research areas",
+      "link": "Research_Areas"
+    },
+    {
+      "label": "About Metopedia",
+      "link": "About"
     }
+  ],
+  "Contribute": [
+    {
+      "label": "Help",
+      "link": "Help:Wiki_markup"
+    },
+    {
+      "label": "Methodology",
+      "link": "Methodology"
+    },
+    {
+      "label": "Editorial guide",
+      "link": "Editorial_Guide"
+    }
+  ],
+  "Projects": [
+    {
+      "label": "Research",
+      "link": "Metopedia:Research"
+    },
+    {
+      "label": "Reputation Flair",
+      "link": "Reputation_Flair"
+    }
+  ],
+  "Tools": [
+    {
+      "label": "Sitemap",
+      "link": "Special:Sitemap"
+    },
+    {
+      "label": "All pages",
+      "link": "Special:AllPages"
+    },
+    {
+      "label": "Categories",
+      "link": "Special:Categories"
+    },
+    {
+      "label": "What links here",
+      "link": "Special:WhatLinksHere/Main_Page"
+    },
+    {
+      "label": "Random article",
+      "link": "Special:Random"
+    },
+    {
+      "label": "Printable version",
+      "link": "javascript:window.print()"
+    }
+  ]
+}
     </script>
 
     <script type="application/json" id="repo-footer">
@@ -814,11 +823,43 @@
         return titleToSlug(value);
     }
 
+    function safeDecode(value) {
+        try { return decodeURIComponent(value); } catch { return value; }
+    }
+
+    function getRouteParts() {
+        const hash = window.location.hash || '';
+        if (hash.startsWith('#/')) {
+            const raw = hash.slice(2);
+            const anchorIndex = raw.indexOf('#');
+            const pagePart = anchorIndex >= 0 ? raw.slice(0, anchorIndex) : raw;
+            const anchorPart = anchorIndex >= 0 ? raw.slice(anchorIndex + 1) : '';
+            return {
+                slug: normalizeSlug(safeDecode(pagePart || appConfig.defaultPage)),
+                anchor: anchorPart ? safeDecode(anchorPart) : ''
+            };
+        }
+        return {
+            slug: appConfig.defaultPage,
+            anchor: hash && hash.length > 1 ? safeDecode(hash.slice(1)) : ''
+        };
+    }
+
     function getPageId() {
-        const hash = window.location.hash;
-        if (hash && hash.startsWith('#/')) return normalizeSlug(hash.slice(2));
-        if (hash && hash.length > 1) return normalizeSlug(hash.slice(1));
-        return appConfig.defaultPage;
+        return getRouteParts().slug;
+    }
+
+    function getRouteAnchor() {
+        return getRouteParts().anchor;
+    }
+
+    function scrollToPageAnchor(anchor) {
+        if (!anchor) return false;
+        const id = String(anchor).replace(/^#/, '');
+        const target = document.getElementById(id);
+        if (!target) return false;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return true;
     }
 
     function navigateTo(slug, mode = 'read') {
@@ -1171,6 +1212,16 @@ You can still link to it now, and create it later.
         document.getElementById('meta-canonical').setAttribute('href', canonical);
     }
 
+    function trackAnalyticsPageView(slug) {
+        if (typeof gtag !== 'function') return;
+        const gaId = appConfig.analytics?.googleAnalyticsId || 'G-E3YFRYPVTK';
+        gtag('config', gaId, {
+            page_title: document.title,
+            page_location: window.location.href,
+            page_path: `${window.location.pathname}${window.location.hash || '#/' + normalizeSlug(slug || appConfig.defaultPage)}`
+        });
+    }
+
     function renderTable(tableText) {
         const lines = tableText.trim().split(/\n/);
         const attrs = (lines[0].match(/^\{\|\s*(.*)$/) || [,''])[1];
@@ -1399,7 +1450,11 @@ You can still link to it now, and create it later.
             const anchor = titleToSlug(section);
             return `<a class="${isKnownPage(slug) ? '' : 'redlink'}" href="#/${safeAttr(slug)}#${safeAttr(anchor)}">${escapeHtml(label || section)}</a>`;
         });
-        html = html.replace(/\[\[#([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, section, label) => `<a href="#${safeAttr(titleToSlug(section))}">${escapeHtml(label || section)}</a>`);
+        html = html.replace(/\[\[#([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, section, label) => {
+            const anchor = titleToSlug(section);
+            const slug = normalizeSlug(currentSlug || appConfig.defaultPage);
+            return `<a href="#/${safeAttr(slug)}#${safeAttr(anchor)}">${escapeHtml(label || section)}</a>`;
+        });
         html = html.replace(/\[\[:Category:([^\]|]+)(?:\|([^\]]+))?\]\]/gi, (_, cat, label) => `<a href="#/${safeAttr(normalizeSlug('Category:' + cat))}">${escapeHtml(label || ('Category:' + cat))}</a>`);
         html = html.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, target, label) => {
             const slug = normalizeSlug(target);
@@ -1456,13 +1511,25 @@ You can still link to it now, and create it later.
         }).join('')}</dl>`;
     }
 
-    function protectBlocks(html, refsState) {
+    function protectBlocks(html, refsState, pageSlug = '') {
         const protectedBlocks = [];
+        const routeSlug = normalizeSlug(pageSlug || currentSlug || appConfig.defaultPage);
+        refsState.backlinks = refsState.backlinks || {};
+        refsState.counts = refsState.counts || {};
+
         const protect = content => {
             protectedBlocks.push(content);
             return `%%%PROTECTED_${protectedBlocks.length - 1}%%%`;
         };
 
+        const markRef = n => {
+            refsState.counts[n] = (refsState.counts[n] || 0) + 1;
+            const suffix = refsState.counts[n] > 1 ? `-${refsState.counts[n]}` : '';
+            const refId = `cite_ref-${n}${suffix}`;
+            if (!refsState.backlinks[n]) refsState.backlinks[n] = [];
+            refsState.backlinks[n].push(refId);
+            return `<sup id="${safeAttr(refId)}" class="reference"><a href="#/${safeAttr(routeSlug)}#cite_note-${n}">[${n}]</a></sup>`;
+        };
 
         html = html.replace(/<math\s+[^>]*(?:display=["']block["']|class=["']display["']|mode=["']display["'])[^>]*>([\s\S]*?)<\/math>/gi, (_, expr) => protect(`<div class="math-display">\\[${escapeHtml(expr.trim())}\\]</div>`));
         html = html.replace(/<syntaxhighlight(?:[^>]*)>([\s\S]*?)<\/syntaxhighlight>/gi, (_, code) => protect(`<pre class="mw-highlight">${escapeHtml(code)}</pre>`));
@@ -1475,8 +1542,7 @@ You can still link to it now, and create it later.
 
         html = html.replace(/<ref\s+name=["']([^"']+)["']\s*\/>/gi, (_, name) => {
             if (!refsState.named[name]) return '';
-            const n = refsState.named[name].index;
-            return `<sup class="reference"><a href="#cite_note-${n}">[${n}]</a></sup>`;
+            return markRef(refsState.named[name].index);
         });
 
         html = html.replace(/<ref([^>]*)>([\s\S]*?)<\/ref>/gi, (_, attrs, content) => {
@@ -1484,16 +1550,13 @@ You can still link to it now, and create it later.
             const text = content.trim();
             if (nameMatch) {
                 const name = nameMatch[1];
-                if (refsState.named[name]) {
-                    const n = refsState.named[name].index;
-                    return `<sup class="reference"><a href="#cite_note-${n}">[${n}]</a></sup>`;
-                }
+                if (refsState.named[name]) return markRef(refsState.named[name].index);
                 refsState.refs.push(text);
                 refsState.named[name] = { index: refsState.refs.length, text };
-                return `<sup class="reference"><a href="#cite_note-${refsState.refs.length}">[${refsState.refs.length}]</a></sup>`;
+                return markRef(refsState.refs.length);
             }
             refsState.refs.push(text);
-            return `<sup class="reference"><a href="#cite_note-${refsState.refs.length}">[${refsState.refs.length}]</a></sup>`;
+            return markRef(refsState.refs.length);
         });
 
         return { html, protectedBlocks };
@@ -1525,8 +1588,8 @@ You can still link to it now, and create it later.
         html = html.replace(/\{\{(Main|See also|About)\|([\s\S]*?)\}\}/gi, (_, name, payload) => renderHatnote(name, payload));
         html = html.replace(/\{\{Quote\|([\s\S]*?)(?:\|([\s\S]*?))?\}\}/gi, (_, quote, author) => `<div class="quote-box">${parseInline(quote.trim())}${author ? `<span class="quote-author">${parseInline(author.trim())}</span>` : ''}</div>`);
 
-        const refsState = { refs: [], named: {} };
-        const protectedResult = protectBlocks(html, refsState);
+        const refsState = { refs: [], named: {}, backlinks: {}, counts: {} };
+        const protectedResult = protectBlocks(html, refsState, pageSlug);
         html = protectedResult.html;
         const protectedBlocks = protectedResult.protectedBlocks;
 
@@ -1591,12 +1654,20 @@ You can still link to it now, and create it later.
         html = restoreBlocks(html, protectedBlocks);
 
         const reflist = refsState.refs.length
-            ? `<ol class="references">${refsState.refs.map((entry, idx) => `<li id="cite_note-${idx + 1}"><span class="mw-cite-backlink">^</span>${parseInline(entry)}</li>`).join('')}</ol>`
+            ? `<ol class="references">${refsState.refs.map((entry, idx) => {
+                const n = idx + 1;
+                const backlinks = refsState.backlinks[n] || [`cite_ref-${n}`];
+                const backlinkText = backlinks.length === 1
+                    ? `<a href="#/${safeAttr(normalizeSlug(pageSlug || currentSlug || appConfig.defaultPage))}#${safeAttr(backlinks[0])}">^</a>`
+                    : backlinks.map((id, bidx) => `<a href="#/${safeAttr(normalizeSlug(pageSlug || currentSlug || appConfig.defaultPage))}#${safeAttr(id)}">${String.fromCharCode(97 + bidx)}</a>`).join(' ');
+                return `<li id="cite_note-${n}"><span class="mw-cite-backlink">${backlinkText}</span>${parseInline(entry)}</li>`;
+            }).join('')}</ol>`
             : '';
         html = html.replace(/\{\{reflist\}\}|<references\s*\/>/gi, reflist);
 
         if (toc.length >= 3) {
-            const tocHtml = `<div class="toc"><div class="toc-title"><h2>Contents</h2></div><ul>${toc.map((item, idx) => `<li class="toc-level-${item.level}"><span class="toc-number">${idx + 1}</span><a href="#${safeAttr(item.id)}">${escapeHtml(item.title)}</a></li>`).join('')}</ul></div>`;
+            const routeSlug = normalizeSlug(pageSlug || currentSlug || appConfig.defaultPage);
+            const tocHtml = `<div class="toc"><div class="toc-title"><h2>Contents</h2></div><ul>${toc.map((item, idx) => `<li class="toc-level-${item.level}"><span class="toc-number">${idx + 1}</span><a href="#/${safeAttr(routeSlug)}#${safeAttr(item.id)}">${escapeHtml(item.title)}</a></li>`).join('')}</ul></div>`;
             if (/<h2\b/i.test(html)) html = html.replace(/<h2\b/i, `${tocHtml}<h2`);
             else html += tocHtml;
         }
@@ -1785,7 +1856,13 @@ You can still link to it now, and create it later.
         }
 
         loader.style.display = 'none';
-        window.scrollTo(0, 0);
+        const routeAnchor = getRouteAnchor();
+        if (routeAnchor) {
+            requestAnimationFrame(() => scrollToPageAnchor(routeAnchor));
+        } else {
+            window.scrollTo(0, 0);
+        }
+        trackAnalyticsPageView(normalized);
     }
 
     document.getElementById('search-form').addEventListener('submit', event => {
@@ -1815,7 +1892,19 @@ You can still link to it now, and create it later.
 
     window.addEventListener('hashchange', () => {
         setMobileMenu(false);
-        loadPage(getPageId(), currentViewMode === 'source' ? 'source' : 'read');
+        const hash = window.location.hash || '';
+        if (hash && !hash.startsWith('#/')) {
+            scrollToPageAnchor(hash.slice(1));
+            return;
+        }
+        const nextSlug = getPageId();
+        const routeAnchor = getRouteAnchor();
+        if (nextSlug === currentSlug && routeAnchor && currentViewMode !== 'source') {
+            scrollToPageAnchor(routeAnchor);
+            trackAnalyticsPageView(nextSlug);
+            return;
+        }
+        loadPage(nextSlug, currentViewMode === 'source' ? 'source' : 'read');
     });
 
     footerLicenseDiv.innerHTML = appConfig.licenseHtml;

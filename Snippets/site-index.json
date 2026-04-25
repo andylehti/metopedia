@@ -286,30 +286,17 @@
     "lastModified": "2026-04-25"
   },
   {
-    "slug": "Metopedia:Applications",
-    "title": "Metopedia services",
-    "description": "Service and application documentation for projects operated under or associated with Metopedia.",
-    "keywords": "Metopedia services, Metopedia applications, application documentation, policy pages",
+    "slug": "Metopedia:Research",
+    "title": "Research",
+    "description": "Research, application, forensic, mathematical, and academic project index for Metopedia.",
+    "keywords": "Metopedia research, applications, forensics, mathematics, cognitive psychology, academic writing, textual study, institutional analysis",
     "author": "Metopedia Editorial",
     "robots": "index,follow,max-image-preview:large",
     "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
-      "Metopedia applications",
-      "Application documentation"
-    ],
-    "path": "./Services/index.md",
-    "lastModified": "2026-04-25"
-  },
-  {
-    "slug": "Metopedia:Services",
-    "title": "Metopedia services",
-    "description": "Legacy route for the Metopedia services index.",
-    "keywords": "Metopedia services, Metopedia applications, application documentation, policy pages",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia applications",
+      "Metopedia",
+      "Research",
+      "Metopedia projects",
       "Application documentation"
     ],
     "path": "./Services/index.md",

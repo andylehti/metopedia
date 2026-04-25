@@ -128,7 +128,7 @@ The repository copy of this privacy policy is maintained at [https://github.com/
 | class="navbox-list" | [[Metopedia:Reputation_Flair|Overview]] • [[Metopedia:Reputation_Flair/Terms|Terms]] • [[Metopedia:Reputation_Flair/Privacy_Policy|Privacy policy]] • [[Metopedia:Reputation_Flair/FAQ|FAQ]]
 |-
 ! class="navbox-group" | Related
-| class="navbox-list" | [[Metopedia:Applications|Metopedia applications]] • [[Privacy_Policy|Metopedia privacy policy]] • [[Terms_of_Use|Metopedia terms of use]]
+| class="navbox-list" | [[Metopedia:Research|Research]] • [[Privacy_Policy|Metopedia privacy policy]] • [[Terms_of_Use|Metopedia terms of use]]
 |}
 
 [[Category:Metopedia applications]]

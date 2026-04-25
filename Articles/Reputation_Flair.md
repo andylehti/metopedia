@@ -169,7 +169,7 @@ Metopedia separates the neutral article about the application from official appl
 | class="navbox-list" | [[Metopedia:Reputation_Flair|Service overview]] • [[Metopedia:Reputation_Flair/Terms|Terms]] • [[Metopedia:Reputation_Flair/Privacy_Policy|Privacy policy]] • [[Metopedia:Reputation_Flair/FAQ|FAQ]]
 |-
 ! class="navbox-group" | Related
-| class="navbox-list" | [[Metopedia:Applications|Metopedia applications]] • [[Cognitive_Impasse|Cognitive Impasse]] • [[Methodology|Methodology]]
+| class="navbox-list" | [[Metopedia:Research|Research]] • [[Cognitive_Impasse|Cognitive Impasse]] • [[Methodology|Methodology]]
 |}
 
 [[Category:Reputation Flair]]

@@ -39,7 +39,7 @@ Metopedia focuses on questions that are often avoided because they are methodolo
 The site favors definitional clarity, explicit structure, open categories, and stable cross-linking. Pages are expected to read like reference entries: direct, analytical, and inspectable.
 
 == Projects ==
-* [[Metopedia:Applications|Metopedia services]] — application and project documentation.
+* [[Metopedia:Research|Research]] — project index for academics, applications, forensics, mathematics, and related documentation.
 * [[Reputation_Flair|Reputation Flair]] — encyclopedia article on the Reddit Devvit application.
 
 [[Category:Metopedia]]
