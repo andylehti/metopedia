@@ -39,10 +39,10 @@ jobs:
       - name: Verify build output
         run: |
           test -f _site/index.html
-          test -f _site/assets/css/metopedia.css
-          test -f _site/assets/js/site.js
-          ls -la _site/assets/css
-          ls -la _site/assets/js
+          test -f _site/Assets/css/metopedia.css
+          test -f _site/Assets/js/site.js
+          ls -la _site/Assets/css
+          ls -la _site/Assets/js
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

@@ -100,14 +100,13 @@
 }
 
 .math-inline mjx-container,
-.math-rendered mjx-container,
-.math-inline svg,
-.math-rendered svg {
-    overflow: visible;
+.math-rendered mjx-container {
+    display: inline-block;
+    overflow: hidden;
 }
 .wikitable td .math-inline,
 .wikitable td .math-rendered {
-    line-height: 2.15;
+    line-height: 1.5;
 }
 .wikitable td {
     vertical-align: middle;
