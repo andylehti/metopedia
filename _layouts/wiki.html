@@ -24,10 +24,10 @@
     </div>
   </div>
   <div id="mw-panel">
-    <a id="p-logo" href="{{ '/' | relative_url }}"><div id="p-logo-mark" aria-hidden="true"></div><span id="p-logo-text">METOPEDIA</span></a>
+    <a id="p-logo" href="{{ '/' | relative_url }}" aria-label="Metopedia home"><img id="p-logo-img" src="{{ '/Assets/metopedia-logo.png' | relative_url }}" alt="Metopedia"></a>
     <div id="sidebar-content">{% include sidebar.html %}</div>
   </div>
-  <div id="mobile-panel-overlay" aria-hidden="true"><div id="mobile-panel-backdrop"></div><aside id="mobile-panel"><div class="mobile-panel-header"><a id="mobile-logo" href="{{ '/' | relative_url }}"><div id="mobile-logo-mark" aria-hidden="true"></div><span id="mobile-logo-text">Metopedia</span></a><button type="button" id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu" title="Close menu">✕</button></div><div id="mobile-sidebar-content">{% include sidebar.html %}</div></aside></div>
+  <div id="mobile-panel-overlay" aria-hidden="true"><div id="mobile-panel-backdrop"></div><aside id="mobile-panel"><div class="mobile-panel-header"><a id="mobile-logo" href="{{ '/' | relative_url }}" aria-label="Metopedia home"><img id="mobile-logo-img" src="{{ '/Assets/metopedia-logo.png' | relative_url }}" alt="Metopedia"></a><button type="button" id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu" title="Close menu">✕</button></div><div id="mobile-sidebar-content">{% include sidebar.html %}</div></aside></div>
   <div id="content">
     <h1 id="firstHeading">{{ page.title }}</h1>
     <div id="siteSub">{{ site.tagline }}</div>

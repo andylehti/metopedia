@@ -28,9 +28,8 @@
         #bodyContent { min-width: 0; }
         #mw-panel { position: absolute; top: 0; width: 11em; left: 0; padding-top: 1em; }
 
-        #p-logo { display: flex; flex-direction: column; align-items: center; width: 11em; margin-bottom: 1em; text-decoration: none; text-align: center; }
-        #p-logo-mark { width: 11em; height: 7.6em; background-position: center center; background-repeat: no-repeat; }
-        #p-logo-text { font-family: var(--heading-font); font-size: 1.4em; display: block; letter-spacing: 1px; color: #000; line-height: 1; margin-top: 0.1em; }
+        #p-logo { display: block; width: 11em; margin: 0 auto 1em auto; padding: 0 0.55em; text-decoration: none; text-align: center; }
+        #p-logo-img { display: block; width: 9.9em; max-width: 100%; height: auto; margin: 0 auto; }
 
         .portal { margin: 0 0.6em 0 0.7em; padding: 0.25em 0; direction: ltr; }
         .portal h3 { font-size: 0.9em; color: var(--muted-color); font-weight: normal; margin: 0.5em 0 0 0.66em; padding: 0.25em 0; cursor: default; border-bottom: 1px solid #c8ccd1; }
@@ -215,7 +214,6 @@
         body.theme-dark .vectorTabs li.selected button { color: var(--text-color); }
         body.theme-dark .header-icon-button,
         body.theme-dark .mobile-menu-close { background-color: #151b21; color: var(--text-color); border-color: var(--border-color); }
-        body.theme-dark #p-logo-text { color: var(--text-color); }
         body.theme-dark #mobile-panel-backdrop { background: rgba(0, 0, 0, 0.6); }
 
         #mw-head-base {
@@ -317,24 +315,16 @@
         #mobile-logo {
             display: inline-flex;
             align-items: center;
-            gap: 0.55em;
             color: inherit;
             text-decoration: none;
             min-width: 0;
         }
-        #mobile-logo-mark {
-            width: 2.25em;
-            height: 2.25em;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: 2em;
+        #mobile-logo-img {
+            display: block;
+            width: 8.2em;
+            max-width: 54vw;
+            height: auto;
             flex: 0 0 auto;
-        }
-        #mobile-logo-text {
-            font-family: var(--heading-font);
-            font-size: 1.25em;
-            letter-spacing: 0.04em;
-            line-height: 1;
         }
         #mobile-sidebar-content .portal {
             margin-left: 0.8em;
@@ -421,10 +411,7 @@ math[display=block], .katex-display{font-size:1.22em;}
 #search-page-results li{margin-bottom:.5em;}
 
 /* Metopedia logo assets */
-#p-logo-mark {
-    background-image: url('../metoblack-icon.svg');
-    background-size: 7.2em 7.2em;
-}
-#mobile-logo-mark {
-    background-image: url('../metoblack-icon.svg');
+body.theme-dark #p-logo-img,
+body.theme-dark #mobile-logo-img {
+    filter: invert(1);
 }
