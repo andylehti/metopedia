@@ -31,12 +31,20 @@
   }
   function renderMath(){
     if(!window.katex) return;
-    document.querySelectorAll('math').forEach(el => {
-      const tex = el.textContent || '';
-      const displayMode = el.getAttribute('display') === 'block';
-      const span = document.createElement(displayMode ? 'div' : 'span');
-      span.className = displayMode ? 'katex-display math-rendered' : 'math-rendered';
-      try{ window.katex.render(tex, span, { displayMode, throwOnError:false }); el.replaceWith(span); }catch(e){}
+    document.querySelectorAll('.tex-math, math').forEach(el => {
+      const tex = (el.getAttribute('data-tex') || el.textContent || '').trim();
+      if(!tex) return;
+      const displayMode = el.getAttribute('data-display') === 'block' || el.getAttribute('display') === 'block' || el.classList.contains('math-display-source');
+      const rendered = document.createElement(displayMode ? 'div' : 'span');
+      rendered.className = displayMode ? 'math-display math-rendered' : 'math-inline math-rendered';
+      try{
+        window.katex.render(tex, rendered, { displayMode, throwOnError:false, strict:false });
+        const parent = el.parentElement;
+        if(displayMode && parent && parent.tagName === 'P' && parent.textContent.trim() === el.textContent.trim()) parent.replaceWith(rendered);
+        else el.replaceWith(rendered);
+      }catch(e){
+        el.classList.add('math-failed');
+      }
     });
   }
   function setupSearch(){

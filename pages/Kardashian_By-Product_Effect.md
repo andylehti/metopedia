@@ -15,7 +15,5 @@ wiki_categories: ["Metopedia", "Research"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p>The <b>Kardashian By-Product Effect</b> is used in Metopedia as a model for describing patterns in which competence is resisted and mediocrity is elevated for defensive or status-protective reasons.</p>
 
-{% endraw %}

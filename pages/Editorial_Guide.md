@@ -15,7 +15,6 @@ wiki_categories: ["Metopedia", "Methodology"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p>Use direct prose. Prefer definitional openings, stable sectioning, and restrained claims. Articles should read like reference entries rather than promotional pages.</p>
 <h2 id="basic-article-pattern">Basic article pattern</h2>
 <ol>
@@ -33,4 +32,3 @@ last_modified: "2026-04-23"
 <li>prefer explicit uncertainty over vague certainty</li>
 </ul>
 
-{% endraw %}

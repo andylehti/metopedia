@@ -15,7 +15,5 @@ wiki_categories: ["Site Policies"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p>This page should document any cookies, local storage, preference storage, or third-party scripts used by Metopedia.</p>
 
-{% endraw %}

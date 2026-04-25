@@ -15,7 +15,5 @@ wiki_categories: ["Site Policies"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p>Metopedia uses a responsive layout. Narrow screens hide the desktop sidebar and make it available through the mobile menu.</p>
 
-{% endraw %}

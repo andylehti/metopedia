@@ -15,7 +15,6 @@ wiki_categories: ["Metopedia applications", "Reputation Flair", "Service terms"]
 last_modified: "2026-04-25"
 ---
 
-{% raw %}
 <div class="hatnote">This is an official service page for Reputation Flair. It is written in wiki form for readability, but it functions as service terms rather than an encyclopedia article.</div>
 <table class="infobox"><tr><th colspan="2" class="infobox-header">Reputation Flair/Terms</th></tr><tr><th class="infobox-label">Service</th><td><a href="/Metopedia/Reputation_Flair/">Reputation Flair</a></td></tr><tr><th class="infobox-label">Page type</th><td>Service terms</td></tr><tr><th class="infobox-label">Last updated</th><td>April 25, 2026</td></tr><tr><th class="infobox-label">Operator</th><td>Andrew Lehti and/or Metopedia</td></tr><tr><th class="infobox-label">Contact</th><td>policy@metopedia.com</td></tr><tr><th class="infobox-label">Source</th><td><a class="external" href="https://github.com/andylehti/reputation_flair/blob/main/rf-terms.md">GitHub</a></td></tr></table>
 <p>These <b>Reputation Flair Terms</b> govern use of the <a href="/Metopedia/Reputation_Flair/">Reputation Flair</a> Devvit application and related service features. By using or configuring the service, a user or moderator accepts these terms. Users who do not agree should not use the service.</p>
@@ -85,4 +84,3 @@ last_modified: "2026-04-25"
 <p>The repository copy of these terms is maintained at <a class="external" href="https://github.com/andylehti/reputation_flair/blob/main/rf-terms.md">rf-terms.md</a>. The application listing is maintained at <a class="external" href="https://developers.reddit.com/apps/reputation-flair">Reddit Developers</a>.</p>
 <div class="navbox-shell"><table class="navbox"><tr><th class="navbox-title" colspan="2"><a href="/Metopedia/Reputation_Flair/">Reputation Flair</a></th></tr><tr><th class="navbox-group">Article</th><td class="navbox-list"><a href="/Reputation_Flair/">Reputation Flair</a></td></tr><tr><th class="navbox-group">Application pages</th><td class="navbox-list"><a href="/Metopedia/Reputation_Flair/">Overview</a> • <a href="/Metopedia/Reputation_Flair/Terms/">Terms</a> • <a href="/Metopedia/Reputation_Flair/Privacy_Policy/">Privacy policy</a> • <a href="/Metopedia/Reputation_Flair/FAQ/">FAQ</a></td></tr><tr><th class="navbox-group">Related</th><td class="navbox-list"><a href="/Metopedia/Research/">Research</a> • <a href="/Privacy_Policy/">Metopedia privacy policy</a> • <a href="/Terms_of_Use/">Metopedia terms of use</a></td></tr></table></div>
 
-{% endraw %}

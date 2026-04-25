@@ -15,11 +15,9 @@ wiki_categories: ["Metopedia", "Research"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p><b>Cognitive Impasse</b> is a framework for describing how individuals or institutions can resist correction when established assumptions are challenged. In Metopedia, it is used to analyze defensive reasoning, dissonance management, and failures of revision across multiple domains.</p>
 <h2 id="general-outline">General outline</h2>
 <p>The framework treats rigidity not as a single event but as a sequence of reactions that can include dismissive signaling, discomfort in the face of contradiction, slowed reassessment, and the preservation of the original conclusion.</p>
 <h2 id="use-in-metopedia">Use in Metopedia</h2>
 <p>It functions both as a research subject and as an interpretive lens for studying cognitive bias, educational conditioning, institutional inertia, and the persistence of error.</p>
 
-{% endraw %}

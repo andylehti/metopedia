@@ -15,7 +15,5 @@ wiki_categories: ["Site Policies"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p>Metopedia is designed to minimize data collection. Any analytics, contact workflows, or embedded third-party services should be documented here if they are later added to the site.</p>
 
-{% endraw %}

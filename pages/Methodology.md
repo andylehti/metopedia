@@ -15,7 +15,6 @@ wiki_categories: ["Metopedia", "Methodology"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p>Metopedia uses an iterative research method that begins with independent modeling before later comparison with academic literature. The aim is to reduce anchoring effects, test assumptions directly, and preserve a clear separation between initial inference and later validation.</p>
 <h2 id="core-procedure">Core procedure</h2>
 <ol>
@@ -41,4 +40,3 @@ last_modified: "2026-04-23"
 <h2 id="context">Context</h2>
 <p>Within Metopedia, this method is used as a guard against premature closure. It assumes that error correction is central to inquiry and that being wrong, when recognized and revised, is part of the research process rather than a failure of it.</p>
 
-{% endraw %}

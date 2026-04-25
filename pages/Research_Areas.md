@@ -15,7 +15,6 @@ wiki_categories: ["Metopedia", "Research"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p>Metopedia is organized around recurring fields of inquiry rather than a single disciplinary lane.</p>
 <h2 id="cognitive-psychology-and-education">Cognitive psychology and education</h2>
 <p>This area examines cognitive rigidity, bias recognition, belief preservation, conformity, educational conditioning, and failures of revision.</p>
@@ -42,4 +41,3 @@ last_modified: "2026-04-23"
 <li><a href="/Metopedia/Reputation_Flair/">Reputation Flair application pages</a></li>
 </ul>
 
-{% endraw %}

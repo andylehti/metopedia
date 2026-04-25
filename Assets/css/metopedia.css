@@ -79,6 +79,34 @@
         .math-display { margin: 0.75em 0 0.9em 0; overflow-x: auto; text-align: center; }
         .math-display .katex-display { margin: 0.25em 0; }
         .math-display .katex { font-size: 1.22em; }
+
+/* TeX math placeholders render through KaTeX. Source uses spans/divs, not <math>, so escaped HTML can no longer leak into articles. */
+.tex-math {
+    font-family: var(--code-font);
+    white-space: nowrap;
+}
+.math-display-source,
+.math-display {
+    display: block;
+    text-align: center;
+    margin: 0.75em 0 0.9em 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+}
+.math-inline,
+.math-rendered {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+.wikitable .tex-math,
+.wikitable .math-rendered,
+.wikitable th,
+.wikitable td {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
         .mw-parser-output a.external { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="%230645ad" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg>') no-repeat right center; padding-right: 13px; }
 
         .wikitable { background-color: #f8f9fa; color: #202122; margin: 1em 0; border: 1px solid #a2a9b1; border-collapse: collapse; max-width: 100%; }
@@ -414,4 +442,14 @@ math[display=block], .katex-display{font-size:1.22em;}
 body.theme-dark #p-logo-img,
 body.theme-dark #mobile-logo-img {
     filter: invert(1);
+}
+
+/* MediaWiki template conversion helpers */
+.hatnote {
+    margin: 0.25em 0 0.85em 0;
+    color: var(--muted-color);
+    font-size: 92%;
+}
+.hatnote + p {
+    margin-top: 0.35em;
 }

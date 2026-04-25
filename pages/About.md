@@ -15,7 +15,6 @@ wiki_categories: ["Metopedia", "System Core"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p>Metopedia is a static reference site published at Metopedia.com. It uses a stable encyclopedia shell to render repository-backed page files while keeping the written content in ordinary folders that can be revised independently of the interface.</p>
 <h2 id="purpose">Purpose</h2>
 <p>The project is intended for interdisciplinary inquiry. Its recurring areas include cognitive psychology, educational conditioning, textual and linguistic analysis, mathematical and computational logic, and institutional or forensic inquiry.</p>
@@ -26,4 +25,3 @@ last_modified: "2026-04-23"
 <li>Categories, sitemap pages, search pages, and related special pages are generated dynamically from the site index.</li>
 </ul>
 
-{% endraw %}

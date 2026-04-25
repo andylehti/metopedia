@@ -15,7 +15,5 @@ wiki_categories: ["Metopedia", "Methodology"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
-<p>{{Main|Methodology}} The <b>Lehti-Feynman Method</b> is the shorthand name used in Metopedia for a form of extrapolative trial by error in which independent modeling precedes later comparison with academic literature.</p>
+<div class="hatnote"><i>Main article:</i> <a href="/Methodology/">Methodology</a></div><p>The <b>Lehti-Feynman Method</b> is the shorthand name used in Metopedia for a form of extrapolative trial by error in which independent modeling precedes later comparison with academic literature.</p>
 
-{% endraw %}

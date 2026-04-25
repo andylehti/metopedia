@@ -15,8 +15,7 @@ wiki_categories: ["Metopedia", "Main Pages"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
-<p>{{Main|Cognitive_Impasse}} The current featured page is <b><a href="/Cognitive_Impasse/">Cognitive Impasse</a></b>, an interdisciplinary framework used in Metopedia to examine mental rigidity, dissonance management, defensive reasoning, and the preservation of entrenched assumptions across multiple domains of inquiry.</p>
+<div class="hatnote"><i>Main article:</i> <a href="/Cognitive_Impasse/">Cognitive Impasse</a></div><p>The current featured page is <b><a href="/Cognitive_Impasse/">Cognitive Impasse</a></b>, an interdisciplinary framework used in Metopedia to examine mental rigidity, dissonance management, defensive reasoning, and the preservation of entrenched assumptions across multiple domains of inquiry.</p>
 <h2 id="why-it-is-featured">Why it is featured</h2>
 <ul>
 <li>It functions as both a subject of study and an interpretive tool.</li>
@@ -24,4 +23,3 @@ last_modified: "2026-04-23"
 <li>It connects psychological mechanisms to broader failures of correction in education, language, mathematics, and institutional analysis.</li>
 </ul>
 
-{% endraw %}

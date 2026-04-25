@@ -15,7 +15,5 @@ wiki_categories: ["Site Policies"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p>This page should describe editorial contact channels, correction requests, and repository or publication inquiries.</p>
 
-{% endraw %}

@@ -15,7 +15,6 @@ wiki_categories: ["Metopedia", "Research", "Metopedia projects", "Application do
 last_modified: "2026-04-25"
 ---
 
-{% raw %}
 <div class="hatnote">This is a Metopedia project-index page. It organizes research areas, applications, forensic methods, mathematical frameworks, and related documentation.</div>
 <p><b>Research</b> on Metopedia refers to the project space that gathers academic writing, applied tools, forensic methods, mathematical frameworks, cognitive models, and public application documentation. It is not limited to formal scholarship. It includes structured investigations, software systems, archived methods, policy pages, and explanatory material connected to Metopedia-associated work.</p>
 <h2 id="scope">Scope</h2>
@@ -36,4 +35,3 @@ last_modified: "2026-04-25"
 <h2 id="notes">Notes</h2>
 <p>Project pages may differ in editorial status. Encyclopedia articles describe a subject from a reference perspective, while application pages provide operational documentation, terms, privacy notices, frequently asked questions, and source links.</p>
 
-{% endraw %}

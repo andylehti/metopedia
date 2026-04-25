@@ -15,7 +15,6 @@ wiki_categories: ["Help", "Markup Showcase"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p>This page documents the supported markup subset in Metopedia.</p>
 <h2 id="headings">Headings</h2>
 <pre>= Level 1 =
@@ -48,4 +47,3 @@ Reuse only.<sup id=&quot;cite_ref-same_2&quot; class=&quot;reference&quot;><a hr
 <p>Use inline KaTeX-compatible math with <code>&amp;lt;math&amp;gt;&lt;/code>. Use display math for larger centered equations.</p>
 <div class="wikitable-wrap"><table class="wikitable"><tr><th>Source</th><th>Result</th></tr><tr><td><code>&amp;lt;math&amp;gt;x^{1/2}&amp;lt;/math&amp;gt;&lt;/code></td><td>inline math</td></tr><tr><td><code>&amp;lt;math display="block"&amp;gt;x^{m/n}=\sqrt[n]{x^m}&amp;lt;/math&amp;gt;&lt;/code></td><td>centered display math</td></tr></table></div>
 
-{% endraw %}

@@ -15,7 +15,5 @@ wiki_categories: ["Metopedia", "Research"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p><b>Standardized Obedience</b> is a framework used in Metopedia for discussing educational systems that prioritize compliance, routine, and institutional continuity over independent inquiry and adaptive reasoning.</p>
 
-{% endraw %}

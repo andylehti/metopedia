@@ -15,7 +15,5 @@ wiki_categories: ["Site Policies"]
 last_modified: "2026-04-23"
 ---
 
-{% raw %}
 <p>This page should define acceptable use, attribution expectations, and any limitations or disclaimers attached to the material published on Metopedia.</p>
 
-{% endraw %}
