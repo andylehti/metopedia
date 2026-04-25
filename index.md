@@ -15,7 +15,6 @@ wiki_categories: ["Metopedia", "Main Pages"]
 last_modified: "2026-04-25"
 ---
 
-{% raw %}
 <div class="wiki-col-container">
 <div class="wiki-col" style="flex:1.45;">
 <h2 class="wiki-panel-heading">Scope</h2>
@@ -55,5 +54,3 @@ last_modified: "2026-04-25"
 <li><a href="/Canonical_Law_of_Indices/">Canonical Law of Indices</a> — canonical index rules for powers, roots, and reciprocal roots.</li>
 <li><a href="/Argument_for_the_Removal_of_the_Radical_Symbol/">Argument for the removal of the radical symbol</a> — reasons for replacing radical notation with fractional exponents.</li>
 </ul>
-
-{% endraw %}
