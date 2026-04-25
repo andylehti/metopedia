@@ -1,4 +1,4 @@
-:root {
+        :root {
             --bg-color: #f6f6f6;
             --content-bg: #ffffff;
             --border-color: #a2a9b1;
@@ -409,17 +409,22 @@
             #mobile-panel { width: min(24rem, 92vw); }
         }
 
-/* Jekyll migration refinements */
+/* Jekyll output compatibility without changing the static Metopedia skin */
 .mw-parser-output::after{content:"";display:block;clear:both;}
 .infobox{max-width:100%;}
 .infobox th,.infobox td{overflow-wrap:anywhere;}
 .wikitable-wrap{clear:both;}
-.header-wordmark{font-family:var(--heading-font);font-size:1.5em;line-height:1;color:#000;text-decoration:none;white-space:nowrap;}
-body.theme-dark .header-wordmark{color:var(--text-color);}
 #firstHeading a{color:inherit;text-decoration:none;}
 .references{font-size:90%;}
 .reference a{white-space:nowrap;}
 math[display=block], .katex-display{font-size:1.22em;}
 #search-page-results li{margin-bottom:.5em;}
-@media (max-width:1080px){#mw-head-base{padding-bottom:.55em;}#left-navigation{order:2;}#right-navigation{order:1;}.header-wordmark{display:none;}#header-actions{flex:0 0 auto;}.header-icon-button{min-width:2.45em;height:2.45em;}#right-navigation{display:flex;align-items:center;gap:.55em;}.vectorTabs{width:100%;}.vectorTabs ul{width:100%;}.vectorTabs li{flex:1 1 auto;}.vectorTabs li a,.vectorTabs li button{width:100%;}}
-@media (max-width:640px){#right-navigation{flex-wrap:nowrap;}#header-actions{margin-left:0;}#p-search{min-width:0;flex:1 1 auto;order:0;}#simpleSearch{min-width:0;}#mobile-menu-toggle,#theme-toggle{flex:0 0 auto;}.header-icon-button{padding:0 .5em;}}
+
+/* Metopedia logo assets */
+#p-logo-mark {
+    background-image: url('../metoblack-icon.svg');
+    background-size: 7.2em 7.2em;
+}
+#mobile-logo-mark {
+    background-image: url('../metoblack-icon.svg');
+}
