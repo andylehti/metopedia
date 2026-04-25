@@ -1,526 +1,135 @@
-[
-  {
-    "slug": "About",
-    "title": "About Metopedia",
-    "description": "About the structure, editorial purpose, and repository-backed publication model of Metopedia.",
-    "keywords": "about Metopedia, editorial structure, static reference site, repository-backed publishing",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "System Core"
-    ],
-    "path": "./Articles/About.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "AI_Detection_Bias_and_False_Positives",
-    "title": "AI-Detection Bias and False Positives",
-    "description": "A 2026 comparative study of AI-detection tools, false positives, stylistic bias, detector disagreement, and academic-integrity risk.",
-    "keywords": "AI detection, AI detector false positives, AI detection bias, authorship detection, academic integrity, polish penalty, detector reliability",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Artificial intelligence",
-      "Education",
-      "Academic integrity",
-      "Authorship attribution",
-      "Cognitive psychology",
-      "Detector reliability"
-    ],
-    "path": "./Articles/AI_Detection_Bias_and_False_Positives.md",
-    "lastModified": "2026-04-25"
-  },
-  {
-    "slug": "Argument_for_the_Removal_of_the_Radical_Symbol",
-    "title": "Argument for the Removal of the Radical Symbol",
-    "description": "A canonical-mathematics argument that radical notation should be replaced by fractional exponents.",
-    "keywords": "radical symbol, fractional exponents, roots, square root, canonical order of operations, mathematical notation",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Mathematics",
-      "Mathematical notation",
-      "Radicals",
-      "Canonical mathematics",
-      "Mathematics education"
-    ],
-    "path": "./Articles/Argument_for_the_Removal_of_the_Radical_Symbol.md",
-    "lastModified": "2026-04-24"
-  },
-  {
-    "slug": "Canonical_Law_of_Indices",
-    "title": "Canonical Law of Indices",
-    "description": "A proposed formulation of index laws inside the Canonical Order of Operations.",
-    "keywords": "Canonical Law of Indices, index laws, exponent laws, canonical arithmetic, implicit unity, fractional exponents",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Mathematics",
-      "Mathematical notation",
-      "Order of operations",
-      "Canonical mathematics"
-    ],
-    "path": "./Articles/Canonical_Law_of_Indices.md",
-    "lastModified": "2026-04-24"
-  },
-  {
-    "slug": "Canonical_Order_of_Operations",
-    "title": "Canonical Order of Operations",
-    "description": "A proposed convention in arithmetic notation intended to make exponentiation, roots, negative signs, and implicit grouping more explicit.",
-    "keywords": "Canonical Order of Operations, order of operations, arithmetic notation, exponents, roots, radical symbol, mathematical convention",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Mathematics",
-      "Mathematical notation",
-      "Order of operations",
-      "Canonical mathematics",
-      "Proposed frameworks"
-    ],
-    "path": "./Articles/Canonical_Order_of_Operations.md",
-    "lastModified": "2026-04-24"
-  },
-  {
-    "slug": "Canonical_Order_of_Operations_Examples",
-    "title": "Canonical Order of Operations Examples",
-    "description": "Worked examples illustrating canonical rewrites of roots, exponents, signs, and grouping.",
-    "keywords": "Canonical Order of Operations examples, exponent examples, radical examples, implicit unity examples, mathematical notation",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Mathematics",
-      "Mathematics education",
-      "Order of operations",
-      "Canonical mathematics"
-    ],
-    "path": "./Articles/Canonical_Order_of_Operations_Examples.md",
-    "lastModified": "2026-04-24"
-  },
-  {
-    "slug": "Cognitive_Impasse",
-    "title": "Cognitive Impasse",
-    "description": "A framework in Metopedia describing defensive mental rigidity, dissonance management, and the preservation of entrenched assumptions.",
-    "keywords": "Cognitive Impasse, cognitive rigidity, cognitive dissonance, belief perseverance, defensive reasoning",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Research"
-    ],
-    "path": "./Articles/Cognitive_Impasse.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Contact",
-    "title": "Contact Metopedia",
-    "description": "Contact information and editorial contact guidance for Metopedia.",
-    "keywords": "contact Metopedia, editorial contact, reference project contact",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Site Policies"
-    ],
-    "path": "./Footer/Contact.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Cookies",
-    "title": "Cookie statement",
-    "description": "Cookie and client-side storage notes for Metopedia.",
-    "keywords": "cookie statement, cookies, client-side storage, Metopedia policy",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Site Policies"
-    ],
-    "path": "./Footer/Cookies.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Editorial_Guide",
-    "title": "Editorial guide",
-    "description": "Editorial standards for tone, structure, sourcing, and cross-linking in Metopedia.",
-    "keywords": "editorial guide, style guide, reference writing, sourcing standards, Metopedia editorial",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Methodology"
-    ],
-    "path": "./Articles/Editorial_Guide.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Featured_Page",
-    "title": "Featured page",
-    "description": "The featured entry in Metopedia, selected for broad methodological and conceptual importance across the project.",
-    "keywords": "Metopedia featured page, featured article, reference entry",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Main Pages"
-    ],
-    "path": "./Articles/Featured_Page.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Fractional_Exponents_and_Roots",
-    "title": "Fractional Exponents and Roots",
-    "description": "A page explaining the canonical treatment of roots as fractional exponents.",
-    "keywords": "fractional exponents, roots, radical symbol, square root, cube root, canonical arithmetic",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Mathematics",
-      "Mathematical notation",
-      "Radicals",
-      "Canonical mathematics"
-    ],
-    "path": "./Articles/Fractional_Exponents_and_Roots.md",
-    "lastModified": "2026-04-24"
-  },
-  {
-    "slug": "Help:Wiki_markup",
-    "title": "Help: Wiki markup",
-    "description": "A practical guide to the wiki markup supported by Metopedia.",
-    "keywords": "wiki markup help, Metopedia syntax, wiki formatting guide, help page",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Help",
-      "Markup Showcase"
-    ],
-    "path": "./Articles/Help/Wiki_markup.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Kardashian_By-Product_Effect",
-    "title": "Kardashian By-Product Effect",
-    "description": "A social-psychological framework describing the defense of mediocrity through the rejection of perceived competence.",
-    "keywords": "Kardashian By-Product Effect, mediocrity, social psychology, competence aversion, status defense",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Research"
-    ],
-    "path": "./Articles/Kardashian_By-Product_Effect.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Law_of_Implicit_Unity",
-    "title": "Law of Implicit Unity",
-    "description": "A rule in the Canonical Order of Operations stating that a term carries an implicit first power.",
-    "keywords": "Law of Implicit Unity, implicit exponent, exponentiation, canonical arithmetic, order of operations",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Mathematics",
-      "Mathematical notation",
-      "Order of operations",
-      "Canonical mathematics"
-    ],
-    "path": "./Articles/Law_of_Implicit_Unity.md",
-    "lastModified": "2026-04-24"
-  },
-  {
-    "slug": "Lehti-Feynman_Method",
-    "title": "Lehti-Feynman Method",
-    "description": "A recursive research method centered on independent modeling, later validation, and deliberate reassessment of bias and assumptions.",
-    "keywords": "Lehti-Feynman Method, extrapolative trial by error, research method, iterative refinement, bias reassessment",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Methodology"
-    ],
-    "path": "./Articles/Lehti-Feynman_Method.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Methodology",
-    "title": "Methodology",
-    "description": "Methodological principles used in Metopedia, including independent modeling, staged reassessment, and later comparison with academic literature.",
-    "keywords": "methodology, extrapolative trial by error, Lehti-Feynman Method, research method, bias reassessment, independent modeling",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Methodology"
-    ],
-    "path": "./Articles/Methodology.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Main_Page",
-    "title": "Metopedia",
-    "description": "Metopedia is an interdisciplinary reference project examining cognitive rigidity, textual study, mathematical logic, and institutional analysis.",
-    "keywords": "Metopedia, interdisciplinary reference, cognitive rigidity, cognitive bias, textual criticism, mathematical logic, institutional analysis",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Main Pages"
-    ],
-    "path": "./Articles/Main_Page.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Metopedia:Applications",
-    "title": "Metopedia applications",
-    "description": "Application documentation for projects operated under or associated with Metopedia.",
-    "keywords": "Metopedia applications, application documentation, policy pages",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia applications",
-      "Application documentation"
-    ],
-    "path": "./Services/index.md",
-    "lastModified": "2026-04-25"
-  },
-  {
-    "slug": "Metopedia:Services",
-    "title": "Metopedia applications",
-    "description": "Legacy route for the Metopedia applications index.",
-    "keywords": "Metopedia applications, application documentation, policy pages",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia applications",
-      "Application documentation"
-    ],
-    "path": "./Services/index.md",
-    "lastModified": "2026-04-25"
-  },
-  {
-    "slug": "Misconceptions_on_Mathematical_Operations",
-    "title": "Misconceptions on Mathematical Operations",
-    "description": "A reference page listing common misconceptions about multiplication, exponentiation, roots, signs, and grouping in the Canonical Order framework.",
-    "keywords": "mathematical misconceptions, order of operations, exponentiation, roots, negative signs, canonical arithmetic",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Mathematics",
-      "Mathematics education",
-      "Order of operations",
-      "Canonical mathematics"
-    ],
-    "path": "./Articles/Misconceptions_on_Mathematical_Operations.md",
-    "lastModified": "2026-04-24"
-  },
-  {
-    "slug": "Mobile",
-    "title": "Mobile view",
-    "description": "Notes on the responsive mobile view and navigation behavior in Metopedia.",
-    "keywords": "mobile view, responsive design, Metopedia mobile navigation",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Site Policies"
-    ],
-    "path": "./Footer/Mobile.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Negative_Bases_and_Exponentiation",
-    "title": "Negative Bases and Exponentiation",
-    "description": "A canonical-mathematics page on signs, bases, and powers in expressions containing negative quantities.",
-    "keywords": "negative bases, exponentiation, unary minus, order of operations, canonical order of operations",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Mathematics",
-      "Mathematical notation",
-      "Order of operations",
-      "Canonical mathematics"
-    ],
-    "path": "./Articles/Negative_Bases_and_Exponentiation.md",
-    "lastModified": "2026-04-24"
-  },
-  {
-    "slug": "Privacy_Policy",
-    "title": "Privacy policy",
-    "description": "Privacy and data-handling information for Metopedia.",
-    "keywords": "privacy policy, data handling, Metopedia privacy",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Site Policies"
-    ],
-    "path": "./Footer/Privacy_Policy.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Metopedia:Reputation_Flair",
-    "title": "Reputation Flair",
-    "description": "A Metopedia service page for Reputation Flair, a Reddit Devvit application for reputation scoring, flair, moderation assistance, transparency dashboards, and optional human verification.",
-    "keywords": "Reputation Flair, Metopedia service, Reddit Devvit, subreddit moderation, human verification, bot shield, reputation scoring",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia applications",
-      "Reputation Flair",
-      "Reddit Devvit applications",
-      "Application documentation"
-    ],
-    "path": "./Services/Reputation_Flair.md",
-    "lastModified": "2026-04-25"
-  },
-  {
-    "slug": "Reputation_Flair",
-    "title": "Reputation Flair",
-    "description": "A Reddit Devvit application associated with Metopedia for subreddit reputation scoring, flair generation, moderation assistance, transparency dashboards, and optional human verification.",
-    "keywords": "Reputation Flair, Reddit Devvit, subreddit moderation, user flair, reputation scoring, Bot Shield, human verification, Metopedia applications",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Reputation Flair",
-      "Reddit Devvit applications",
-      "Moderation tools",
-      "Metopedia applications",
-      "Human verification"
-    ],
-    "path": "./Articles/Reputation_Flair.md",
-    "lastModified": "2026-04-25"
-  },
-  {
-    "slug": "Metopedia:Reputation_Flair/FAQ",
-    "title": "Reputation Flair/FAQ",
-    "description": "Frequently asked questions for the Reputation Flair Metopedia service and Reddit Devvit application.",
-    "keywords": "Reputation Flair FAQ, reputation scoring, flair, Reddit Devvit, Bot Shield, human verification, moderation app",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia applications",
-      "Reputation Flair",
-      "Frequently asked questions",
-      "Application documentation"
-    ],
-    "path": "./Services/Reputation_Flair_FAQ.md",
-    "lastModified": "2026-04-25"
-  },
-  {
-    "slug": "Metopedia:Reputation_Flair/Privacy_Policy",
-    "title": "Reputation Flair/Privacy Policy",
-    "description": "Privacy policy for the Reputation Flair Metopedia service and Reddit Devvit application.",
-    "keywords": "Reputation Flair privacy policy, Metopedia service privacy, Reddit Devvit app privacy, moderation app data",
-    "author": "Metopedia Policy",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia applications",
-      "Reputation Flair",
-      "Privacy policies",
-      "Application documentation"
-    ],
-    "path": "./Services/Reputation_Flair_Privacy_Policy.md",
-    "lastModified": "2026-04-25"
-  },
-  {
-    "slug": "Metopedia:Reputation_Flair/Terms",
-    "title": "Reputation Flair/Terms",
-    "description": "Terms governing use of the Reputation Flair Metopedia service and Reddit Devvit application.",
-    "keywords": "Reputation Flair terms, Metopedia service terms, Reddit Devvit app terms, moderation app terms",
-    "author": "Metopedia Policy",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia applications",
-      "Reputation Flair",
-      "Service terms"
-    ],
-    "path": "./Services/Reputation_Flair_Terms.md",
-    "lastModified": "2026-04-25"
-  },
-  {
-    "slug": "Research_Areas",
-    "title": "Research areas",
-    "description": "The principal fields of inquiry represented in Metopedia, including cognitive psychology, textual studies, mathematical logic, and institutional analysis.",
-    "keywords": "research areas, cognitive psychology, textual studies, philology, mathematical logic, institutional analysis",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Research"
-    ],
-    "path": "./Articles/Research_Areas.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Standard_Order_of_Operations",
-    "title": "Standard Order of Operations",
-    "description": "A reference page on the conventional order of operations and its comparison with the Canonical Order of Operations.",
-    "keywords": "Standard Order of Operations, PEMDAS, BODMAS, arithmetic precedence, Canonical Order of Operations",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Mathematics",
-      "Mathematics education",
-      "Order of operations",
-      "Mathematical notation"
-    ],
-    "path": "./Articles/Standard_Order_of_Operations.md",
-    "lastModified": "2026-04-24"
-  },
-  {
-    "slug": "Standardized_Obedience",
-    "title": "Standardized Obedience",
-    "description": "A framework describing conformity-driven educational conditioning and its role in preserving intellectual inertia.",
-    "keywords": "Standardized Obedience, educational conditioning, conformity, intellectual inertia, critical thinking",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow,max-image-preview:large",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Metopedia",
-      "Research"
-    ],
-    "path": "./Articles/Standardized_Obedience.md",
-    "lastModified": "2026-04-23"
-  },
-  {
-    "slug": "Terms_of_Use",
-    "title": "Terms of Use",
-    "description": "Terms governing access to and use of Metopedia.",
-    "keywords": "terms of use, Metopedia terms, site policy",
-    "author": "Metopedia Editorial",
-    "robots": "index,follow",
-    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
-    "categories": [
-      "Site Policies"
-    ],
-    "path": "./Footer/Terms_of_Use.md",
-    "lastModified": "2026-04-23"
-  }
-]
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://metopedia.com/#/About</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/AI_Detection_Bias_and_False_Positives</loc>
+    <lastmod>2026-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Argument_for_the_Removal_of_the_Radical_Symbol</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Canonical_Law_of_Indices</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Canonical_Order_of_Operations</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Canonical_Order_of_Operations_Examples</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Cognitive_Impasse</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Contact</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Cookies</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Editorial_Guide</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Featured_Page</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Fractional_Exponents_and_Roots</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Help:Wiki_markup</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Kardashian_By-Product_Effect</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Law_of_Implicit_Unity</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Lehti-Feynman_Method</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Methodology</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Main_Page</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Metopedia:Applications</loc>
+    <lastmod>2026-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Metopedia:Services</loc>
+    <lastmod>2026-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Misconceptions_on_Mathematical_Operations</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Mobile</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Negative_Bases_and_Exponentiation</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Privacy_Policy</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Metopedia:Reputation_Flair</loc>
+    <lastmod>2026-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Reputation_Flair</loc>
+    <lastmod>2026-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Metopedia:Reputation_Flair/FAQ</loc>
+    <lastmod>2026-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Metopedia:Reputation_Flair/Privacy_Policy</loc>
+    <lastmod>2026-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Metopedia:Reputation_Flair/Terms</loc>
+    <lastmod>2026-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Research_Areas</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Standard_Order_of_Operations</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Standardized_Obedience</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
+    <loc>https://metopedia.com/#/Terms_of_Use</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+</urlset>

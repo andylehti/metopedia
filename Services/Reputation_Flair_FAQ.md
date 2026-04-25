@@ -359,14 +359,14 @@ The repository copy of this FAQ is maintained at [https://github.com/andylehti/r
 ! class="navbox-group" | Article
 | class="navbox-list" | [[Reputation_Flair|Reputation Flair]]
 |-
-! class="navbox-group" | Service pages
+! class="navbox-group" | Application pages
 | class="navbox-list" | [[Metopedia:Reputation_Flair|Overview]] • [[Metopedia:Reputation_Flair/Terms|Terms]] • [[Metopedia:Reputation_Flair/Privacy_Policy|Privacy policy]] • [[Metopedia:Reputation_Flair/FAQ|FAQ]]
 |-
 ! class="navbox-group" | Related
-| class="navbox-list" | [[Metopedia:Services|Metopedia services]] • [[Privacy_Policy|Metopedia privacy policy]] • [[Terms_of_Use|Metopedia terms of use]]
+| class="navbox-list" | [[Metopedia:Applications|Metopedia applications]] • [[Privacy_Policy|Metopedia privacy policy]] • [[Terms_of_Use|Metopedia terms of use]]
 |}
 
-[[Category:Metopedia services]]
+[[Category:Metopedia applications]]
 [[Category:Reputation Flair]]
 [[Category:Frequently asked questions]]
-[[Category:Service documentation]]
+[[Category:Application documentation]]

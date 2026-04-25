@@ -22,6 +22,8 @@ This area includes formal structure, notation, symbolic convention, order of ope
 == Institutional and forensic inquiry ==
 This area addresses how institutions frame, preserve, defend, and sometimes insulate official narratives, with attention to records, methods, and evidentiary standards.
 
+* [[AI_Detection_Bias_and_False_Positives|AI-detection bias and false positives]] — detector reliability, false positives, writing-style bias, and academic-integrity risk.
+
 [[Category:Metopedia]]
 [[Category:Research]]
 
@@ -32,8 +34,8 @@ Canonical mathematics pages examine arithmetic notation, inherited order-of-oper
 * [[Canonical_Law_of_Indices|Canonical Law of Indices]]
 * [[Misconceptions_on_Mathematical_Operations|Misconceptions on mathematical operations]]
 
-== Applied systems and services ==
-Applied systems pages document software and service projects associated with Metopedia.
+== Applied systems and applications ==
+Applied systems pages document software and application projects associated with Metopedia.
 
 * [[Reputation_Flair|Reputation Flair]] — Reddit Devvit application for subreddit reputation scoring, flair, dashboards, moderation assistance, and optional human verification.
-* [[Metopedia:Reputation_Flair|Reputation Flair service pages]]
+* [[Metopedia:Reputation_Flair|Reputation Flair application pages]]

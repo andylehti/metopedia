@@ -15,6 +15,25 @@
     "lastModified": "2026-04-23"
   },
   {
+    "slug": "AI_Detection_Bias_and_False_Positives",
+    "title": "AI-Detection Bias and False Positives",
+    "description": "A 2026 comparative study of AI-detection tools, false positives, stylistic bias, detector disagreement, and academic-integrity risk.",
+    "keywords": "AI detection, AI detector false positives, AI detection bias, authorship detection, academic integrity, polish penalty, detector reliability",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Artificial intelligence",
+      "Education",
+      "Academic integrity",
+      "Authorship attribution",
+      "Cognitive psychology",
+      "Detector reliability"
+    ],
+    "path": "./Articles/AI_Detection_Bias_and_False_Positives.md",
+    "lastModified": "2026-04-25"
+  },
+  {
     "slug": "Argument_for_the_Removal_of_the_Radical_Symbol",
     "title": "Argument for the Removal of the Radical Symbol",
     "description": "A canonical-mathematics argument that radical notation should be replaced by fractional exponents.",
@@ -264,19 +283,34 @@
       "Main Pages"
     ],
     "path": "./Articles/Main_Page.md",
-    "lastModified": "2026-04-23"
+    "lastModified": "2026-04-25"
   },
   {
-    "slug": "Metopedia:Services",
+    "slug": "Metopedia:Applications",
     "title": "Metopedia services",
     "description": "Service and application documentation for projects operated under or associated with Metopedia.",
-    "keywords": "Metopedia services, applications, service documentation, policy pages",
+    "keywords": "Metopedia services, Metopedia applications, application documentation, policy pages",
     "author": "Metopedia Editorial",
     "robots": "index,follow,max-image-preview:large",
     "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
-      "Metopedia services",
-      "Service documentation"
+      "Metopedia applications",
+      "Application documentation"
+    ],
+    "path": "./Services/index.md",
+    "lastModified": "2026-04-25"
+  },
+  {
+    "slug": "Metopedia:Services",
+    "title": "Metopedia services",
+    "description": "Legacy route for the Metopedia services index.",
+    "keywords": "Metopedia services, Metopedia applications, application documentation, policy pages",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia applications",
+      "Application documentation"
     ],
     "path": "./Services/index.md",
     "lastModified": "2026-04-25"
@@ -352,10 +386,10 @@
     "robots": "index,follow,max-image-preview:large",
     "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
-      "Metopedia services",
+      "Metopedia applications",
       "Reputation Flair",
       "Reddit Devvit applications",
-      "Service documentation"
+      "Application documentation"
     ],
     "path": "./Services/Reputation_Flair.md",
     "lastModified": "2026-04-25"
@@ -364,7 +398,7 @@
     "slug": "Reputation_Flair",
     "title": "Reputation Flair",
     "description": "A Reddit Devvit application associated with Metopedia for subreddit reputation scoring, flair generation, moderation assistance, transparency dashboards, and optional human verification.",
-    "keywords": "Reputation Flair, Reddit Devvit, subreddit moderation, user flair, reputation scoring, Bot Shield, human verification, Metopedia services",
+    "keywords": "Reputation Flair, Reddit Devvit, subreddit moderation, user flair, reputation scoring, Bot Shield, human verification, Metopedia applications",
     "author": "Metopedia Editorial",
     "robots": "index,follow,max-image-preview:large",
     "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
@@ -372,7 +406,7 @@
       "Reputation Flair",
       "Reddit Devvit applications",
       "Moderation tools",
-      "Metopedia services",
+      "Metopedia applications",
       "Human verification"
     ],
     "path": "./Articles/Reputation_Flair.md",
@@ -387,10 +421,10 @@
     "robots": "index,follow,max-image-preview:large",
     "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
-      "Metopedia services",
+      "Metopedia applications",
       "Reputation Flair",
       "Frequently asked questions",
-      "Service documentation"
+      "Application documentation"
     ],
     "path": "./Services/Reputation_Flair_FAQ.md",
     "lastModified": "2026-04-25"
@@ -404,10 +438,10 @@
     "robots": "index,follow,max-image-preview:large",
     "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
-      "Metopedia services",
+      "Metopedia applications",
       "Reputation Flair",
       "Privacy policies",
-      "Service documentation"
+      "Application documentation"
     ],
     "path": "./Services/Reputation_Flair_Privacy_Policy.md",
     "lastModified": "2026-04-25"
@@ -421,7 +455,7 @@
     "robots": "index,follow,max-image-preview:large",
     "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
     "categories": [
-      "Metopedia services",
+      "Metopedia applications",
       "Reputation Flair",
       "Service terms"
     ],

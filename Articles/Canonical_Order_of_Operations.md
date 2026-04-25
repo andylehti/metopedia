@@ -11,16 +11,11 @@ ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 {{Infobox
 | title = Canonical Order of Operations
 | subheader = Proposed convention in arithmetic notation
-| label1 = Abbreviation
-| data1 = COO
-| label2 = Contrasted with
-| data2 = [[Standard_Order_of_Operations|Standard Order of Operations]] (SOO)
-| label3 = Central topics
-| data3 = [[Canonical_Law_of_Indices|indices]], [[Law_of_Implicit_Unity|implicit unity]], [[Fractional_Exponents_and_Roots|fractional exponents]], [[Negative_Bases_and_Exponentiation|negative bases]]
-| label4 = Associated manuscript
-| data4 = ''The Canonical Order of Operations'', first edition
-| label5 = Author
-| data5 = Andrew Lehti
+| Abbreviation = COO
+| Contrasted with = [[Standard_Order_of_Operations|Standard Order of Operations]] (SOO)
+| Central topics = [[Canonical_Law_of_Indices|indices]], [[Law_of_Implicit_Unity|implicit unity]], [[Fractional_Exponents_and_Roots|fractional exponents]], [[Negative_Bases_and_Exponentiation|negative bases]]
+| Associated manuscript = ''The Canonical Order of Operations'', first edition
+| Author = Andrew Lehti
 }}
 
 '''Canonical Order of Operations''' ('''COO''') is a proposed convention for writing and evaluating arithmetic expressions. It is presented as an alternative to the inherited [[Standard_Order_of_Operations|Standard Order of Operations]] (SOO), not as a change to arithmetic itself. The proposal argues that several common ambiguities in elementary notation arise from the way signs, powers, roots, and implicit grouping are written rather than from the underlying quantities.

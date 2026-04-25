@@ -1,13 +1,13 @@
 ---
 title: "Reputation Flair"
 description: "Reputation Flair is a Reddit Devvit application associated with Metopedia for subreddit reputation scoring, flair generation, moderation assistance, transparency dashboards, and optional human verification."
-keywords: "Reputation Flair, Reddit Devvit, subreddit moderation, user flair, reputation scoring, Bot Shield, human verification, Metopedia services"
+keywords: "Reputation Flair, Reddit Devvit, subreddit moderation, user flair, reputation scoring, Bot Shield, human verification, Metopedia applications"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
 ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|Reddit Devvit application for subreddit reputation scoring, flair, dashboards, moderation assistance, and optional human verification.}}
-<div class="hatnote">This article is about the Reddit Devvit application. For official service documentation, see [[Metopedia:Reputation_Flair|Metopedia:Reputation Flair]].</div>
+<div class="hatnote">This article is about the Reddit Devvit application. For official application documentation, see [[Metopedia:Reputation_Flair|Metopedia:Reputation Flair]].</div>
 {{Infobox
 | title = Reputation Flair
 | Other names = RF; Reputation Flair System; Bot Shield; Human Verification Module; Reputation Portal
@@ -20,10 +20,10 @@ ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 | License = BSD-3-Clause
 | App listing = [https://developers.reddit.com/apps/reputation-flair Reddit Developers]
 | Repository = [https://github.com/andylehti/reputation_flair GitHub]
-| Service pages = [[Metopedia:Reputation_Flair|Overview]] · [[Metopedia:Reputation_Flair/Terms|Terms]] · [[Metopedia:Reputation_Flair/Privacy_Policy|Privacy policy]] · [[Metopedia:Reputation_Flair/FAQ|FAQ]]
+| Application pages = [[Metopedia:Reputation_Flair|Overview]] · [[Metopedia:Reputation_Flair/Terms|Terms]] · [[Metopedia:Reputation_Flair/Privacy_Policy|Privacy policy]] · [[Metopedia:Reputation_Flair/FAQ|FAQ]]
 }}
 
-'''Reputation Flair''' is a Reddit Devvit application associated with Metopedia. It is designed for subreddit-level reputation scoring, user flair generation, moderation assistance, transparency dashboards, and optional human verification. The application is published under the name <code>reputation-flair</code> and is documented through both Metopedia service pages and the project repository.<ref name="devapp">[https://developers.reddit.com/apps/reputation-flair Reputation Flair app listing], Reddit Developers.</ref><ref name="readme">[https://github.com/andylehti/reputation_flair/blob/main/README.md Reputation Flair README], GitHub.</ref>
+'''Reputation Flair''' is a Reddit Devvit application associated with Metopedia. It is designed for subreddit-level reputation scoring, user flair generation, moderation assistance, transparency dashboards, and optional human verification. The application is published under the name <code>reputation-flair</code> and is documented through both Metopedia application pages and the project repository.<ref name="devapp">[https://developers.reddit.com/apps/reputation-flair Reputation Flair app listing], Reddit Developers.</ref><ref name="readme">[https://github.com/andylehti/reputation_flair/blob/main/README.md Reputation Flair README], GitHub.</ref>
 
 The application measures contribution patterns inside a subreddit rather than across Reddit as a whole. Its output may include good and bad reputation points, contribution counts, broad discourse-category counters, a reputation percentage, a warning count, subreddit activity totals, verification state, and a compact flair string. Its official terms describe these values as subreddit-specific operational signals rather than official Reddit account status, legal findings, background-check data, or proof of a user's character, identity, or intent.<ref name="terms">[https://github.com/andylehti/reputation_flair/blob/main/rf-terms.md Reputation Flair terms], GitHub.</ref>
 
@@ -33,7 +33,7 @@ Reputation Flair belongs to a class of moderation-assistance tools that use auto
 The system is not intended to replace human moderation. Its terms describe review and removal behavior as assistance for moderators, with moderators remaining responsible for enforcing subreddit and Reddit rules.<ref name="terms" />
 
 == Name and scope ==
-The service documentation treats several names as referring to the same underlying system, including '''Reputation Flair''', '''RF''', '''Reputation Flair System''', '''RFS''', '''Bot Shield''', '''Human Verification Module''', '''Subreddit Stats by Reputation Flair''', and the '''Reputation Portal'''.<ref name="terms" /> In common use, ''Reputation Flair'' refers to the whole Devvit app, while ''Bot Shield'' usually refers to its optional human-verification component.
+The application documentation treats several names as referring to the same underlying system, including '''Reputation Flair''', '''RF''', '''Reputation Flair System''', '''RFS''', '''Bot Shield''', '''Human Verification Module''', '''Subreddit Stats by Reputation Flair''', and the '''Reputation Portal'''.<ref name="terms" /> In common use, ''Reputation Flair'' refers to the whole Devvit app, while ''Bot Shield'' usually refers to its optional human-verification component.
 
 The system is subreddit-scoped. A user's records, flair, verification state, dashboard presence, and moderation outcomes may differ from one subreddit to another because each subreddit can use different settings.
 
@@ -139,8 +139,8 @@ Reputation Flair's scores are approximate operational signals. They can change a
 
 The application is also platform-dependent. It operates through Reddit, Devvit, Reddit APIs, Devvit permissions, and Redis runtime storage. Its behavior may be affected by Reddit platform changes, permission limits, app review status, deleted content, moderator actions, or technical failures.
 
-== Service documentation ==
-Metopedia separates the neutral article about the application from official service pages. The service pages are operational documents rather than encyclopedia entries.
+== Application documentation ==
+Metopedia separates the neutral article about the application from official application pages. The application pages are operational documents rather than encyclopedia entries.
 
 * [[Metopedia:Reputation_Flair|Service overview]]
 * [[Metopedia:Reputation_Flair/Terms|Terms]]
@@ -165,15 +165,15 @@ Metopedia separates the neutral article about the application from official serv
 ! class="navbox-group" | Article
 | class="navbox-list" | [[Reputation_Flair|Reputation Flair]]
 |-
-! class="navbox-group" | Service pages
+! class="navbox-group" | Application pages
 | class="navbox-list" | [[Metopedia:Reputation_Flair|Service overview]] • [[Metopedia:Reputation_Flair/Terms|Terms]] • [[Metopedia:Reputation_Flair/Privacy_Policy|Privacy policy]] • [[Metopedia:Reputation_Flair/FAQ|FAQ]]
 |-
 ! class="navbox-group" | Related
-| class="navbox-list" | [[Metopedia:Services|Metopedia services]] • [[Cognitive_Impasse|Cognitive Impasse]] • [[Methodology|Methodology]]
+| class="navbox-list" | [[Metopedia:Applications|Metopedia applications]] • [[Cognitive_Impasse|Cognitive Impasse]] • [[Methodology|Methodology]]
 |}
 
 [[Category:Reputation Flair]]
 [[Category:Reddit Devvit applications]]
 [[Category:Moderation tools]]
-[[Category:Metopedia services]]
+[[Category:Metopedia applications]]
 [[Category:Human verification]]

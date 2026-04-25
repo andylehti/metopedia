@@ -31,6 +31,16 @@
       "link": "Editorial_Guide"
     }
   ],
+  "Projects": [
+    {
+      "label": "Metopedia services",
+      "link": "Metopedia:Applications"
+    },
+    {
+      "label": "Reputation Flair",
+      "link": "Reputation_Flair"
+    }
+  ],
   "Tools": [
     {
       "label": "Sitemap",
@@ -55,32 +65,6 @@
     {
       "label": "Printable version",
       "link": "javascript:window.print()"
-    }
-  ],
-  "Services": [
-    {
-      "label": "Metopedia services",
-      "link": "Metopedia:Services"
-    },
-    {
-      "label": "RF article",
-      "link": "Reputation_Flair"
-    },
-    {
-      "label": "Reputation Flair",
-      "link": "Metopedia:Reputation_Flair"
-    },
-    {
-      "label": "RF terms",
-      "link": "Metopedia:Reputation_Flair/Terms"
-    },
-    {
-      "label": "RF privacy",
-      "link": "Metopedia:Reputation_Flair/Privacy_Policy"
-    },
-    {
-      "label": "RF FAQ",
-      "link": "Metopedia:Reputation_Flair/FAQ"
     }
   ]
 }

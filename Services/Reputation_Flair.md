@@ -7,11 +7,11 @@ robots: "index,follow,max-image-preview:large"
 ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 ---
 {{short description|A Metopedia service page for the Reputation Flair Reddit Devvit application.}}
-<div class="hatnote">This page is service documentation for a Metopedia-associated application. It is not a general encyclopedia article.</div>
+<div class="hatnote">This page is application documentation for a Metopedia-associated application. It is not a general encyclopedia article.</div>
 {{Infobox
 | title = Reputation Flair
 | Type = Reddit Devvit application
-| Service family = Metopedia services
+| Application family = Metopedia applications
 | Platform = Reddit and Devvit
 | Operator = Andrew Lehti and/or Metopedia
 | Main functions = reputation scoring, user flair, moderation assistance, transparency dashboards, optional human verification
@@ -81,14 +81,14 @@ Reputation Flair reads post and comment text to score discourse and decide wheth
 ! class="navbox-group" | Article
 | class="navbox-list" | [[Reputation_Flair|Reputation Flair]]
 |-
-! class="navbox-group" | Service pages
+! class="navbox-group" | Application pages
 | class="navbox-list" | [[Metopedia:Reputation_Flair|Overview]] • [[Metopedia:Reputation_Flair/Terms|Terms]] • [[Metopedia:Reputation_Flair/Privacy_Policy|Privacy policy]] • [[Metopedia:Reputation_Flair/FAQ|FAQ]]
 |-
 ! class="navbox-group" | Related
-| class="navbox-list" | [[Metopedia:Services|Metopedia services]] • [[Privacy_Policy|Metopedia privacy policy]] • [[Terms_of_Use|Metopedia terms of use]]
+| class="navbox-list" | [[Metopedia:Applications|Metopedia applications]] • [[Privacy_Policy|Metopedia privacy policy]] • [[Terms_of_Use|Metopedia terms of use]]
 |}
 
-[[Category:Metopedia services]]
+[[Category:Metopedia applications]]
 [[Category:Reputation Flair]]
 [[Category:Reddit Devvit applications]]
-[[Category:Service documentation]]
+[[Category:Application documentation]]

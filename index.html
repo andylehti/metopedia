@@ -40,14 +40,14 @@
 
         * { box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { margin: 0; padding: 0; font-family: var(--body-font); font-size: 0.875em; line-height: 1.6; background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; overflow-y: scroll; }
+        body { margin: 0; padding: 0; font-family: var(--body-font); font-size: 14px; line-height: 1.6; background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; overflow-y: scroll; }
         a { color: var(--link-color); text-decoration: none; }
         a:hover { text-decoration: underline; }
         a.redlink { color: var(--redlink-color); }
         img { max-width: 100%; height: auto; }
 
         #mw-page-base { height: 5em; background-position: bottom left; background-repeat: repeat-x; background-image: linear-gradient(to bottom, #ffffff 50%, #f6f6f6 100%); }
-        #mw-head-base { margin-top: -5em; margin-left: 11em; height: 5em; }
+        #mw-head-base { margin-top: -5em; margin-left: 11em; height: 5em; position: relative; z-index: 5; overflow: visible; }
         #mw-head-base::after { content: ''; display: block; clear: both; }
         #content { margin-left: 11em; padding: 1.25em 1.5em 1.5em 1.5em; background-color: var(--content-bg); border: 1px solid var(--border-color); border-right-width: 0; border-top-width: 0; min-height: 100vh; position: relative; z-index: 2; overflow-wrap: anywhere; }
         #bodyContent { min-width: 0; }
@@ -58,9 +58,9 @@
         #p-logo-text { font-family: var(--heading-font); font-size: 1.4em; display: block; letter-spacing: 1px; color: #000; line-height: 1; margin-top: 0.1em; }
 
         .portal { margin: 0 0.6em 0 0.7em; padding: 0.25em 0; direction: ltr; }
-        .portal h3 { font-size: 0.75em; color: var(--muted-color); font-weight: normal; margin: 0.5em 0 0 0.66em; padding: 0.25em 0; cursor: default; border-bottom: 1px solid #c8ccd1; }
+        .portal h3 { font-size: 0.9em; color: var(--muted-color); font-weight: normal; margin: 0.5em 0 0 0.66em; padding: 0.25em 0; cursor: default; border-bottom: 1px solid #c8ccd1; }
         .portal ul { list-style: none; margin: 0; padding: 0.3em 0 0 0; }
-        .portal li { margin: 0; padding: 0.25em 0; font-size: 0.75em; line-height: 1.125em; }
+        .portal li { margin: 0; padding: 0.22em 0; font-size: 0.88em; line-height: 1.32em; }
         .portal li a, .portal li button { color: var(--link-color); text-decoration: none; background: none; border: none; padding: 0; font: inherit; cursor: pointer; text-align: left; }
         .portal li a:hover, .portal li button:hover { text-decoration: underline; }
 
@@ -161,6 +161,20 @@
         .catlinks ul { display: inline; list-style: none !important; margin: 0 !important; padding: 0 !important; }
         .catlinks li { display: inline-block; border-left: 1px solid #a2a9b1; padding: 0 0.5em; margin: 0; list-style-image: none !important; }
         .catlinks li:first-child { border-left: none; }
+
+        .wiki-col-container { display: flex; gap: 1em; align-items: stretch; margin: 1em 0; clear: both; }
+        .wiki-col { flex: 1 1 0; min-width: 0; border: 1px solid var(--border-color); background-color: #f8f9fa; padding: 0.8em 0.9em; }
+        .wiki-panel-heading { font-family: var(--heading-font); font-weight: normal; font-size: 1.18em; margin: 0 0 0.55em 0; padding: 0.25em 0.45em; border: 1px solid var(--border-color); background-color: #eaecf0; color: var(--text-color); }
+        body.theme-dark .wiki-col { background-color: #151b21; border-color: var(--border-color); }
+        body.theme-dark .wiki-panel-heading { background-color: #1d2833; color: var(--text-color); border-color: var(--border-color); }
+        body.theme-dark .wikitable tr th,
+        body.theme-dark .wikitable > tbody > tr > th { background-color: #1d2833; color: var(--text-color); }
+        body.theme-dark .wikitable tr td,
+        body.theme-dark .wikitable > tbody > tr > td { background-color: #101418; color: var(--text-color); }
+        body.theme-dark .infobox .infobox-header,
+        body.theme-dark .infobox .infobox-subheader,
+        body.theme-dark .infobox .infobox-label { color: var(--text-color); }
+        body.theme-dark .thumbcaption { background-color: #151b21; color: var(--muted-color); }
 
         .search-results-list { margin-left: 0; padding-left: 1.4em; }
         .search-hit-meta { font-size: 0.9em; color: var(--muted-color); }
@@ -375,15 +389,15 @@
             #mw-panel { display: none; }
             #mobile-menu-toggle { display: inline-flex; }
             #mw-page-base { height: 0; background-image: none; }
-            #mw-head-base { margin: 0; min-height: 0; padding: 0.55em 0.75em 0 0.75em; flex-direction: column; align-items: stretch; gap: 0.45em; }
+            #mw-head-base { margin: 0; min-height: 0; padding: 0.55em 0.75em 0.6em 0.75em; flex-direction: column; align-items: stretch; gap: 0.45em; position: relative; z-index: 10; overflow: visible; }
             #content, #footer { margin-left: 0; }
             #content { padding: 1em 0.95em 1.35em 0.95em; border-right-width: 1px; min-height: 0; }
             #footer { padding: 1em 0.95em 1.25em 0.95em; }
             #left-navigation, #right-navigation { width: 100%; margin: 0; }
-            #right-navigation { justify-content: space-between; align-items: stretch; flex-wrap: wrap; }
+            #right-navigation { justify-content: space-between; align-items: center; flex-wrap: wrap; min-height: 2.6em; overflow: visible; }
             #p-search { margin: 0; width: 100%; order: 3; }
             #simpleSearch { width: 100%; max-width: none; }
-            #header-actions { margin-left: auto; }
+            #header-actions { margin-left: auto; margin-bottom: 0; align-self: center; flex: 0 0 auto; }
             .vectorTabs { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
             .vectorTabs ul { min-width: max-content; }
             .vectorTabs li { flex: 0 0 auto; }
@@ -402,6 +416,10 @@
         }
 
         @media (max-width: 640px) {
+            #right-navigation { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.45em; }
+            #header-actions { grid-column: 2; grid-row: 1; justify-self: end; align-self: center; margin: 0; }
+            #p-search { grid-column: 1 / -1; grid-row: 2; }
+            .header-icon-button, .mobile-menu-close { min-width: 2.45em; height: 2.45em; line-height: 1; }
             body { font-size: 15px; }
             #mw-head-base { padding-left: 0.6em; padding-right: 0.6em; }
             #content { padding: 0.9em 0.75em 1.2em 0.75em; }
@@ -524,90 +542,76 @@
     </script>
 
     <script type="application/json" id="repo-sidebar">
-    
     {
-  "Navigation": [
-    {
-      "label": "Main page",
-      "link": "Main_Page"
-    },
-    {
-      "label": "Featured page",
-      "link": "Featured_Page"
-    },
-    {
-      "label": "Research areas",
-      "link": "Research_Areas"
-    },
-    {
-      "label": "About Metopedia",
-      "link": "About"
+      "Navigation": [
+        {
+          "label": "Main page",
+          "link": "Main_Page"
+        },
+        {
+          "label": "Featured page",
+          "link": "Featured_Page"
+        },
+        {
+          "label": "Research areas",
+          "link": "Research_Areas"
+        },
+        {
+          "label": "About Metopedia",
+          "link": "About"
+        }
+      ],
+      "Contribute": [
+        {
+          "label": "Help",
+          "link": "Help:Wiki_markup"
+        },
+        {
+          "label": "Methodology",
+          "link": "Methodology"
+        },
+        {
+          "label": "Editorial guide",
+          "link": "Editorial_Guide"
+        }
+      ],
+      "Projects": [
+        {
+          "label": "Metopedia services",
+          "link": "Metopedia:Applications"
+        },
+        {
+          "label": "Reputation Flair",
+          "link": "Reputation_Flair"
+        }
+      ],
+      "Tools": [
+        {
+          "label": "Sitemap",
+          "link": "Special:Sitemap"
+        },
+        {
+          "label": "All pages",
+          "link": "Special:AllPages"
+        },
+        {
+          "label": "Categories",
+          "link": "Special:Categories"
+        },
+        {
+          "label": "What links here",
+          "link": "Special:WhatLinksHere/Main_Page"
+        },
+        {
+          "label": "Random article",
+          "link": "Special:Random"
+        },
+        {
+          "label": "Printable version",
+          "link": "javascript:window.print()"
+        }
+      ]
     }
-  ],
-  "Contribute": [
-    {
-      "label": "Help",
-      "link": "Help:Wiki_markup"
-    },
-    {
-      "label": "Methodology",
-      "link": "Methodology"
-    },
-    {
-      "label": "Editorial guide",
-      "link": "Editorial_Guide"
-    }
-  ],
-  "Tools": [
-    {
-      "label": "Sitemap",
-      "link": "Special:Sitemap"
-    },
-    {
-      "label": "All pages",
-      "link": "Special:AllPages"
-    },
-    {
-      "label": "Categories",
-      "link": "Special:Categories"
-    },
-    {
-      "label": "What links here",
-      "link": "Special:WhatLinksHere/Main_Page"
-    },
-    {
-      "label": "Random article",
-      "link": "Special:Random"
-    },
-    {
-      "label": "Printable version",
-      "link": "javascript:window.print()"
-    }
-  ],
-  "Services": [
-    {
-      "label": "Metopedia services",
-      "link": "Metopedia:Services"
-    },
-    {
-      "label": "Reputation Flair",
-      "link": "Metopedia:Reputation_Flair"
-    },
-    {
-      "label": "RF terms",
-      "link": "Metopedia:Reputation_Flair/Terms"
-    },
-    {
-      "label": "RF privacy",
-      "link": "Metopedia:Reputation_Flair/Privacy_Policy"
-    },
-    {
-      "label": "RF FAQ",
-      "link": "Metopedia:Reputation_Flair/FAQ"
-    }
-  ]
-}
-    
     </script>
 
     <script type="application/json" id="repo-footer">
@@ -1250,26 +1254,81 @@ You can still link to it now, and create it later.
 
     function renderInfobox(source) {
         const body = source.replace(/^\{\{Infobox\s*/i, '').replace(/\}\}\s*$/i, '');
-        const lines = body.split(/\n/).map(line => line.trim()).filter(Boolean);
-        let rows = '';
-        for (const line of lines) {
-            if (!line.startsWith('|')) continue;
-            const clean = line.slice(1);
-            const idx = clean.indexOf('=');
-            if (idx === -1) continue;
-            const key = clean.slice(0, idx).trim();
-            const value = clean.slice(idx + 1).trim();
-            if (/^title$/i.test(key)) {
-                rows += `<tr><th colspan="2" class="infobox-header">${parseInline(value)}</th></tr>`;
-            } else if (/^header\d*$/i.test(key)) {
-                rows += `<tr><th colspan="2" class="infobox-subheader">${parseInline(value)}</th></tr>`;
-            } else if (/^image$/i.test(key)) {
-                rows += `<tr><td colspan="2" class="infobox-image">${parseInline(value)}</td></tr>`;
-            } else {
-                rows += `<tr><th class="infobox-label">${escapeHtml(key.replace(/_/g, ' '))}</th><td>${parseInline(value)}</td></tr>`;
+        const rawLines = body.split(/\n/);
+        const ordered = [];
+        const fields = {};
+        let current = null;
+        const keyId = key => String(key || '').toLowerCase().replace(/\s+/g, '');
+        const pushField = (key, value) => {
+            const cleanKey = String(key || '').trim();
+            if (!cleanKey) return;
+            const field = { key: cleanKey, value: String(value || '').trim() };
+            ordered.push(field);
+            fields[keyId(cleanKey)] = field;
+            current = field;
+        };
+        for (const raw of rawLines) {
+            const line = raw.trim();
+            if (!line) continue;
+            if (line.startsWith('|')) {
+                const clean = line.slice(1);
+                const idx = clean.indexOf('=');
+                if (idx === -1) continue;
+                pushField(clean.slice(0, idx), clean.slice(idx + 1));
+            } else if (current) {
+                current.value = (current.value + '\n' + line).trim();
+                fields[keyId(current.key)] = current;
             }
         }
-        return `<table class="infobox">${rows}</table>`;
+        let rows = '';
+        const used = new Set();
+        const show = value => String(value || '').trim();
+        const inline = value => parseInline(show(value).replace(/\n+/g, '<br>'));
+        const addHeader = value => { if (show(value)) rows += '<tr><th colspan="2" class="infobox-header">' + inline(value) + '</th></tr>'; };
+        const addSubheader = value => { if (show(value)) rows += '<tr><th colspan="2" class="infobox-subheader">' + inline(value) + '</th></tr>'; };
+        const addImage = value => { if (show(value)) rows += '<tr><td colspan="2" class="infobox-image">' + inline(value) + '</td></tr>'; };
+        const addCaption = value => { if (show(value)) rows += '<tr><td colspan="2" class="thumbcaption">' + inline(value) + '</td></tr>'; };
+        const addRow = (label, value) => {
+            const l = show(label);
+            const v = show(value);
+            if (l && v) rows += '<tr><th class="infobox-label">' + inline(l) + '</th><td>' + inline(v) + '</td></tr>';
+            else if (v) rows += '<tr><td colspan="2">' + inline(v) + '</td></tr>';
+        };
+
+        if (fields.title) { addHeader(fields.title.value); used.add('title'); }
+        if (fields.name && !fields.title) { addHeader(fields.name.value); used.add('name'); }
+        if (fields.subheader) { addSubheader(fields.subheader.value); used.add('subheader'); }
+        if (fields.image) { addImage(fields.image.value); used.add('image'); }
+        if (fields.caption && fields.image && show(fields.image.value)) { addCaption(fields.caption.value); used.add('caption'); }
+        else if (fields.caption && !show(fields.caption.value)) used.add('caption');
+
+        const numbered = new Set();
+        for (const { key } of ordered) {
+            const match = keyId(key).match(/^(?:label|data|header|subheader)(\d+)$/);
+            if (match) numbered.add(Number(match[1]));
+        }
+        [...numbered].sort((a, b) => a - b).forEach(n => {
+            const header = fields['header' + n];
+            const subheader = fields['subheader' + n];
+            const label = fields['label' + n];
+            const data = fields['data' + n];
+            if (header) { addSubheader(header.value); used.add('header' + n); }
+            if (subheader) { addSubheader(subheader.value); used.add('subheader' + n); }
+            if (label || data) {
+                addRow(label ? label.value : '', data ? data.value : '');
+                if (label) used.add('label' + n);
+                if (data) used.add('data' + n);
+            }
+        });
+
+        for (const { key, value } of ordered) {
+            const low = keyId(key);
+            if (used.has(low)) continue;
+            if (/^(?:label|data|header|subheader)\d+$/i.test(low)) continue;
+            if (/^(?:title|name|subheader|image|caption)$/i.test(low)) continue;
+            addRow(key.replace(/_/g, ' '), value);
+        }
+        return '<table class="infobox">' + rows + '</table>';
     }
 
     function renderGallery(source) {
