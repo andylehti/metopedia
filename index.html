@@ -112,11 +112,12 @@
         .wikitable > tbody > tr > th, .wikitable > tbody > tr > td, .wikitable tr th, .wikitable tr td { border: 1px solid #a2a9b1; padding: 0.2em 0.4em; vertical-align: top; }
         .wikitable > tbody > tr > th, .wikitable tr th { background-color: #eaecf0; text-align: center; }
 
-        .infobox { float: right; clear: right; margin: 0 0 1em 1em; border: 1px solid var(--border-color); background-color: #f8f9fa; padding: 0.2em; font-size: 88%; width: 22em; line-height: 1.5em; }
-        .infobox th, .infobox td { vertical-align: top; padding: 0.2em 0.6em; }
+        .infobox { float: right; clear: right; margin: 0 0 1em 1em; border: 1px solid var(--border-color); background-color: #f8f9fa; padding: 0.2em; font-size: 88%; width: 24em; max-width: 100%; line-height: 1.5em; table-layout: auto; }
+        .infobox th, .infobox td { vertical-align: top; padding: 0.2em 0.6em; overflow-wrap: normal; word-break: normal; hyphens: none; }
+        .infobox td { overflow-wrap: break-word; }
         .infobox .infobox-header { text-align: center; font-size: 125%; font-weight: bold; background-color: #e0e0e0; }
         .infobox .infobox-subheader { text-align: center; background-color: #f0f0f0; font-weight: bold; border-top: 1px solid #ccc; }
-        .infobox .infobox-label { text-align: left; background-color: #eaecf0; width: 35%; font-weight: bold; }
+        .infobox .infobox-label { text-align: left; background-color: #eaecf0; width: 9.25em; min-width: 9.25em; max-width: 12em; font-weight: bold; white-space: normal; overflow-wrap: normal; word-break: keep-all; hyphens: none; }
         .infobox .infobox-image { text-align: center; padding: 0.8em !important; background: #fff; }
 
         .thumb { border: 1px solid #c8ccd1; background-color: #f8f9fa; padding: 3px; margin: 0.5em 0 1.3em 0; clear: both; }
@@ -175,6 +176,7 @@
         body.theme-dark .infobox .infobox-subheader,
         body.theme-dark .infobox .infobox-label { color: var(--text-color); }
         body.theme-dark .thumbcaption { background-color: #151b21; color: var(--muted-color); }
+        body.theme-dark .infobox .infobox-image { background-color: #151b21; }
 
         .search-results-list { margin-left: 0; padding-left: 1.4em; }
         .search-hit-meta { font-size: 0.9em; color: var(--muted-color); }

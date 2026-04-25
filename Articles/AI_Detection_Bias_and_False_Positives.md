@@ -352,11 +352,11 @@ Appendix C expanded the results into a five-condition comparison.
 |-
 | undetectableAI || 77.0% || 9.0% || 67.0% || 72.0% || 5.0%
 |-
-! Mean || 33.60% || 3.67% || 66.59% || 61.18% || 5.49%
+| '''Mean''' || 33.60% || 3.67% || 66.59% || 61.18% || 5.49%
 |-
-! Median || 24.30% || 1.00% || 67.00% || 61.00% || 2.19%
+| '''Median''' || 24.30% || 1.00% || 67.00% || 61.00% || 2.19%
 |-
-! Standard deviation || 28.31% || 7.00% || 32.78% || 33.57% || 9.42%
+| '''Standard deviation''' || 28.31% || 7.00% || 32.78% || 33.57% || 9.42%
 |}
 
 The table divides the samples into “structured” and “low-quality” categories. The 2007 student essay and 2026 Reddit comment are described as poor-structure, inconsistent, or low-flow writing. The 2016 and 2026 human essays are described as semi-formal or experience-driven, while the 2026 AI essay is described as fully generated AI.<ref name="lehti-doi" />
