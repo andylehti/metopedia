@@ -31,30 +31,44 @@
   }
   function renderMath(attempt){
     attempt = attempt || 0;
-    const nodes = Array.from(document.querySelectorAll('.tex-math, math')).filter(el => el.getAttribute('data-rendered') !== '1');
-    if(!nodes.length) return;
+    const sourceNodes = Array.from(document.querySelectorAll('.tex-math, math')).filter(el => el.getAttribute('data-rendered') !== '1');
+    if(!sourceNodes.length) return;
     if(!(window.MathJax && window.MathJax.startup && window.MathJax.startup.promise)){
       if(attempt < 80) setTimeout(() => renderMath(attempt + 1), 50);
       return;
     }
     window.MathJax.startup.promise.then(() => {
-      const renderedNodes = [];
-      nodes.forEach(el => {
+      sourceNodes.forEach(el => {
         const tex = (el.getAttribute('data-tex') || el.textContent || '').trim();
         if(!tex) return;
         const displayMode = el.getAttribute('data-display') === 'block' || el.getAttribute('display') === 'block' || el.classList.contains('math-display-source');
         const rendered = document.createElement(displayMode ? 'div' : 'span');
         rendered.className = displayMode ? 'math-display math-rendered' : 'math-inline math-rendered';
         rendered.setAttribute('data-rendered', '1');
-        rendered.textContent = displayMode ? '\\[' + tex + '\\]' : '\\(' + tex + '\\)';
         const parent = el.parentElement;
         if(displayMode && parent && parent.tagName === 'P' && parent.textContent.trim() === el.textContent.trim()) parent.replaceWith(rendered);
         else el.replaceWith(rendered);
-        renderedNodes.push(rendered);
+
+        const renderPromise = window.MathJax.tex2svgPromise
+          ? window.MathJax.tex2svgPromise(tex, { display: displayMode })
+          : Promise.resolve(null);
+
+        renderPromise
+          .then(node => {
+            if(node){
+              rendered.textContent = '';
+              rendered.appendChild(node);
+            }else{
+              rendered.textContent = displayMode ? '\\[' + tex + '\\]' : '\\(' + tex + '\\)';
+              return window.MathJax.typesetPromise ? window.MathJax.typesetPromise([rendered]) : null;
+            }
+            return null;
+          })
+          .catch(() => {
+            rendered.classList.add('math-failed');
+            rendered.textContent = tex;
+          });
       });
-      if(window.MathJax.typesetPromise){
-        window.MathJax.typesetPromise(renderedNodes).catch(() => renderedNodes.forEach(el => el.classList.add('math-failed')));
-      }
     });
   }
   function setupSearch(){
