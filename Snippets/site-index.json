@@ -267,6 +267,21 @@
     "lastModified": "2026-04-23"
   },
   {
+    "slug": "Metopedia:Services",
+    "title": "Metopedia services",
+    "description": "Service and application documentation for projects operated under or associated with Metopedia.",
+    "keywords": "Metopedia services, applications, service documentation, policy pages",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia services",
+      "Service documentation"
+    ],
+    "path": "./Services/index.md",
+    "lastModified": "2026-04-25"
+  },
+  {
     "slug": "Misconceptions_on_Mathematical_Operations",
     "title": "Misconceptions on Mathematical Operations",
     "description": "A reference page listing common misconceptions about multiplication, exponentiation, roots, signs, and grouping in the Canonical Order framework.",
@@ -327,6 +342,91 @@
     ],
     "path": "./Footer/Privacy_Policy.md",
     "lastModified": "2026-04-23"
+  },
+  {
+    "slug": "Metopedia:Reputation_Flair",
+    "title": "Reputation Flair",
+    "description": "A Metopedia service page for Reputation Flair, a Reddit Devvit application for reputation scoring, flair, moderation assistance, transparency dashboards, and optional human verification.",
+    "keywords": "Reputation Flair, Metopedia service, Reddit Devvit, subreddit moderation, human verification, bot shield, reputation scoring",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia services",
+      "Reputation Flair",
+      "Reddit Devvit applications",
+      "Service documentation"
+    ],
+    "path": "./Services/Reputation_Flair.md",
+    "lastModified": "2026-04-25"
+  },
+  {
+    "slug": "Reputation_Flair",
+    "title": "Reputation Flair",
+    "description": "A Reddit Devvit application associated with Metopedia for subreddit reputation scoring, flair generation, moderation assistance, transparency dashboards, and optional human verification.",
+    "keywords": "Reputation Flair, Reddit Devvit, subreddit moderation, user flair, reputation scoring, Bot Shield, human verification, Metopedia services",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Reputation Flair",
+      "Reddit Devvit applications",
+      "Moderation tools",
+      "Metopedia services",
+      "Human verification"
+    ],
+    "path": "./Articles/Reputation_Flair.md",
+    "lastModified": "2026-04-25"
+  },
+  {
+    "slug": "Metopedia:Reputation_Flair/FAQ",
+    "title": "Reputation Flair/FAQ",
+    "description": "Frequently asked questions for the Reputation Flair Metopedia service and Reddit Devvit application.",
+    "keywords": "Reputation Flair FAQ, reputation scoring, flair, Reddit Devvit, Bot Shield, human verification, moderation app",
+    "author": "Metopedia Editorial",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia services",
+      "Reputation Flair",
+      "Frequently asked questions",
+      "Service documentation"
+    ],
+    "path": "./Services/Reputation_Flair_FAQ.md",
+    "lastModified": "2026-04-25"
+  },
+  {
+    "slug": "Metopedia:Reputation_Flair/Privacy_Policy",
+    "title": "Reputation Flair/Privacy Policy",
+    "description": "Privacy policy for the Reputation Flair Metopedia service and Reddit Devvit application.",
+    "keywords": "Reputation Flair privacy policy, Metopedia service privacy, Reddit Devvit app privacy, moderation app data",
+    "author": "Metopedia Policy",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia services",
+      "Reputation Flair",
+      "Privacy policies",
+      "Service documentation"
+    ],
+    "path": "./Services/Reputation_Flair_Privacy_Policy.md",
+    "lastModified": "2026-04-25"
+  },
+  {
+    "slug": "Metopedia:Reputation_Flair/Terms",
+    "title": "Reputation Flair/Terms",
+    "description": "Terms governing use of the Reputation Flair Metopedia service and Reddit Devvit application.",
+    "keywords": "Reputation Flair terms, Metopedia service terms, Reddit Devvit app terms, moderation app terms",
+    "author": "Metopedia Policy",
+    "robots": "index,follow,max-image-preview:large",
+    "ogImage": "https://metopedia.com/Assets/metopedia-og.png",
+    "categories": [
+      "Metopedia services",
+      "Reputation Flair",
+      "Service terms"
+    ],
+    "path": "./Services/Reputation_Flair_Terms.md",
+    "lastModified": "2026-04-25"
   },
   {
     "slug": "Research_Areas",

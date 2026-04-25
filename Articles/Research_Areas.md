@@ -25,10 +25,15 @@ This area addresses how institutions frame, preserve, defend, and sometimes insu
 [[Category:Metopedia]]
 [[Category:Research]]
 
-
 == Canonical mathematics ==
 Canonical mathematics pages examine arithmetic notation, inherited order-of-operations conventions, and proposed repairs to ambiguity in signs, roots, and exponents.
 
 * [[Canonical_Order_of_Operations|Canonical Order of Operations]]
 * [[Canonical_Law_of_Indices|Canonical Law of Indices]]
 * [[Misconceptions_on_Mathematical_Operations|Misconceptions on mathematical operations]]
+
+== Applied systems and services ==
+Applied systems pages document software and service projects associated with Metopedia.
+
+* [[Reputation_Flair|Reputation Flair]] — Reddit Devvit application for subreddit reputation scoring, flair, dashboards, moderation assistance, and optional human verification.
+* [[Metopedia:Reputation_Flair|Reputation Flair service pages]]

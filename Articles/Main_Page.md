@@ -38,9 +38,13 @@ Metopedia focuses on questions that are often avoided because they are methodolo
 == Editorial character ==
 The site favors definitional clarity, explicit structure, open categories, and stable cross-linking. Pages are expected to read like reference entries: direct, analytical, and inspectable.
 
+== Services ==
+* [[Metopedia:Services|Metopedia services]] — service and application documentation.
+* [[Reputation_Flair|Reputation Flair]] — encyclopedia article on the Reddit Devvit application.
+* [[Metopedia:Reputation_Flair|Reputation Flair service pages]] — terms, privacy policy, FAQ, and operational documentation.
+
 [[Category:Metopedia]]
 [[Category:Main Pages]]
-
 
 == Mathematical notation ==
 * [[Canonical_Order_of_Operations|Canonical Order of Operations]] — proposed notation-first convention for powers, roots, signs, and implicit grouping.

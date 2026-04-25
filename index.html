@@ -479,37 +479,39 @@
     </div>
 
     <script type="application/json" id="app-config">
+    
     {
   "siteName": "Metopedia",
   "siteTagline": "From Metopedia, the free encyclopedia",
   "defaultPage": "Main_Page",
+  "indexPath": "./Snippets/site-index.json",
   "contentBasePath": "./Articles",
   "pageExtensions": [
+    ".md",
     ".wiki",
-    ".txt",
-    ".md"
+    ".txt"
   ],
-  "indexPath": "./Snippets/site-index.json",
   "canonicalBaseUrl": "https://metopedia.com",
   "sourceBaseUrl": "",
-  "licenseHtml": "Text is available under the <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 License</a>; additional terms may apply. By using this site, you agree to the <a href=\"#/Terms_of_Use\">Terms of Use</a> and <a href=\"#/Privacy_Policy\">Privacy Policy</a>.",
+  "licenseHtml": "Text is available under the <a href=\"#/Terms_of_Use\">Terms of Use</a>; additional terms may apply. By using this site, you agree to the <a href=\"#/Terms_of_Use\">Terms of Use</a> and <a href=\"#/Privacy_Policy\">Privacy Policy</a>. Metopedia is an independent reference project.",
   "defaultSeo": {
     "title": "Metopedia",
-    "description": "Metopedia is an independent encyclopedic repository devoted to interdisciplinary inquiry across cognition, bias, textual study, mathematical logic, and institutional analysis.",
-    "keywords": "Metopedia, cognitive analysis, cognitive bias, textual criticism, mathematics, institutional inquiry, knowledge repository",
-    "author": "Metopedia Foundation",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg",
+    "description": "Metopedia is an interdisciplinary reference project focused on cognitive rigidity, textual study, mathematical logic, and institutional analysis.",
+    "keywords": "Metopedia, interdisciplinary research, cognitive rigidity, cognitive bias, textual study, philology, mathematical logic, institutional analysis",
+    "author": "Metopedia Editorial",
+    "image": "https://metopedia.com/Assets/metopedia-og.png",
     "robots": "index,follow,max-image-preview:large"
   },
   "collections": {
-    "navigationFolder": "./Navigation",
-    "contributeFolder": "./Contribute",
-    "toolsFolder": "./Tools",
     "articlesFolder": "./Articles",
     "imagesFolder": "./Images",
     "assetsFolder": "./Assets",
     "footerFolder": "./Footer",
-    "snippetsFolder": "./Snippets"
+    "toolsFolder": "./Tools",
+    "contributeFolder": "./Contribute",
+    "navigationFolder": "./Navigation",
+    "snippetsFolder": "./Snippets",
+    "servicesFolder": "./Services"
   },
   "githubRepo": {
     "enabled": false,
@@ -518,9 +520,11 @@
     "branch": "main"
   }
 }
+    
     </script>
 
     <script type="application/json" id="repo-sidebar">
+    
     {
   "Navigation": [
     {
@@ -572,11 +576,38 @@
       "link": "Special:WhatLinksHere/Main_Page"
     },
     {
+      "label": "Random article",
+      "link": "Special:Random"
+    },
+    {
       "label": "Printable version",
       "link": "javascript:window.print()"
     }
+  ],
+  "Services": [
+    {
+      "label": "Metopedia services",
+      "link": "Metopedia:Services"
+    },
+    {
+      "label": "Reputation Flair",
+      "link": "Metopedia:Reputation_Flair"
+    },
+    {
+      "label": "RF terms",
+      "link": "Metopedia:Reputation_Flair/Terms"
+    },
+    {
+      "label": "RF privacy",
+      "link": "Metopedia:Reputation_Flair/Privacy_Policy"
+    },
+    {
+      "label": "RF FAQ",
+      "link": "Metopedia:Reputation_Flair/FAQ"
+    }
   ]
 }
+    
     </script>
 
     <script type="application/json" id="repo-footer">
@@ -699,7 +730,8 @@
             appConfig.collections?.footerFolder,
             appConfig.collections?.toolsFolder,
             appConfig.collections?.contributeFolder,
-            appConfig.collections?.navigationFolder
+            appConfig.collections?.navigationFolder,
+            appConfig.collections?.servicesFolder
         ].filter(Boolean).map(value => String(value).replace(/\/$/, ''));
         if (appConfig.contentBasePath) folders.unshift(String(appConfig.contentBasePath).replace(/\/$/, ''));
         return [...new Set(folders)];

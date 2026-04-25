@@ -28,7 +28,8 @@
     "toolsFolder": "./Tools",
     "contributeFolder": "./Contribute",
     "navigationFolder": "./Navigation",
-    "snippetsFolder": "./Snippets"
+    "snippetsFolder": "./Snippets",
+    "servicesFolder": "./Services"
   },
   "githubRepo": {
     "enabled": false,
