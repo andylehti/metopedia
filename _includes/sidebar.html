@@ -1,0 +1,1 @@
+{% for section in site.data.sidebar %}<div class="portal"><h3>{{ section[0] }}</h3><ul>{% for item in section[1] %}<li><a href="{{ item.url | relative_url }}">{{ item.label }}</a></li>{% endfor %}</ul></div>{% endfor %}

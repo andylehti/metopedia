@@ -1,31 +1,22 @@
-# Metopedia
+# Metopedia Jekyll Site
 
-Metopedia is a static interdisciplinary reference site published at https://metopedia.com.
+This version migrates Metopedia from a hash-routed single-page renderer to a Jekyll static site with clean, indexable URLs.
 
-## Folders
-
-- `Articles/` reference entries and help pages
-- `Footer/` footer-linked policy pages
-- `Navigation/` sidebar navigation definitions
-- `Contribute/` sidebar contribution definitions
-- `Tools/` sidebar tool definitions
-- `Images/` image assets
-- `Assets/` icons and other static assets
-- `Snippets/` generated JSON support files
-
-## Build
-
-Run:
+## Local preview
 
 ```bash
-python metopedia_repo_builder.py --base-url https://metopedia.com
+bundle install
+bundle exec jekyll serve
 ```
 
-This refreshes:
+## Page model
 
-- `index.html`
-- `Snippets/app-config.json`
-- `Snippets/sidebar.json`
-- `Snippets/footer.json`
-- `Snippets/site-index.json`
-- `sitemap.xml`
+Pages are generated as static Jekyll pages with Wikipedia-style layout, infoboxes, tables, references, categories, and KaTeX math support. The old hash links are redirected by the front page script when someone visits a legacy URL such as `/#/Reputation_Flair`.
+
+## Editing
+
+The generated pages are ordinary Jekyll HTML pages with front matter. The original pre-migration Markdown is preserved in `wiki-source/` for reference and future conversion.
+
+## Analytics
+
+Google Analytics is configured in `_config.yml` with `google_analytics: G-E3YFRYPVTK`.

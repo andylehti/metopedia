@@ -1,0 +1,32 @@
+Navigation:
+  - label: Main page
+    url: /
+  - label: Featured page
+    url: /Featured_Page/
+  - label: Research areas
+    url: /Research_Areas/
+  - label: About Metopedia
+    url: /About/
+Contribute:
+  - label: Help
+    url: /Help/Wiki_markup/
+  - label: Methodology
+    url: /Methodology/
+  - label: Editorial guide
+    url: /Editorial_Guide/
+Projects:
+  - label: Research
+    url: /Metopedia/Research/
+  - label: Reputation Flair
+    url: /Reputation_Flair/
+Tools:
+  - label: Sitemap
+    url: /Special/Sitemap/
+  - label: All pages
+    url: /Special/AllPages/
+  - label: Categories
+    url: /Special/Categories/
+  - label: What links here
+    url: /Special/WhatLinksHere/Main_Page/
+  - label: Printable version
+    url: javascript:window.print()

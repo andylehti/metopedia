@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://metopedia.com/sitemap.xml

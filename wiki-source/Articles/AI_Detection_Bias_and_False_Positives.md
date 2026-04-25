@@ -11,24 +11,14 @@ robots: "index,follow,max-image-preview:large"
 {{Infobox
 | title = AI-Detection Bias and False Positives
 | subheader = Comparative detector study
-| image = 
-| caption = 
-| label1 = Full title
-| data1 = ''AI-Detection Bias and False Positives: Comparing 2016 Human, 2026 AI, and 2007 Student Essays Across Common Detectors''
-| label2 = Author
-| data2 = Andrew Lehti
-| label3 = Publication date
-| data3 = February 28, 2026
-| label4 = DOI
-| data4 = [https://doi.org/10.6084/m9.figshare.31439995 10.6084/m9.figshare.31439995]
-| label5 = Subject
-| data5 = AI-detection reliability, false positives, detector bias, academic-integrity policy
-| label6 = Corpus
-| data6 = Five text samples: three human essays/comments, one seventh-grade human essay, one AI-generated essay
-| label7 = Main claim
-| data7 = AI-detection scores vary sharply by detector and appear sensitive to polish, formatting, and structural regularity
-| label8 = Archive
-| data8 = [https://archive.org/download/censored-academic-papers/AI_Detection_Bias_and_False_Positives_Co.pdf Internet Archive PDF]
+| Full title = ''AI-Detection Bias and False Positives: Comparing 2016 Human, 2026 AI, and 2007 Student Essays Across Common Detectors''
+| Author = Andrew Lehti
+| Publication date = February 28, 2026
+| DOI = [https://doi.org/10.6084/m9.figshare.31439995 10.6084/m9.figshare.31439995]
+| Subject = AI-detection reliability, false positives, detector bias, academic-integrity policy
+| Corpus = Five text samples: three human essays/comments, one seventh-grade human essay, one AI-generated essay
+| Main claim = AI-detection scores vary sharply by detector and appear sensitive to polish, formatting, and structural regularity
+| Archive = [https://archive.org/download/censored-academic-papers/AI_Detection_Bias_and_False_Positives_Co.pdf Internet Archive PDF]
 }}
 
 '''''AI-Detection Bias and False Positives: Comparing 2016 Human, 2026 AI, and 2007 Student Essays Across Common Detectors''''' is a 2026 paper by Andrew Lehti examining the reliability of common AI-authorship detectors when applied to human-written and AI-generated text samples.<ref name="lehti-doi">Andrew Lehti, ''AI-Detection Bias and False Positives: Comparing 2016 Human, 2026 AI, and 2007 Student Essays Across Common Detectors'', figshare, 2026. DOI: [https://doi.org/10.6084/m9.figshare.31439995 10.6084/m9.figshare.31439995]. Archived PDF: [https://archive.org/download/censored-academic-papers/AI_Detection_Bias_and_False_Positives_Co.pdf Internet Archive].</ref> The study compares detector outputs on older human writing, contemporary AI writing, informal student writing, and additional control texts. It argues that many detectors appear to penalize formal structure, grammatical consistency, and polished academic style rather than identifying a stable signature of machine authorship.

@@ -1,0 +1,57 @@
+title: Metopedia
+tagline: From Metopedia, the free encyclopedia
+description: Metopedia is an independent encyclopedic repository devoted to interdisciplinary inquiry across cognition, bias, textual study, mathematical logic, applications, forensics, and institutional analysis.
+author: Metopedia Foundation
+url: https://metopedia.com
+baseurl: ""
+logo: /Assets/metopedia-og.png
+image: /Assets/metopedia-og.png
+google_analytics: G-E3YFRYPVTK
+github_repository: https://github.com/andylehti/metopedia
+repository: andylehti/metopedia
+lang: en_US
+timezone: America/Chicago
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax
+  syntax_highlighter: rouge
+permalink: pretty
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jemoji
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: "pages"
+    values:
+      layout: wiki
+      wiki_page: true
+      sitemap: true
+      robots: "index,follow,max-image-preview:large"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: wiki
+      wiki_page: true
+      sitemap: true
+
+include:
+  - pages
+exclude:
+  - tools
+  - wiki-source
+  - metopedia-main.zip
+  - package-lock.json
+  - node_modules
+  - vendor
+  - README_SOURCE_MIGRATION.md
