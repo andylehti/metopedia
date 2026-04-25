@@ -5,7 +5,7 @@ description: "A canonical-mathematics argument that radical notation should be r
 keywords: "radical symbol, fractional exponents, roots, square root, canonical order of operations, mathematical notation"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/Assets/metopedia-og.png"
+og_image: "https://metopedia.com/assets/metopedia-og.png"
 permalink: "/Argument_for_the_Removal_of_the_Radical_Symbol/"
 canonical_url: "/Argument_for_the_Removal_of_the_Radical_Symbol/"
 wiki_page: true

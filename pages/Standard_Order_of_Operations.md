@@ -5,7 +5,7 @@ description: "A reference page on the conventional order of operations and its c
 keywords: "Standard Order of Operations, PEMDAS, BODMAS, arithmetic precedence, Canonical Order of Operations"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/Assets/metopedia-og.png"
+og_image: "https://metopedia.com/assets/metopedia-og.png"
 permalink: "/Standard_Order_of_Operations/"
 canonical_url: "/Standard_Order_of_Operations/"
 wiki_page: true

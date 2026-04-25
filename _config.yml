@@ -4,8 +4,8 @@ description: Metopedia is an independent encyclopedic repository devoted to inte
 author: Metopedia Foundation
 url: https://metopedia.com
 baseurl: ""
-logo: /Assets/metopedia-og.png
-image: /Assets/metopedia-og.png
+logo: /assets/metopedia-og.png
+image: /assets/metopedia-og.png
 google_analytics: G-E3YFRYPVTK
 github_repository: https://github.com/andylehti/metopedia
 repository: andylehti/metopedia
