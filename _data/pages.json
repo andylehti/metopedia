@@ -214,17 +214,17 @@
     "path": "./Articles/Main_Page.md"
   },
   {
-    "slug": "Metopedia:Research",
-    "title": "Research",
-    "url": "/Metopedia/Research/",
-    "description": "Research, application, forensic, mathematical, and academic project index for Metopedia.",
+    "slug": "Metopedia:MB3I_Prediction_Lab",
+    "title": "Metopedia: MB3I / MBTI Prediction Lab",
+    "url": "/Metopedia/MB3I_Prediction_Lab/",
+    "description": "Client-side MB3I and MBTI analysis utility for scoring TXT or Reddit data with local browser processing.",
     "categories": [
       "Metopedia",
-      "Research",
-      "Metopedia projects",
-      "Application documentation"
+      "Projects",
+      "MBTI",
+      "Client-side tools"
     ],
-    "path": "./Services/index.md"
+    "path": "./pages/Metopedia__MB3I_Prediction_Lab.html"
   },
   {
     "slug": "Misconceptions_on_Mathematical_Operations",
@@ -336,6 +336,19 @@
       "Service terms"
     ],
     "path": "./Services/Reputation_Flair_Terms.md"
+  },
+  {
+    "slug": "Metopedia:Research",
+    "title": "Research",
+    "url": "/Metopedia/Research/",
+    "description": "Research, application, forensic, mathematical, and academic project index for Metopedia.",
+    "categories": [
+      "Metopedia",
+      "Research",
+      "Metopedia projects",
+      "Application documentation"
+    ],
+    "path": "./Services/index.md"
   },
   {
     "slug": "Research_Areas",
