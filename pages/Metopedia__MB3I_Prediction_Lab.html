@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: "Metopedia: MB3I / MBTI Prediction Lab"
-description: "Client-side MB3I and MBTI analysis utility for scoring TXT or Reddit data with local browser processing."
+description: "Client-side MB3I and MBTI analysis utility for scoring TXT data with local browser processing."
 permalink: "/Metopedia/MB3I_Prediction_Lab/"
 wiki_page: true
 slug_name: "Metopedia:MB3I_Prediction_Lab"
@@ -297,47 +297,105 @@ body.theme-dark .mb3i-lab .pointLabel,
 body.theme-dark .mb3i-lab .tooltipText,
 body.theme-dark .mb3i-lab .heatText { fill: #e5e7eb; }
 body.theme-dark .mb3i-lab .svgLabelBg { fill: #101418; stroke: #4b5563; }
+
+
+/* MB3I Lab v7: softer Metopedia panel skin and TXT-only layout. */
+.mb3i-lab {
+  --lab-panel: #f6f8fa;
+  --lab-panel-2: #ffffff;
+  --lab-border: #b8c0ca;
+  --lab-border-soft: #d5dbe3;
+  --lab-muted: #66727f;
+  --lab-blue: #3366cc;
+  --lab-blue-bg: #eef5ff;
+  --lab-green-bg: #edf8ef;
+  --lab-yellow-bg: #fff8e6;
+  --lab-red-bg: #fff1f1;
+}
+.mb3i-lab .lab-lead {
+  border-left: 4px solid var(--lab-blue);
+  background: linear-gradient(180deg, var(--lab-panel-2), var(--lab-panel));
+  padding: 1em 1.1em;
+}
+.mb3i-lab .lab-feature-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.mb3i-lab .lab-feature-list li,
+.mb3i-lab .card,
+.mb3i-lab .miniCard,
+.mb3i-lab .chartBox,
+.mb3i-lab .hintBox { border-radius: 4px; }
+.mb3i-lab .card {
+  background: linear-gradient(180deg, var(--lab-panel-2), var(--lab-panel));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 1em;
+}
+.mb3i-lab .card h2 { margin-bottom: 0.75em; }
+.mb3i-lab input,
+.mb3i-lab select,
+.mb3i-lab textarea { border-color: var(--lab-border-soft); padding: 0.48em 0.55em; }
+.mb3i-lab textarea { min-height: 12em; }
+.mb3i-lab button { border-color: var(--lab-border-soft); background: #eef1f5; }
+.mb3i-lab button.primary { background: #3366cc; border-color: #2f5fb8; }
+.mb3i-lab .option-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45em;
+  padding: 0.45em 0.5em;
+  border: 1px solid var(--lab-border-soft);
+  background: var(--lab-panel-2);
+  border-radius: 4px;
+}
+.mb3i-lab .option-check input { margin-top: 0.2em; flex: 0 0 auto; }
+.mb3i-lab .status,
+.mb3i-lab pre,
+.mb3i-lab .tableWrap { border-color: var(--lab-border-soft); border-radius: 4px; }
+body.theme-dark .mb3i-lab {
+  --lab-panel: #151b22;
+  --lab-panel-2: #11171f;
+  --lab-border: #465260;
+  --lab-border-soft: #303b48;
+  --lab-muted: #b4beca;
+  --lab-blue: #8ab4ff;
+  --lab-blue-bg: #172438;
+  --lab-green-bg: #13281a;
+  --lab-yellow-bg: #332914;
+  --lab-red-bg: #321b1b;
+}
+body.theme-dark .mb3i-lab .lab-lead,
+body.theme-dark .mb3i-lab .card { background: linear-gradient(180deg, #151c24, #10161d); }
+body.theme-dark .mb3i-lab .lab-feature-list li,
+body.theme-dark .mb3i-lab .option-check,
+body.theme-dark .mb3i-lab input,
+body.theme-dark .mb3i-lab select,
+body.theme-dark .mb3i-lab textarea,
+body.theme-dark .mb3i-lab .status,
+body.theme-dark .mb3i-lab pre,
+body.theme-dark .mb3i-lab .tableWrap,
+body.theme-dark .mb3i-lab .chartBox,
+body.theme-dark .mb3i-lab .miniCard,
+body.theme-dark .mb3i-lab .hintBox { background: var(--lab-panel-2); border-color: var(--lab-border-soft); color: var(--text-color); }
+body.theme-dark .mb3i-lab button { background: #1d2733; color: var(--text-color); border-color: var(--lab-border-soft); }
+body.theme-dark .mb3i-lab button:hover { background: #263241; }
+body.theme-dark .mb3i-lab button.primary { background: #2f64c9; border-color: #4d7fe0; color: #ffffff; }
+body.theme-dark .mb3i-lab th { background: #1d2733; }
+@media (max-width: 950px) { .mb3i-lab .lab-feature-list { grid-template-columns: 1fr; } }
+
 </style>
 
 <div class="mb3i-lab">
   <section class="lab-lead">
     <h2>Metopedia: MB3I / MBTI Prediction Lab</h2>
-    <p>A client-side analysis utility for MBTI pattern recognition. It utilizes JSON models to score TXT or Reddit data. All processing is performed locally within the browser.</p>
+    <p>A client-side analysis utility for MBTI pattern recognition. It utilizes JSON models to score TXT data. All processing is performed locally within the browser.</p>
     <p><strong>Features:</strong></p>
     <ul class="lab-feature-list">
       <li><strong>Scoring and Charts:</strong> Analyze text files and chart vote patterns.</li>
       <li><strong>Testing Suite:</strong> Compare models and evaluate NFJ mirror/turbulence.</li>
       <li><strong>Axis Helpers:</strong> Use 16-type reference sets for I/E or J/P mapping.</li>
-      <li><strong>Reddit Support:</strong> Optional credential integration for data retrieval.</li>
     </ul>
   </section>
-<div class="grid">
-    <section class="card col-4">
-      <h2>1. Built-in models + Reddit credentials</h2>
-      <p class="small">The MB3I/MBTI JSON datasets are hardcoded inside this HTML. The upload box below is only for optional Reddit credentials. TXT mode needs no credentials.</p>
-      <div class="row" style="margin-top:10px">
-        <button id="reloadModelsBtn" class="primary">Reload built-in models</button>
-      </div>
-      <label>Optional Reddit credential file</label>
-      <input id="credInput" type="file" accept=".txt,.zip,text/plain,application/zip">
-      <p class="small">Accepted: plain <span class="mono">reddit.txt</span>, or a ZIP containing <span class="mono">reddit.txt</span>. If no file is loaded, Reddit mode uses the manual fields below.</p>
-      <div class="row" style="margin-top:10px">
-        <button id="loadCredBtn" class="primary">Load credentials</button>
-        <button id="downloadCredSampleBtn" class="ghost">Download sample reddit.txt</button>
-        <button id="clearCredBtn" class="ghost">Clear credentials</button>
-      </div>
-      <label>Built-in loaded models</label>
-      <div id="modelList" class="status">Loading built-in models...</div>
-    </section>
-
-    <section class="card col-4">
+<div class="grid compact-lab-grid">
+    <section class="card col-6">
       <h2>2. Source</h2>
-      <label>Source mode</label>
-      <select id="sourceMode">
-        <option value="txt">TXT / pasted text</option>
-        <option value="reddit">Reddit</option>
-      </select>
-
+      <input id="sourceMode" type="hidden" value="txt">
       <div id="txtPanel">
         <label>TXT process mode</label>
         <select id="txtMode">
@@ -351,44 +409,9 @@ body.theme-dark .mb3i-lab .svgLabelBg { fill: #101418; stroke: #4b5563; }
         <label>Or paste text</label>
         <textarea id="pasteText" placeholder="Paste text here..."></textarea>
       </div>
-
-      <div id="redditPanel" class="hidden">
-        <label>Reddit engine</label>
-        <select id="redditEngine">
-          <option value="public">Direct public JSON fetch, no credentials, may fail from browser/CORS</option>
-          <option value="oauth">OAuth fetch using reddit.txt or fields, may fail from browser/CORS</option>
-          <option value="backend">Backend URL returning rows JSON</option>
-          <option value="upload">Upload Reddit rows JSON</option>
-        </select>
-        <div id="redditFetchFields">
-          <label>Username</label>
-          <input id="redditUser" placeholder="username without u/">
-          <div class="two">
-            <div><label>Max comments</label><input id="maxComments" type="number" min="0" value="300"></div>
-            <div><label>Max posts</label><input id="maxPosts" type="number" min="0" value="100"></div>
-          </div>
-          <div class="two">
-            <div><label>Request delay ms</label><input id="requestDelay" type="number" min="0" value="750"></div>
-            <div><label>Reddit rows per sample</label><input id="redditRowsPerSample" type="number" min="1" value="1"></div>
-          </div>
-        </div>
-        <div id="oauthFields" class="hidden">
-          <label>CLIENT_ID</label><input id="clientId" autocomplete="off">
-          <label>CLIENT_SECRET</label><input id="clientSecret" autocomplete="off">
-          <label>USER_AGENT</label><input id="userAgent" value="personal:getInterests:v1.0 (by /u/USERNAME)">
-          <p class="small warnText">These fields are only for local testing. Do not share ZIPs containing <span class="mono">reddit.txt</span> with credentials.</p>
-        </div>
-        <div id="backendFields" class="hidden">
-          <label>Backend URL</label><input id="backendUrl" placeholder="https://your-backend.example/reddit?user=name">
-          <p class="small">Backend should return an array of rows or <span class="mono">{"rows":[...]}</span>. Row text can be in <span class="mono">text</span>, <span class="mono">body</span>, or <span class="mono">selftext/title</span>.</p>
-        </div>
-        <div id="redditUploadFields" class="hidden">
-          <label>Upload Reddit rows JSON</label><input id="redditRowsFile" type="file" accept=".json,application/json">
-        </div>
-      </div>
     </section>
 
-    <section class="card col-4">
+    <section class="card col-6">
       <h2>3. Options</h2>
       <div class="two">
         <div><label>Min text chars</label><input id="minChars" type="number" min="0" value="20"></div>
@@ -402,10 +425,10 @@ body.theme-dark .mb3i-lab .svgLabelBg { fill: #101418; stroke: #4b5563; }
         <div><label>Letter-punct weight</label><input id="punctWeight" type="number" step="0.05" value="1"></div>
         <div><label>P/J helper blend</label><input id="pjBlend" type="number" min="0" max="1" step="0.05" value="0"></div>
       </div>
-      <label><input id="useFullIE" type="checkbox" checked> Use full 16-type JSON models as I/E helper</label>
-      <label><input id="useFullPJ" type="checkbox"> Use full 16-type JSON models as P/J helper modifier</label>
-      <label><input id="includeAggregateInMean" type="checkbox"> Include aggregate JSONs in side-by-side mean</label>
-      <p class="small">If aggregate files already contain other files, leave this off to avoid double-counting. They still display separately.</p>
+      <label class="option-check"><input id="useFullIE" type="checkbox" checked> <span>Use full 16-type JSON models as I/E helper</span></label>
+      <label class="option-check"><input id="useFullPJ" type="checkbox" checked> <span>Use full 16-type JSON models as P/J helper modifier</span></label>
+      <label class="option-check"><input id="includeAggregateInMean" type="checkbox" checked> <span>Include aggregate JSONs in side-by-side mean</span></label>
+      <p class="small">Aggregate models display beside the individual model rounds. Keep this enabled when you want the side-by-side mean to include every built-in model.</p>
       <div class="row" style="margin-top:12px">
         <button id="processBtn" class="primary">Process</button>
         <button id="resetOutputBtn" class="ghost">Clear output</button>
@@ -423,19 +446,15 @@ body.theme-dark .mb3i-lab .svgLabelBg { fill: #101418; stroke: #4b5563; }
         <button id="saveSummaryJsonBtn">Save summary JSON</button>
         <button id="saveProcessedJsonBtn">Save processed samples JSON</button>
         <button id="saveProcessedTsvBtn">Save processed samples TSV</button>
-        <button id="saveRedditJsonBtn">Save raw Reddit rows JSON</button>
-        <button id="saveRedditTsvBtn">Save raw Reddit rows TSV</button>
       </div>
     </section>
 
     <section id="results" class="col-12"></section>
   </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script>
 const $ = id => document.getElementById(id);
 let models = [];
-let redditCreds = null;
 let rawRows = [];
 let processedSamples = [];
 let lastResult = null;
@@ -457,15 +476,9 @@ function toTsv(rows){if(!rows || !rows.length) return ""; const keys = Array.fro
 function tableHtml(rows, maxRows=500){if(!rows || !rows.length) return `<p class="small">No rows.</p>`; const keys = Object.keys(rows[0]); const body = rows.slice(0,maxRows).map(r=>`<tr>${keys.map(k=>`<td class="${k==='text'||k==='textPreview'?'scrollText':''}">${safeText(r[k])}</td>`).join("")}</tr>`).join(""); const note = rows.length > maxRows ? `<p class="small">Showing ${maxRows} of ${rows.length} rows.</p>` : ""; return `${note}<div class="tableWrap"><table><thead><tr>${keys.map(k=>`<th>${safeText(k)}</th>`).join("")}</tr></thead><tbody>${body}</tbody></table></div>`;}
 function barsHtml(rows, labelKey="Personality", valueKey="Percentage", max=8){return rows.slice(0,max).map(r=>`<div class="barRow"><div class="mono">${safeText(r[labelKey])}</div><div class="barBox"><div class="bar" style="width:${Math.max(0,Math.min(100,Number(r[valueKey]||0)))}%"></div></div><div>${round(Number(r[valueKey]||0),3)}%</div></div>`).join("");}
 
-function parseCreds(text){const get = key => {const m = text.match(new RegExp(key + "\\s*=\\s*[\\\"']([^\\\"']*)[\\\"']", "i")); return m ? m[1] : "";}; const out = {clientId:get("CLIENT_ID"), clientSecret:get("CLIENT_SECRET"), userAgent:get("USER_AGENT")}; return out.clientId || out.clientSecret || out.userAgent ? out : null;}
-function modelLabel(fileName, data){return data.datasetName || data.name || fileName.replace(/\.json$/i,"");}
-function isAggregate(label, data){return /aggregate/i.test(label) || /aggregate/i.test(data.datasetName||"") || /aggregate/i.test(data.comment||"");}
-function prepModel(fileName, data){if(!data || !data.groups || !Array.isArray(data.mbtiTypes)) throw new Error(`${fileName}: not a compact model JSON`); const model = {fileName, label:modelLabel(fileName,data), data, typeCount:data.mbtiTypes.length, isFull16:data.mbtiTypes.length===16 && data.mbtiTypes.every(t=>t.length===4), isNoIE:data.mbtiTypes.every(t=>t.length===3), aggregate:isAggregate(modelLabel(fileName,data), data)}; for(const groupName of data.groupOrder || Object.keys(data.groups)){const g = data.groups[groupName]; if(!g || !g.tokens || !g.probabilityMatrix) continue; g.index = Object.fromEntries(g.tokens.map((t,i)=>[t,i])); g.norms = {}; for(const type of data.mbtiTypes){const vals = g.probabilityMatrix[type] || []; g.norms[type] = Math.sqrt(vals.reduce((a,b)=>a+b*b,0));}} return model;}
-function renderModelList(){if(!models.length){$("modelList").textContent = "No models loaded."; return;} $("modelList").innerHTML = models.map((m,i)=>`<span class="pill ${m.isFull16?'good':'info'}">${i+1}. ${safeText(m.label)} · ${m.isFull16?'16-type':'8-family'}${m.aggregate?' · aggregate':''}</span>`).join(" ");}
-
 function loadBuiltInModels(){
   const loaded = [];
-  setStatus("Loading built-in models...");
+  setStatus("Initializing built-in analysis models...");
   for(const blob of BUILTIN_MODEL_BLOBS){
     try{
       const data = JSON.parse(blob.text);
@@ -476,47 +489,7 @@ function loadBuiltInModels(){
   }
   models = loaded;
   renderModelList();
-  log(`Loaded ${models.length} built-in JSON model(s). Full 16-type: ${models.filter(m=>m.isFull16).length}. No-I/E: ${models.filter(m=>m.isNoIE).length}.`);
-}
-
-function applyRedditCreds(creds, sourceLabel="credential file"){
-  if(!creds) throw new Error("No CLIENT_ID, CLIENT_SECRET, or USER_AGENT found.");
-  redditCreds = creds;
-  $("clientId").value = creds.clientId || "";
-  $("clientSecret").value = creds.clientSecret || "";
-  if(creds.userAgent) $("userAgent").value = creds.userAgent;
-  log(`Loaded Reddit credentials from ${sourceLabel}.`);
-}
-
-async function loadCredentialFile(){
-  const file = $("credInput").files[0];
-  if(!file) throw new Error("Choose reddit.txt or a ZIP containing reddit.txt.");
-  const lower = file.name.toLowerCase();
-  let text = "";
-  if(lower.endsWith(".zip")){
-    if(!window.JSZip) throw new Error("JSZip is unavailable. Upload a plain reddit.txt file instead.");
-    const zip = await JSZip.loadAsync(file);
-    const entry = Object.values(zip.files).find(f => !f.dir && f.name.split("/").pop().toLowerCase() === "reddit.txt");
-    if(!entry) throw new Error("ZIP did not contain reddit.txt.");
-    text = await entry.async("text");
-  }else{
-    text = await file.text();
-  }
-  applyRedditCreds(parseCreds(text), file.name);
-}
-
-function clearCredentials(){
-  redditCreds = null;
-  $("clientId").value = "";
-  $("clientSecret").value = "";
-  $("userAgent").value = "personal:getInterests:v1.0 (by /u/USERNAME)";
-  if($("credInput")) $("credInput").value = "";
-  log("Reddit credentials cleared. Manual fields can still be used.");
-}
-
-function downloadCredentialSample(){
-  const sample = 'CLIENT_ID = "x"\nCLIENT_SECRET = "z"\nUSER_AGENT = "personal:getInterests:v1.0 (by /u/USERNAME)"\n';
-  downloadFile("reddit.txt", sample, "text/plain;charset=utf-8");
+  log("Built-in analysis models are active.");
 }
 
 function normalizeLowerSpace(text){text = String(text).normalize("NFKC").toLowerCase(); let out="", lastSpace=false; for(const ch of text){if(ch>="a"&&ch<="z"){out+=ch; lastSpace=false;} else if(/\s/.test(ch) && !lastSpace){out+=" "; lastSpace=true;}} return out.trim();}
@@ -541,15 +514,6 @@ function axisDominanceRows(dims){const rows=[]; if("I%" in dims && "E%" in dims)
 
 function readRowsFromText(text, source){const mode = $("txtMode").value; const min = Number($("minChars").value || 0); const linesPer = Math.max(1, Number($("txtLinesPerSample").value || 1)); const cleaned = String(text || "").replace(/\r\n/g,"\n"); if(mode==="whole"){const t=cleaned.trim(); return t.length>=min ? [{kind:"txt_all", id:"txt_all_1", source, text:t, textPreview:t.slice(0,300), textChars:t.length}] : [];} const lines = cleaned.split("\n").map(s=>s.trim()).filter(Boolean); const rows = []; for(let i=0;i<lines.length;i+=linesPer){const chunk = lines.slice(i,i+linesPer).join("\n").trim(); if(chunk.length>=min) rows.push({kind:"txt_group", id:`txt_group_${rows.length+1}`, source, startLine:i+1, endLine:Math.min(i+linesPer,lines.length), groupedCount:Math.min(linesPer, lines.length-i), text:chunk, textPreview:chunk.slice(0,300), textChars:chunk.length});} return rows;}
 async function getTxtRows(){const file = $("txtFile").files[0]; if(file){const text = await file.text(); return readRowsFromText(text, file.name);} return readRowsFromText($("pasteText").value, "pasted_text");}
-function normalizeRedditRow(row, i){let text = row.text ?? row.body ?? ""; if(!text && (row.title || row.selftext)) text = `${row.title || ""}\n\n${row.selftext || ""}`.trim(); const kind = row.kind || row.type || (row.title ? "reddit_post" : "reddit_comment"); return {kind, id: row.id || `${kind}_${i+1}`, source: row.subreddit || row.source || "reddit", subreddit: row.subreddit || "", created_iso_utc: row.created_iso_utc || row.created || "", score: row.score ?? 0, permalink: row.permalink || row.url || "", text:String(text||"").trim()};}
-function groupRedditRows(rows){const min = Number($("minChars").value || 0); const per = Math.max(1, Number($("redditRowsPerSample").value || 1)); const clean = rows.map(normalizeRedditRow).filter(r=>r.text && r.text.length>=min && !["[deleted]","[removed]"].includes(r.text.trim())); rawRows = clean; const grouped = []; for(let i=0;i<clean.length;i+=per){const chunk = clean.slice(i,i+per); const text = chunk.map(r=>r.text).join("\n").trim(); if(text.length<min) continue; grouped.push({kind: per===1 ? chunk[0].kind : "reddit_group", id: per===1 ? chunk[0].id : `reddit_group_${grouped.length+1}`, source: per===1 ? chunk[0].source : `${chunk[0].source}...`, subreddit: per===1 ? chunk[0].subreddit : "mixed", created_iso_utc: chunk[0].created_iso_utc || "", score: sum(chunk.map(r=>Number(r.score)||0)), permalink: per===1 ? chunk[0].permalink : "", groupedCount: chunk.length, text, textPreview:text.slice(0,300), textChars:text.length});} return grouped;}
-function childToRow(child, kind){const d = child.data || child; if(kind==="comment") return {kind:"reddit_comment", id:d.id, subreddit:d.subreddit, created_iso_utc:d.created_utc?new Date(d.created_utc*1000).toISOString():"", score:d.score||0, permalink:d.permalink?"https://www.reddit.com"+d.permalink:"", text:d.body||""}; return {kind:"reddit_post", id:d.id, subreddit:d.subreddit, created_iso_utc:d.created_utc?new Date(d.created_utc*1000).toISOString():"", score:d.score||0, permalink:d.permalink?"https://www.reddit.com"+d.permalink:"", text:`${d.title||""}\n\n${d.selftext||""}`.trim()};}
-async function fetchListing(baseUrl, limit, kind, headers={}){let out=[], after=""; const delay = Number($("requestDelay").value || 0); while(out.length < limit){const take = Math.min(100, limit-out.length); const sep = baseUrl.includes("?") ? "&" : "?"; const url = `${baseUrl}${sep}limit=${take}${after?`&after=${encodeURIComponent(after)}`:""}&raw_json=1`; const res = await fetch(url,{headers}); if(!res.ok) throw new Error(`${res.status} ${res.statusText} from ${url}`); const json = await res.json(); const children = json?.data?.children || []; if(!children.length) break; out.push(...children.map(c=>childToRow(c, kind))); after = json?.data?.after; log(`Fetched ${out.length}/${limit} ${kind}s.`); if(!after) break; if(delay) await sleep(delay);} return out;}
-async function getOAuthToken(){const clientId = $("clientId").value.trim(); const clientSecret = $("clientSecret").value.trim(); const userAgent = $("userAgent").value.trim(); if(!clientId || !clientSecret) throw new Error("OAuth needs CLIENT_ID and CLIENT_SECRET."); const res = await fetch("https://www.reddit.com/api/v1/access_token", {method:"POST", headers:{"Authorization":"Basic "+btoa(`${clientId}:${clientSecret}`), "Content-Type":"application/x-www-form-urlencoded", "User-Agent":userAgent}, body:"grant_type=client_credentials"}); if(!res.ok) throw new Error(`OAuth token failed: ${res.status} ${res.statusText}`); return await res.json();}
-async function getRedditRows(){const engine = $("redditEngine").value; if(engine==="upload"){const f=$("redditRowsFile").files[0]; if(!f) throw new Error("Choose a Reddit rows JSON file."); const data = JSON.parse(await f.text()); return groupRedditRows(Array.isArray(data)?data:(data.rows||data.items||[]));} if(engine==="backend"){const url=$("backendUrl").value.trim(); if(!url) throw new Error("Backend URL required."); const data = await (await fetch(url)).json(); return groupRedditRows(Array.isArray(data)?data:(data.rows||data.items||[]));}
- const user = $("redditUser").value.trim().replace(/^u\//i,""); if(!user) throw new Error("Reddit username required."); const maxC = Number($("maxComments").value || 0), maxP = Number($("maxPosts").value || 0); let headers = {}; let commentUrl, postUrl; if(engine==="oauth"){const tok = await getOAuthToken(); headers = {"Authorization":"bearer "+tok.access_token}; commentUrl = `https://oauth.reddit.com/user/${encodeURIComponent(user)}/comments`; postUrl = `https://oauth.reddit.com/user/${encodeURIComponent(user)}/submitted`; log("OAuth token received. Browser CORS may still block Reddit.");} else {commentUrl = `https://www.reddit.com/user/${encodeURIComponent(user)}/comments.json`; postUrl = `https://www.reddit.com/user/${encodeURIComponent(user)}/submitted.json`;}
- const rows=[]; if(maxC>0) rows.push(...await fetchListing(commentUrl, maxC, "comment", headers)); if(maxP>0) rows.push(...await fetchListing(postUrl, maxP, "post", headers)); rows.sort((a,b)=>String(b.created_iso_utc).localeCompare(String(a.created_iso_utc))); return groupRedditRows(rows);}
-
 function averageFamilyAcrossModels(modelSummaries){const includeAgg = $("includeAggregateInMean").checked; let usable = modelSummaries.filter(r=>includeAgg || !r.model.aggregate); if(!usable.length) usable = modelSummaries; const out = Object.fromEntries(eightFamilies.map(f=>[f,0])); for(const r of usable){const fam = collapseToFamily(r.finalProbs); for(const f of eightFamilies) out[f]+=fam[f]||0;} for(const f of eightFamilies) out[f]/=usable.length; const norm=sum(Object.values(out)); if(norm) for(const f of eightFamilies) out[f]/=norm; return out;}
 function fullAxisHelper(modelSummaries){const full = modelSummaries.filter(r=>r.model.isFull16 && (!r.model.aggregate || $("includeAggregateInMean").checked)); if(!full.length) return null; const avg = Object.fromEntries(mbti16.map(t=>[t,0])); for(const r of full){for(const t of mbti16) avg[t]+=r.finalProbs[t]||0;} for(const t of mbti16) avg[t]/=full.length; const norm=sum(Object.values(avg)); if(norm) for(const t of mbti16) avg[t]/=norm; return {probs:avg, dims:dimensions(avg), dominance:axisDominanceRows(dimensions(avg))};}
 function applyPJBlend(fam, axis){const blend = $("useFullPJ").checked ? Number($("pjBlend").value||0) : 0; if(!axis || blend<=0) return fam; const j = (axis.dims["J%"]||50)/100, p = (axis.dims["P%"]||50)/100; const out={}; for(const f of eightFamilies){const want = f[2]==="J" ? j : p; out[f] = fam[f] * ((1-blend) + blend*(want*2));} const norm=sum(Object.values(out)); if(norm) for(const f of eightFamilies) out[f]/=norm; return out;}
@@ -579,17 +543,17 @@ function groupHeatRows(res){const rows=[]; for(const m of res.modelSummaries||[]
 function sampleScatterRows(res){return (res.sampleResults||[]).map(r=>{const fam=rowFromFamilyProbs(r); const rows=probsToRows(fam); const p=projectionFromFamily(fam); return {x:p.x,y:p.y,z:p.z,family:rows[0]?.Personality||r.familyTop,label:`${r.model} #${r.sampleNumber} ${r.kind}`,size:3+Math.min(9,Number(r.familyTopPercentage||0)/5),opacity:.55};});}
 function modelScatterRows(res){const rows=[]; for(const m of res.modelSummaries||[]){const fam=collapseToFamily(m.finalProbs||{}); const top=probsToRows(fam)[0]; const p=projectionFromFamily(fam); rows.push({x:p.x,y:p.y,z:p.z,family:top.Personality,label:m.model,size:6+Math.min(8,top.Percentage/5),opacity:.9}); for(const [g,probs] of Object.entries(m.groupFinals||{})){const gfam=collapseToFamily(probs); const gtop=probsToRows(gfam)[0]; const gp=projectionFromFamily(gfam); rows.push({x:gp.x,y:gp.y,z:gp.z,family:gtop.Personality,label:`${m.model} / ${g}`,size:5,opacity:.5});}} return rows;}
 function jpScatterRows(res){return sampleScatterRows(res).map(r=>({x:r.x,y:r.z,z:r.y,family:r.family,label:r.label,size:r.size,opacity:r.opacity}));}
-function updateDownloadButtons(){const hasResult=!!lastResult, hasSamples=!!(lastResult&&lastResult.sampleResults&&lastResult.sampleResults.length), hasRaw=!!(rawRows&&rawRows.length); const card=$("downloadsCard"); if(card) card.classList.toggle("hidden",!hasResult); const states={saveSummaryJsonBtn:hasResult,saveProcessedJsonBtn:hasSamples,saveProcessedTsvBtn:hasSamples,saveRedditJsonBtn:hasRaw,saveRedditTsvBtn:hasRaw}; for(const [id,on] of Object.entries(states)){const b=$(id); if(!b) continue; b.disabled=!on; b.classList.toggle("downloadHidden",!on && id.startsWith("saveReddit")); b.title=on?"":"No data available for this export yet.";}}
+function updateDownloadButtons(){const hasResult=!!lastResult, hasSamples=!!(lastResult&&lastResult.sampleResults&&lastResult.sampleResults.length); const card=$("downloadsCard"); if(card) card.classList.toggle("hidden",!hasResult); const states={saveSummaryJsonBtn:hasResult,saveProcessedJsonBtn:hasSamples,saveProcessedTsvBtn:hasSamples}; for(const [id,on] of Object.entries(states)){const b=$(id); if(!b) continue; b.disabled=!on; b.title=on?"":"No data available for this export yet.";}}
 
 function buildVoteSummary(modelSummaries, sampleResults){const modelCounts={}, featureCounts={}, kindCounts={}, sampleCounts={}; for(const m of modelSummaries){addVote(modelCounts, probsToRows(collapseToFamily(m.finalProbs))[0].Personality); for(const [g,probs] of Object.entries(m.groupFinals||{})) addVote(featureCounts, probsToRows(collapseToFamily(probs))[0].Personality); for(const [k,probs] of Object.entries(m.kindFinals||{})) addVote(kindCounts, probsToRows(collapseToFamily(probs))[0].Personality);} for(const r of sampleResults) if(r.familyTop) addVote(sampleCounts, r.familyTop); return {modelTopVotes:voteRows(modelCounts, modelSummaries.length, "Family"), featureGroupVotes:voteRows(featureCounts, sum(Object.values(featureCounts)), "Family"), sourceKindVotes:voteRows(kindCounts, sum(Object.values(kindCounts)), "Family"), sampleTopVotes:voteRows(sampleCounts, sampleResults.length, "Family")};}
 function svgBarChart(rows, labelKey="Personality", valueKey="Percentage", maxRows=8, width=620){const rowH=28, left=70, right=70, top=20; const data=rows.slice(0,maxRows); const height=top+data.length*rowH+10; const maxVal=Math.max(1,...data.map(r=>Number(r[valueKey]||0))); const bars=data.map((r,i)=>{const y=top+i*rowH; const val=Number(r[valueKey]||0); const w=(width-left-right)*(val/maxVal); return `<text class="axisText" x="8" y="${y+15}">${safeText(r[labelKey])}</text><rect x="${left}" y="${y}" width="${w}" height="16" rx="8" fill="url(#grad)"></rect><text class="barText" x="${left+w+6}" y="${y+13}">${round(val,2)}</text>`;}).join(""); return `<svg class="svgChart" viewBox="0 0 ${width} ${height}" role="img"><defs><linearGradient id="grad" x1="0" x2="1"><stop offset="0" stop-color="#75b7ff"/><stop offset="1" stop-color="#d0a8ff"/></linearGradient></defs>${bars}</svg>`;}
 function svgAxisChart(rows, width=620){const rowH=34, left=85, barW=360, top=18; const height=top+rows.length*rowH+10; const body=rows.map((r,i)=>{const y=top+i*rowH; const l=Number(r.leftPct||0), rr=Number(r.rightPct||0); const lw=barW*(l/100), rw=barW*(rr/100); return `<text class="axisText" x="8" y="${y+16}">${safeText(r.axis)}</text><rect x="${left}" y="${y}" width="${lw}" height="16" rx="8" fill="#75b7ff"></rect><rect x="${left+lw}" y="${y}" width="${rw}" height="16" rx="8" fill="#d0a8ff"></rect><text class="barText" x="${left+barW+10}" y="${y+13}">${safeText(r.dominance)} +${round(r.margin,2)}</text>`;}).join(""); return `<svg class="svgChart" viewBox="0 0 ${width} ${height}">${body}</svg>`;}
 function chartBox(title, html, note=""){return `<div class="chartBox"><h3>${safeText(title)}</h3>${note?`<p class="small">${safeText(note)}</p>`:""}${html}</div>`;}
 
-async function process(){if(!models.length) throw new Error("Load at least one model JSON."); setStatus("Preparing source rows..."); rawRows=[]; processedSamples=[]; lastResult=null; const sourceRows = $("sourceMode").value==="txt" ? await getTxtRows() : await getRedditRows(); if(!sourceRows.length) throw new Error("No usable source rows/samples found."); processedSamples = sourceRows; log(`Prepared ${sourceRows.length} scoring sample(s). Raw Reddit rows: ${rawRows.length}.`);
- const modelSummaries=[]; const sampleResults=[]; for(const model of models){log(`Scoring ${model.label}...`); const types = model.data.mbtiTypes; const total = zero(types); const groupSums = {}; const groupCounts = {}; for(const g of model.data.groupOrder || Object.keys(model.data.groups)){groupSums[g]=zero(types); groupCounts[g]=0;} const kindSums={}, kindCounts={}; for(let i=0;i<sourceRows.length;i++){const src = sourceRows[i]; const scored = scoreTextWithModel(src.text, model); addInto(total, scored.probs, types); for(const [g,probs] of Object.entries(scored.groupResults)){if(!groupSums[g]){groupSums[g]=zero(types); groupCounts[g]=0;} addInto(groupSums[g], probs, types); groupCounts[g]++;} const kind = src.kind || "unknown"; if(!kindSums[kind]){kindSums[kind]=zero(types); kindCounts[kind]=0;} addInto(kindSums[kind], scored.probs, types); kindCounts[kind]++; const nativeRows=probsToRows(scored.probs); const fam = collapseToFamily(scored.probs); const famRows = probsToRows(fam); sampleResults.push({model:model.label, sampleNumber:i+1, kind:kind, id:src.id||"", source:src.source||src.subreddit||"", subreddit:src.subreddit||"", groupedCount:src.groupedCount||1, startLine:src.startLine||"", endLine:src.endLine||"", created_iso_utc:src.created_iso_utc||"", score:src.score??"", permalink:src.permalink||"", textChars:src.textChars||src.text.length, textPreview:(src.textPreview||src.text.slice(0,300)), text:src.text, topType:nativeRows[0].Personality, topPercentage:nativeRows[0].Percentage, familyTop:famRows[0].Personality, familyTopPercentage:famRows[0].Percentage, familyEntropy:round(entropy(fam),4), ...sampleDimensionFields(fam, model.isFull16 ? scored.probs : null), ...Object.fromEntries(famRows.map(r=>[r.Personality,r.Percentage]))});}
+async function process(){if(!models.length) throw new Error("Load at least one model JSON."); setStatus("Preparing source rows..."); rawRows=[]; processedSamples=[]; lastResult=null; const sourceRows = await getTxtRows(); if(!sourceRows.length) throw new Error("No usable source rows/samples found."); processedSamples = sourceRows; log(`Prepared ${sourceRows.length} scoring sample(s).`);
+ const modelSummaries=[]; const sampleResults=[]; for(const model of models){log(`Scoring ${model.label}...`); const types = model.data.mbtiTypes; const total = zero(types); const groupSums = {}; const groupCounts = {}; for(const g of model.data.groupOrder || Object.keys(model.data.groups)){groupSums[g]=zero(types); groupCounts[g]=0;} const kindSums={}, kindCounts={}; for(let i=0;i<sourceRows.length;i++){const src = sourceRows[i]; const scored = scoreTextWithModel(src.text, model); addInto(total, scored.probs, types); for(const [g,probs] of Object.entries(scored.groupResults)){if(!groupSums[g]){groupSums[g]=zero(types); groupCounts[g]=0;} addInto(groupSums[g], probs, types); groupCounts[g]++;} const kind = src.kind || "unknown"; if(!kindSums[kind]){kindSums[kind]=zero(types); kindCounts[kind]=0;} addInto(kindSums[kind], scored.probs, types); kindCounts[kind]++; const nativeRows=probsToRows(scored.probs); const fam = collapseToFamily(scored.probs); const famRows = probsToRows(fam); sampleResults.push({model:model.label, sampleNumber:i+1, kind:kind, id:src.id||"", source:src.source||"", groupedCount:src.groupedCount||1, startLine:src.startLine||"", endLine:src.endLine||"", textChars:src.textChars||src.text.length, textPreview:(src.textPreview||src.text.slice(0,300)), text:src.text, topType:nativeRows[0].Personality, topPercentage:nativeRows[0].Percentage, familyTop:famRows[0].Personality, familyTopPercentage:famRows[0].Percentage, familyEntropy:round(entropy(fam),4), ...sampleDimensionFields(fam, model.isFull16 ? scored.probs : null), ...Object.fromEntries(famRows.map(r=>[r.Personality,r.Percentage]))});}
  const finalProbs = avgFromSum(total, sourceRows.length, types); const groupFinals = {}; for(const g of Object.keys(groupSums)) groupFinals[g]=avgFromSum(groupSums[g], groupCounts[g], types); const kindFinals = {}; for(const k of Object.keys(kindSums)) kindFinals[k]=avgFromSum(kindSums[k], kindCounts[k], types); modelSummaries.push({model, finalProbs, groupFinals, kindFinals});}
- const familyConsensusRaw = averageFamilyAcrossModels(modelSummaries); const axis = fullAxisHelper(modelSummaries); const familyConsensus = applyPJBlend(familyConsensusRaw, axis); const reconstructed = reconstructedFullRows(familyConsensus, axis); const voteSummary = buildVoteSummary(modelSummaries, sampleResults); const diagnostic = nfjDiagnostics(familyConsensus, modelSummaries, sampleResults, voteSummary); const familyRows = probsToRows(familyConsensus); const confidence = interpretConfidence(familyRows, voteSummary, sourceRows.length); const consensusDims = dimensions(familyConsensus); const consensusDominance = axisDominanceRows(consensusDims); lastResult = {createdAt:new Date().toISOString(), sourceMode:$("sourceMode").value, sampleCount:sourceRows.length, rawRedditCount:rawRows.length, modelSummaries:modelSummaries.map(m=>({model:m.model.label, fileName:m.model.fileName, isFull16:m.model.isFull16, isNoIE:m.model.isNoIE, aggregate:m.model.aggregate, finalRows:probsToRows(m.finalProbs), finalProbs:m.finalProbs, familyRows:probsToRows(collapseToFamily(m.finalProbs)), dimensions:dimensions(m.finalProbs), axisDominance:axisDominanceRows(dimensions(m.finalProbs)), groupFinals:m.groupFinals, kindFinals:m.kindFinals})), familyConsensusRows:familyRows, familyConsensusProbs:familyConsensus, consensusDimensions:consensusDims, consensusDominance, axisHelper:axis, reconstructedFullRows:reconstructed, diagnostic, voteSummary, confidence, processedSamples:sourceRows, sampleResults}; renderResults(lastResult); $("downloadsCard").classList.remove("hidden"); updateDownloadButtons(); log("Done.");}
+ const familyConsensusRaw = averageFamilyAcrossModels(modelSummaries); const axis = fullAxisHelper(modelSummaries); const familyConsensus = applyPJBlend(familyConsensusRaw, axis); const reconstructed = reconstructedFullRows(familyConsensus, axis); const voteSummary = buildVoteSummary(modelSummaries, sampleResults); const diagnostic = nfjDiagnostics(familyConsensus, modelSummaries, sampleResults, voteSummary); const familyRows = probsToRows(familyConsensus); const confidence = interpretConfidence(familyRows, voteSummary, sourceRows.length); const consensusDims = dimensions(familyConsensus); const consensusDominance = axisDominanceRows(consensusDims); lastResult = {createdAt:new Date().toISOString(), sourceMode:"txt", sampleCount:sourceRows.length,  modelSummaries:modelSummaries.map(m=>({model:m.model.label, fileName:m.model.fileName, isFull16:m.model.isFull16, isNoIE:m.model.isNoIE, aggregate:m.model.aggregate, finalRows:probsToRows(m.finalProbs), finalProbs:m.finalProbs, familyRows:probsToRows(collapseToFamily(m.finalProbs)), dimensions:dimensions(m.finalProbs), axisDominance:axisDominanceRows(dimensions(m.finalProbs)), groupFinals:m.groupFinals, kindFinals:m.kindFinals})), familyConsensusRows:familyRows, familyConsensusProbs:familyConsensus, consensusDimensions:consensusDims, consensusDominance, axisHelper:axis, reconstructedFullRows:reconstructed, diagnostic, voteSummary, confidence, processedSamples:sourceRows, sampleResults}; renderResults(lastResult); $("downloadsCard").classList.remove("hidden"); updateDownloadButtons(); log("Done.");}
 
 
 function renderResults(res){const root=$("results"); const familyRows=res.familyConsensusRows; const fullAxisRows = res.axisHelper ? probsToRows(res.axisHelper.probs).slice(0,16) : []; const charts = [];
@@ -604,38 +568,35 @@ function renderResults(res){const root=$("results"); const familyRows=res.family
  else {if(scatterSamples.length) charts.push(chartBox("All sample points: N/S vs T/F", svgScatter(scatterSamples,{jitter:true,maxPoints:1600}), "Every processed sample from every model is plotted. Right = more N, left = more S, up = more T, down = more F. Color = winning family.")); const centroids=familyCentroidRows(scatterSamples); if(centroids.length) charts.push(chartBox("Sample-family centroids: N/S vs T/F", svgScatter(centroids,{autoZoom:true,showLabels:true}), "Each large point is the average position for all samples that were won by that family. This makes dense line-by-line runs easier to read.")); if(scatterSamples.length) charts.push(chartBox("All sample points: N/S vs J/P", svgScatter(toJPScatterRows(scatterSamples),{jitter:true,maxPoints:1600,yTop:"J ↑",yBottom:"P ↓"}), "Right = more N, left = more S, up = more J, down = more P. Useful for seeing P/J turbulence.")); if(scatterModels.length) charts.push(chartBox("Model and feature-group projection map", svgScatter(scatterModels,{autoZoom:true,showLabels:true}), "Large points are model finals; smaller points are model × feature-group rounds."));}
  if((res.modelSummaries||[]).length>1) charts.push(chartBox("Rank-flow across JSON models", svgRankFlow(res.modelSummaries), "Lines show how each family moves in rank across the loaded JSON models. Use it to see whether a family is stable or model-specific."));
  const ieSummary = res.axisHelper ? res.axisHelper.dominance.find(r=>r.axis==="I/E") : null;
- const miniCards = [{label:"Primary family",value:res.confidence.primaryFamily,sub:`${res.confidence.primaryPct}%`},{label:"Secondary",value:res.confidence.secondaryFamily,sub:`margin ${res.confidence.marginPct}%`},{label:"Confidence",value:res.confidence.confidence,sub:`model agreement ${res.confidence.modelTopAgreementPct}%`},{label:"I/E helper",value:ieSummary?ieSummary.dominance:"No full helper",sub:ieSummary?`margin ${ieSummary.margin}%`:"Load 16-type JSONs"}];
+ const miniCards = [{label:"Primary family",value:res.confidence.primaryFamily,sub:`${res.confidence.primaryPct}%`},{label:"Secondary",value:res.confidence.secondaryFamily,sub:`margin ${res.confidence.marginPct}%`},{label:"Confidence",value:res.confidence.confidence,sub:`model agreement ${res.confidence.modelTopAgreementPct}%`},{label:"I/E helper",value:ieSummary?ieSummary.dominance:"No full helper",sub:ieSummary?`margin ${ieSummary.margin}%`:"No helper model"}];
  let html = `<section class="card col-12"><h2>How to read this output</h2><div class="hintBox"><strong>Normal result:</strong> the top family is the ordinary classifier answer. <strong>Vote tables:</strong> show whether the answer is stable across models, feature groups, source kinds, and individual samples. <strong>NFJ turbulence:</strong> is a separate theory test: it looks for high spread, weak margins, shifting top families, and NF/FJ pull. It does not override the normal score unless you choose to interpret it that way.</div><div class="miniGrid">${miniCards.map(c=>`<div class="miniCard"><div class="small">${safeText(c.label)}</div><div class="big">${safeText(c.value)}</div><div class="small">${safeText(c.sub)}</div></div>`).join("")}</div></section>`;
  html += `<section class="card col-12"><h2>Charts and visual maps</h2><p class="small">These charts map the same scores in multiple ways. Whole-file mode uses zoomed model-final maps because there are too few sample points for a useful cloud. Grouped-line mode uses scatter clouds plus centroid maps so dense samples stay readable.</p><div class="chartGrid">${charts.join("")}</div></section>`;
  html += `<section class="card col-12"><h2>Family consensus</h2><div class="grid"><div class="card col-6"><h3>Top families</h3>${barsHtml(familyRows,"Personality","Percentage",8)}</div><div class="card col-6"><h3>NFJ mirror/turbulence diagnostic</h3><p class="small">High turbulence can mean: the sample borrows styles, shifts context, mirrors others, or has no single stable surface signature. This is where the NFJ-mirroring hypothesis can be tested against known accounts. A high score is not an NFJ verdict; it is a flag to inspect variance.</p>${tableHtml([res.diagnostic])}</div></div>${tableHtml(familyRows)}</section>`;
  html += `<section class="card col-12"><h2>Interpretive tally summary</h2><p class="small">This section is designed for close calls. It combines model winners, feature-group winners, source-kind winners, and per-sample winners without hiding disagreement.</p>${tableHtml([res.confidence])}</section>`;
  html += `<section class="card col-12"><h2>Consensus dimension dominance</h2><p class="small">Axis dominance from the 8-family consensus. Positive margins show how far one side outruns its counterpart.</p>${tableHtml(res.consensusDominance)}</section>`;
- if(res.axisHelper){html += `<section class="card col-12"><h2>Full 16-type axis helper</h2><p class="small">Uses loaded full 16-type JSON models only. This helps restore I/E for 8-family models and optionally check J/P drift. I/E dominance is a helper signal, not a forced answer.</p>${tableHtml([res.axisHelper.dims])}<h3>I/E and full-axis dominance</h3>${tableHtml(res.axisHelper.dominance)}<h3>Full-type helper ranking</h3>${tableHtml(fullAxisRows)}</section>`;} else {html += `<section class="card col-12"><h2>Full 16-type axis helper</h2><p class="small warnText">No full 16-type models loaded, so I/E reconstruction is unavailable. Add full 16-type JSONs to the ZIP to unlock I/E dominance.</p></section>`;}
+ if(res.axisHelper){html += `<section class="card col-12"><h2>Full 16-type axis helper</h2><p class="small">Uses built-in full 16-type JSON models only. This helps restore I/E for 8-family models and optionally check J/P drift. I/E dominance is a helper signal, not a forced answer.</p>${tableHtml([res.axisHelper.dims])}<h3>I/E and full-axis dominance</h3>${tableHtml(res.axisHelper.dominance)}<h3>Full-type helper ranking</h3>${tableHtml(fullAxisRows)}</section>`;} else {html += `<section class="card col-12"><h2>Full 16-type axis helper</h2><p class="small warnText">No full 16-type helper model is available, so I/E reconstruction is unavailable.</p></section>`;}
  if(res.reconstructedFullRows?.length){html += `<section class="card col-12"><h2>Reconstructed 16-type estimate</h2><p class="small">Family score split by the full 16-type I/E helper. This is an estimate, not a native 16-type model result.</p>${tableHtml(res.reconstructedFullRows)}</section>`;}
  let native=[], dims=[], groupRows=[], kindRows=[]; for(const m of res.modelSummaries){for(const r of m.finalRows) native.push({model:m.model, Personality:r.Personality, Percentage:r.Percentage}); dims.push({model:m.model, ...m.dimensions}); for(const [g,probs] of Object.entries(m.groupFinals||{})){const rows=probsToRows(probs); const fam=probsToRows(collapseToFamily(probs)); groupRows.push({model:m.model, group:g, topType:rows[0]?.Personality||"", topPct:rows[0]?.Percentage||0, topFamily:fam[0]?.Personality||"", familyPct:fam[0]?.Percentage||0, ...dimensions(probs)});} for(const [k,probs] of Object.entries(m.kindFinals||{})){const rows=probsToRows(probs); const fam=probsToRows(collapseToFamily(probs)); kindRows.push({model:m.model, kind:k, topType:rows[0]?.Personality||"", topPct:rows[0]?.Percentage||0, topFamily:fam[0]?.Personality||"", familyPct:fam[0]?.Percentage||0, ...dimensions(probs)});}}
- html += `<section class="card col-12"><h2>Round vote tallies</h2><p class="small">These are winner counts, not probability averages. They show how many independent rounds chose each family.</p><div class="grid"><div class="card col-3"><h3>Model winners</h3>${tableHtml(res.voteSummary.modelTopVotes)}</div><div class="card col-3"><h3>Feature-group winners</h3>${tableHtml(res.voteSummary.featureGroupVotes)}</div><div class="card col-3"><h3>Source-kind winners</h3>${tableHtml(res.voteSummary.sourceKindVotes)}</div><div class="card col-3"><h3>Sample winners</h3>${tableHtml(res.voteSummary.sampleTopVotes)}</div></div></section>`;
+ html += `<section class="card col-12"><h2>Round vote tallies</h2><p class="small">These are winner counts, not probability averages. They show how many independent rounds chose each family.</p><div class="grid"><div class="card col-3"><h3>Model winners</h3>${tableHtml(res.voteSummary.modelTopVotes)}</div><div class="card col-3"><h3>Feature-group winners</h3>${tableHtml(res.voteSummary.featureGroupVotes)}</div><div class="card col-3"><h3>Source winners</h3>${tableHtml(res.voteSummary.sourceKindVotes)}</div><div class="card col-3"><h3>Sample winners</h3>${tableHtml(res.voteSummary.sampleTopVotes)}</div></div></section>`;
  html += `<section class="card col-12"><h2>Native model results</h2>${tableHtml(native,1000)}</section>`;
  html += `<section class="card col-12"><h2>Dimensions by model</h2>${tableHtml(dims)}</section>`;
  html += `<section class="card col-12"><h2>Feature-group winners</h2><p class="small">Each row is one model × feature group. Use this to find feature-specific pull, such as punctuation producing a different winner than lower-pair structure.</p>${tableHtml(groupRows,1000)}</section>`;
- html += `<section class="card col-12"><h2>Source-kind winners</h2><p class="small">This separates Reddit comments/posts, grouped Reddit samples, pasted text, or TXT groups when those kinds exist.</p>${tableHtml(kindRows,1000)}</section>`;
+ html += `<section class="card col-12"><h2>Source winners</h2><p class="small">This separates pasted text and TXT groups when those kinds exist.</p>${tableHtml(kindRows,1000)}</section>`;
  html += `<section class="card col-12"><h2>Processed sample results</h2><p class="small">Includes metadata, grouped text, family scores, family dimensions, and I/E helper fields when the row came from a full 16-type model. For large files, use the JSON/TSV export buttons.</p>${tableHtml(res.sampleResults,1000)}</section>`;
  root.innerHTML = html; updateDownloadButtons();}
 
-function setPanels(){const src=$("sourceMode").value; $("txtPanel").classList.toggle("hidden",src!=="txt"); $("redditPanel").classList.toggle("hidden",src!=="reddit"); const eng=$("redditEngine").value; $("oauthFields").classList.toggle("hidden",!(src==="reddit" && eng==="oauth")); $("backendFields").classList.toggle("hidden",!(src==="reddit" && eng==="backend")); $("redditUploadFields").classList.toggle("hidden",!(src==="reddit" && eng==="upload")); $("redditFetchFields").classList.toggle("hidden",!(src==="reddit" && (eng==="public" || eng==="oauth")));}
+function setPanels(){const txt=$("txtPanel"); if(txt) txt.classList.remove("hidden");}
+function bindClick(id, fn){const el=$(id); if(el) el.onclick=fn;}
+function bindChange(id, fn){const el=$(id); if(el) el.onchange=fn;}
 
-$("reloadModelsBtn").onclick=()=>{loadBuiltInModels();};
-$("loadCredBtn").onclick=()=>loadCredentialFile().catch(e=>{log("ERROR: "+e.message); console.error(e);});
-$("downloadCredSampleBtn").onclick=()=>downloadCredentialSample();
-$("clearCredBtn").onclick=()=>clearCredentials();
+bindClick("reloadModelsBtn",()=>{loadBuiltInModels();});
 window.addEventListener("DOMContentLoaded",()=>loadBuiltInModels());
-$("processBtn").onclick=()=>process().catch(e=>{log("ERROR: "+e.message); console.error(e);});
-$("resetOutputBtn").onclick=()=>{$("results").innerHTML=""; lastResult=null; $("downloadsCard").classList.add("hidden"); updateDownloadButtons(); setStatus("Output cleared.");};
-$("sourceMode").onchange=setPanels; $("redditEngine").onchange=setPanels;
-$("saveSummaryJsonBtn").onclick=()=>lastResult&&downloadFile("mb3i_summary.json", JSON.stringify({...lastResult, sampleResults:undefined, processedSamples:undefined}, null, 2), "application/json");
-$("saveProcessedJsonBtn").onclick=()=>lastResult&&downloadFile("mb3i_processed_samples.json", JSON.stringify(lastResult.sampleResults, null, 2), "application/json");
-$("saveProcessedTsvBtn").onclick=()=>lastResult&&downloadFile("mb3i_processed_samples.tsv", toTsv(lastResult.sampleResults), "text/tab-separated-values");
-$("saveRedditJsonBtn").onclick=()=>downloadFile("reddit_rows.json", JSON.stringify(rawRows, null, 2), "application/json");
-$("saveRedditTsvBtn").onclick=()=>downloadFile("reddit_rows.tsv", toTsv(rawRows), "text/tab-separated-values");
+bindClick("processBtn",()=>process().catch(e=>{log("ERROR: "+e.message); console.error(e);}));
+bindClick("resetOutputBtn",()=>{$("results").innerHTML=""; lastResult=null; $("downloadsCard").classList.add("hidden"); updateDownloadButtons(); setStatus("Output cleared.");});
+bindChange("sourceMode",setPanels);
+bindClick("saveSummaryJsonBtn",()=>lastResult&&downloadFile("mb3i_summary.json", JSON.stringify({...lastResult, sampleResults:undefined, processedSamples:undefined}, null, 2), "application/json"));
+bindClick("saveProcessedJsonBtn",()=>lastResult&&downloadFile("mb3i_processed_samples.json", JSON.stringify(lastResult.sampleResults, null, 2), "application/json"));
+bindClick("saveProcessedTsvBtn",()=>lastResult&&downloadFile("mb3i_processed_samples.tsv", toTsv(lastResult.sampleResults), "text/tab-separated-values"));
 setPanels(); updateDownloadButtons();
 </script>
 {% endraw %}
