@@ -28,15 +28,15 @@ This page collects examples of rewrites used in the Canonical Order of Operation
 {| class="wikitable"
 ! Starting form !! Canonical rewrite
 |-
-| <math>\sqrt{x}</math> || <math>x^{1/2}</math>
+| <math>\sqrt{x}</math> || <math>x^{\dfrac{1}{2}}</math>
 |-
-| <math>\sqrt[3]{x}</math> || <math>x^{1/3}</math>
+| <math>\sqrt[3]{x}</math> || <math>x^{\dfrac{1}{3}}</math>
 |-
-| <math>\sqrt{x^2}</math> || <math>x^{2/2}</math>
+| <math>\sqrt{x^2}</math> || <math>x^{\dfrac{2}{2}}</math>
 |-
-| <math>\sqrt[5]{x^3}</math> || <math>x^{3/5}</math>
+| <math>\sqrt[5]{x^3}</math> || <math>x^{\dfrac{3}{5}}</math>
 |-
-| <math>1/\sqrt{x}</math> || <math>x^{-1/2}</math>
+| <math>\dfrac{1}{\sqrt{x}}</math> || <math>x^{-\dfrac{1}{2}}</math>
 |}
 
 == Power of a power ==
@@ -45,9 +45,9 @@ This page collects examples of rewrites used in the Canonical Order of Operation
 |-
 | <math>(x^2)^3</math> || <math>x^6</math>
 |-
-| <math>(x^{1/2})^2</math> || <math>x^1</math>
+| <math>(x^{\dfrac{1}{2}})^2</math> || <math>x^1</math>
 |-
-| <math>(x^{m/n})^p</math> || <math>x^{mp/n}</math>
+| <math>(x^{\dfrac{m}{n}})^p</math> || <math>x^{\dfrac{mp}{n}}</math>
 |}
 
 == Sign placement ==
@@ -69,13 +69,13 @@ When an expression can be read more than one way, COO favors rewriting rather th
 {| class="wikitable"
 ! Ambiguous or compressed form !! Clearer rewrite
 |-
-| <math>-\sqrt{x}</math> || <math>-x^{1/2}</math>
+| <math>-\sqrt{x}</math> || <math>-x^{\dfrac{1}{2}}</math>
 |-
-| <math>\sqrt{x^2y}</math> || <math>(x^2y)^{1/2}</math>
+| <math>\sqrt{x^2y}</math> || <math>(x^2y)^{\dfrac{1}{2}}</math>
 |-
-| <math>-x^{1/2}</math> || <math>-(x^{1/2})</math>
+| <math>-x^{\dfrac{1}{2}}</math> || <math>-(x^{\dfrac{1}{2}})</math>
 |-
-| <math>(-x)^{1/2}</math> || Explicitly grouped signed base under a fractional exponent.
+| <math>(-x)^{\dfrac{1}{2}}</math> || Explicitly grouped signed base under a fractional exponent.
 |}
 
 {| class="navbox"

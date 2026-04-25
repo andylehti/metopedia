@@ -29,23 +29,33 @@
     const overlay = document.getElementById('mobile-panel-overlay');
     if(overlay){ overlay.classList.toggle('open', open); overlay.setAttribute('aria-hidden', String(!open)); }
   }
-  function renderMath(){
-    if(!window.katex) return;
-    document.querySelectorAll('.tex-math, math').forEach(el => {
+  function renderMath(attempt){
+    attempt = attempt || 0;
+    const nodes = Array.from(document.querySelectorAll('.tex-math, math')).filter(el => el.getAttribute('data-rendered') !== '1');
+    if(!nodes.length) return;
+    const renderedNodes = [];
+    nodes.forEach(el => {
       const tex = (el.getAttribute('data-tex') || el.textContent || '').trim();
       if(!tex) return;
       const displayMode = el.getAttribute('data-display') === 'block' || el.getAttribute('display') === 'block' || el.classList.contains('math-display-source');
       const rendered = document.createElement(displayMode ? 'div' : 'span');
       rendered.className = displayMode ? 'math-display math-rendered' : 'math-inline math-rendered';
-      try{
-        window.katex.render(tex, rendered, { displayMode, throwOnError:false, strict:false });
-        const parent = el.parentElement;
-        if(displayMode && parent && parent.tagName === 'P' && parent.textContent.trim() === el.textContent.trim()) parent.replaceWith(rendered);
-        else el.replaceWith(rendered);
-      }catch(e){
-        el.classList.add('math-failed');
-      }
+      rendered.setAttribute('data-rendered', '1');
+      rendered.textContent = displayMode ? '\\[' + tex + '\\]' : '\\(' + tex + '\\)';
+      const parent = el.parentElement;
+      if(displayMode && parent && parent.tagName === 'P' && parent.textContent.trim() === el.textContent.trim()) parent.replaceWith(rendered);
+      else el.replaceWith(rendered);
+      renderedNodes.push(rendered);
     });
+    const typeset = () => {
+      if(window.MathJax && window.MathJax.typesetPromise){
+        window.MathJax.typesetPromise(renderedNodes).catch(() => renderedNodes.forEach(el => el.classList.add('math-failed')));
+      }else if(attempt < 80){
+        setTimeout(() => renderMath(attempt + 1), 50);
+      }
+    };
+    if(window.MathJax && window.MathJax.startup && window.MathJax.startup.promise) window.MathJax.startup.promise.then(typeset);
+    else typeset();
   }
   function setupSearch(){
     const form = document.getElementById('search-form');

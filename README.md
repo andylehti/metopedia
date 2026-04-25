@@ -11,7 +11,7 @@ bundle exec jekyll serve
 
 ## Page model
 
-Pages are generated as static Jekyll pages with Wikipedia-style layout, infoboxes, tables, references, categories, and KaTeX math support. The old hash links are redirected by the front page script when someone visits a legacy URL such as `/#/Reputation_Flair`.
+Pages are generated as static Jekyll pages with Wikipedia-style layout, infoboxes, tables, references, categories, and MathJax math support. The old hash links are redirected by the front page script when someone visits a legacy URL such as `/#/Reputation_Flair`.
 
 ## Editing
 

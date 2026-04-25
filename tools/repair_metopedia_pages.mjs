@@ -10,6 +10,10 @@ function esc(s){
   return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+function unesc(s){
+  return String(s ?? '').replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+}
+
 function titleFromSlug(slug){
   const clean = String(slug || '').split('#')[0].replace(/^:/, '').replace(/^Category:/, '');
   return titles.get(clean) || clean.replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
@@ -82,6 +86,10 @@ function firstTopLevelSlash(s){
   let depth = 0;
   for(let i = 0; i < s.length; i++){
     const ch = s[i];
+    if(ch === '\\'){
+      i++;
+      continue;
+    }
     if('{[('.includes(ch)) depth++;
     else if('}])'.includes(ch) && depth > 0) depth--;
     else if(ch === '/' && depth === 0) return i;
@@ -89,30 +97,84 @@ function firstTopLevelSlash(s){
   return -1;
 }
 
-function frac(s){
+function splitTopLevel(s, separator){
+  const out = [];
+  let buf = '';
+  let depth = 0;
+  for(let i = 0; i < s.length; i++){
+    const ch = s[i];
+    if(ch === '\\'){
+      buf += ch;
+      if(i + 1 < s.length) buf += s[++i];
+      continue;
+    }
+    if('{[('.includes(ch)) depth++;
+    else if('}])'.includes(ch) && depth > 0) depth--;
+    if(ch === separator && depth === 0){
+      out.push(buf);
+      buf = '';
+    }else{
+      buf += ch;
+    }
+  }
+  out.push(buf);
+  return out;
+}
+
+function bracedFraction(s){
   s = s.trim();
-  if(!s || s.includes('\\frac')) return s;
+  if(!s || /\\[dt]?frac/.test(s)) return s;
+  let prefix = '';
+  if(s.startsWith('-')){
+    prefix = '-';
+    s = s.slice(1).trim();
+  }
   const i = firstTopLevelSlash(s);
-  if(i < 1) return s;
+  if(i < 1) return prefix + s;
   const left = s.slice(0, i).trim();
   const right = s.slice(i + 1).trim();
-  if(!left || !right) return s;
-  return `\\frac{${left}}{${right}}`;
+  if(!left || !right) return prefix + s;
+  return `${prefix}\\dfrac{${left}}{${right}}`;
+}
+
+function normalizeExponentFractions(tex){
+  let out = '';
+  for(let i = 0; i < tex.length; i++){
+    if(tex[i] !== '^' || tex[i + 1] !== '{'){
+      out += tex[i];
+      continue;
+    }
+    let j = i + 2;
+    let depth = 1;
+    let inner = '';
+    for(; j < tex.length; j++){
+      const ch = tex[j];
+      if(ch === '\\'){
+        inner += ch;
+        if(j + 1 < tex.length) inner += tex[++j];
+        continue;
+      }
+      if(ch === '{') depth++;
+      else if(ch === '}'){
+        depth--;
+        if(depth === 0) break;
+      }
+      inner += ch;
+    }
+    if(depth !== 0){
+      out += tex.slice(i);
+      break;
+    }
+    out += `^{${bracedFraction(normalizeExponentFractions(inner))}}`;
+    i = j;
+  }
+  return out;
 }
 
 function normalizeTex(tex){
-  tex = String(tex || '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&').trim().replace(/\s+/g, ' ');
-  if(tex.includes('\\frac')) return tex;
-  const parts = [];
-  let buf = '', depth = 0;
-  for(const ch of tex){
-    if('{[('.includes(ch)) depth++;
-    else if('}])'.includes(ch) && depth > 0) depth--;
-    if(ch === '=' && depth === 0){ parts.push(buf); buf = ''; }
-    else buf += ch;
-  }
-  parts.push(buf);
-  return parts.length > 1 ? parts.map(frac).join('=') : frac(tex);
+  tex = unesc(tex).trim().replace(/\s+/g, ' ').replace(/\\frac/g, '\\dfrac');
+  const parts = splitTopLevel(tex, '=');
+  return parts.map(part => normalizeExponentFractions(bracedFraction(part))).join('=');
 }
 
 function texNode(tex, display = false){
@@ -126,6 +188,16 @@ function texNode(tex, display = false){
 function convertMath(text){
   text = text.replace(/&lt;(\/?math(?:\s+display=(?:&quot;|"|')block(?:&quot;|"|'))?)&gt;/g, (_, tag) => `<${tag.replace(/&quot;/g, '"')}>`);
   return text.replace(/<math([^>]*)>([\s\S]*?)<\/math>/g, (_, attrs, tex) => texNode(tex, /display\s*=\s*["']block["']/.test(attrs || '')));
+}
+
+function normalizeExistingTexNodes(text){
+  return text.split('\n').map(line => line.replace(/<(span|div)\b([^>]*\bclass="[^"]*tex-math[^"]*"[^>]*)\bdata-tex="([^"]*)"([^>]*)>([^<]*)<\/\1>/g, (match, tag, before, tex) => {
+    const display = /data-display="block"|math-display-source/.test(match);
+    const cls = (match.match(/\bclass="([^"]*)"/) || [,''])[1] || (display ? 'tex-math math-display-source' : 'tex-math math-inline-source');
+    const mode = (match.match(/\bdata-display="([^"]*)"/) || [, display ? 'block' : 'inline'])[1];
+    const normalized = normalizeTex(tex);
+    return `<${tag} class="${esc(cls)}" data-display="${esc(mode)}" data-tex="${esc(normalized)}">${esc(normalized)}</${tag}>`;
+  })).join('\n');
 }
 
 function files(dir){
@@ -143,7 +215,8 @@ const targets = [...files(path.join(root, 'pages')), path.join(root, 'index.md')
 let changed = 0;
 for(const file of targets){
   const before = fs.readFileSync(file, 'utf8');
-  const after = convertMath(convertLinks(convertTemplates(before))).replace(/\{% raw %\}\s*/g, '').replace(/\s*\{% endraw %\}/g, '');
+  const repaired = convertMath(convertLinks(convertTemplates(before))).replace(/\{% raw %\}\s*/g, '').replace(/\s*\{% endraw %\}/g, '');
+  const after = /tex-math|data-tex=/.test(repaired) ? normalizeExistingTexNodes(repaired) : repaired;
   if(after !== before){
     fs.writeFileSync(file, after);
     changed++;

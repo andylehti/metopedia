@@ -44,6 +44,6 @@ Repeated statement.<sup id=&quot;cite_ref-same_1&quot; class=&quot;reference&quo
 Reuse only.<sup id=&quot;cite_ref-same_2&quot; class=&quot;reference&quot;><a href=&quot;#cite_note-same&quot;>[1]</a></sup>
 &lt;ol class=&quot;references&quot;>&lt;li id=&quot;cite_note-same&quot;>&lt;span class=&quot;mw-cite-backlink&quot;><a href=&quot;#cite_ref-same_1&quot;>↑a</a> <a href=&quot;#cite_ref-same_2&quot;>↑b</a>&lt;/span> Reference text.&lt;/li>&lt;li id=&quot;cite_note-note-2&quot;>&lt;span class=&quot;mw-cite-backlink&quot;><a href=&quot;#cite_ref-note-2_1&quot;>↑</a>&lt;/span> Reference text.&lt;/li>&lt;/ol></pre>
 <h2 id="mathematics">Mathematics</h2>
-<p>Use inline KaTeX-compatible math with <code>&amp;lt;math&amp;gt;&lt;/code>. Use display math for larger centered equations.</p>
+<p>Use inline MathJax-compatible math with <code>&amp;lt;math&amp;gt;&lt;/code>. Use display math for larger centered equations.</p>
 <div class="wikitable-wrap"><table class="wikitable"><tr><th>Source</th><th>Result</th></tr><tr><td><code>&amp;lt;math&amp;gt;x^{1/2}&amp;lt;/math&amp;gt;&lt;/code></td><td>inline math</td></tr><tr><td><code>&amp;lt;math display="block"&amp;gt;x^{m/n}=\sqrt[n]{x^m}&amp;lt;/math&amp;gt;&lt;/code></td><td>centered display math</td></tr></table></div>
 

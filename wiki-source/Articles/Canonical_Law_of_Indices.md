@@ -25,15 +25,15 @@ In canonical usage, an index law is not merely a rule for simplifying exponents.
 |-
 | Product of like bases || <math>x^a x^b=x^{a+b}</math> || Like bases combine by adding indices.
 |-
-| Quotient of like bases || <math>x^a/x^b=x^{a-b}</math> || Like bases divide by subtracting indices.
+| Quotient of like bases || <math>\dfrac{x^a}{x^b}=x^{a-b}</math> || Like bases divide by subtracting indices.
 |-
 | Power of a power || <math>(x^a)^b=x^{ab}</math> || Nested indices multiply.
 |-
-| Root as power || <math>\sqrt[n]{x}=x^{1/n}</math> || Roots are fractional indices.
+| Root as power || <math>\sqrt[n]{x}=x^{\dfrac{1}{n}}</math> || Roots are fractional indices.
 |-
-| Combined power and root || <math>\sqrt[n]{x^m}=x^{m/n}</math> || The numerator is the power and the denominator is the root.
+| Combined power and root || <math>\sqrt[n]{x^m}=x^{\dfrac{m}{n}}</math> || The numerator is the power and the denominator is the root.
 |-
-| Negative index || <math>x^{-a}=1/x^a</math> || A negative index denotes reciprocal form.
+| Negative index || <math>x^{-a}=\dfrac{1}{x^a}</math> || A negative index denotes reciprocal form.
 |}
 
 == Relationship to implicit unity ==
@@ -48,9 +48,9 @@ This rule is central to COO because it prevents the exponent from silently exten
 {{Main|Fractional_Exponents_and_Roots}}
 The Canonical Law of Indices treats roots as a subset of exponentiation. The radical symbol is therefore viewed as redundant notation rather than a distinct operation:
 
-<math display="block">\sqrt{x^3}=x^{3/2}</math>
+<math display="block">\sqrt{x^3}=x^{\dfrac{3}{2}}</math>
 
-<math display="block">\sqrt[4]{x^7}=x^{7/4}</math>
+<math display="block">\sqrt[4]{x^7}=x^{\dfrac{7}{4}}</math>
 
 == Sign and base identity ==
 The proposed law requires the sign of a term to be distinguished from the base being exponentiated. This does not mean that negative values cannot be exponentiated. It means the notation must indicate whether the negative sign belongs to the base or operates outside the power.

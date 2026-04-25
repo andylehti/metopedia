@@ -21,7 +21,7 @@ ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 |-
 | Parentheses merely mean “do this first.” || Parentheses also define the object that later operations act upon.
 |-
-| Roots are separate from powers. || Roots can be written as fractional powers: <math>\sqrt[n]{x}=x^{1/n}</math>.
+| Roots are separate from powers. || Roots can be written as fractional powers: <math>\sqrt[n]{x}=x^{\dfrac{1}{n}}</math>.
 |-
 | The radical symbol is necessary. || COO treats the radical symbol as redundant because fractional exponents express the same operation more systematically.
 |-
@@ -31,7 +31,7 @@ ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 |}
 
 == Multiplication and exponentiation ==
-A common teaching shortcut defines exponentiation as repeated multiplication. This is helpful for expressions such as <math>2^3=2\times2\times2</math>, but it does not explain <math>2^0</math>, <math>2^{-3}</math>, or <math>2^{1/2}</math>. COO treats this shortcut as one source of later confusion.
+A common teaching shortcut defines exponentiation as repeated multiplication. This is helpful for expressions such as <math>2^3=2\times2\times2</math>, but it does not explain <math>2^0</math>, <math>2^{-3}</math>, or <math>2^{\dfrac{1}{2}}</math>. COO treats this shortcut as one source of later confusion.
 
 == Signs and bases ==
 The expression <math>-x^2</math> is not the same as <math>(-x)^2</math>. The difference is not a special trick; it is a difference in base identity. In the first expression the base is <math>x</math>. In the second expression the base is the grouped signed term <math>-x</math>.
@@ -39,7 +39,7 @@ The expression <math>-x^2</math> is not the same as <math>(-x)^2</math>. The dif
 == Roots and fractional powers ==
 Root notation often conceals its connection to exponentiation. The canonical rewrite makes that connection immediate:
 
-<math display="block">\sqrt[5]{x^2}=x^{2/5}</math>
+<math display="block">\sqrt[5]{x^2}=x^{\dfrac{2}{5}}</math>
 
 Once roots are written as powers, the ordinary laws of indices can be applied without switching notation systems.
 

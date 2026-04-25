@@ -28,7 +28,7 @@ The Canonical Order uses the law to prevent exponentiation from being applied to
 |-
 | <math>(xy)^n</math> || <math>(x^1y^1)^n</math> || The exponent distributes over the factors when expanded.
 |-
-| <math>\sqrt{x}</math> || <math>(x^1)^{1/2}</math> || The root is a fractional exponent acting on the base.
+| <math>\sqrt{x}</math> || <math>(x^1)^{\dfrac{1}{2}}</math> || The root is a fractional exponent acting on the base.
 |}
 
 == Negative signs ==

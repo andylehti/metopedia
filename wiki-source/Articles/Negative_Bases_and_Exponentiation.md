@@ -35,11 +35,11 @@ The distinction becomes more important when fractional exponents are used. A fra
 {| class="wikitable"
 ! Expression type !! Canonical concern
 |-
-| <math>x^{1/2}</math> || The base is positive, zero, symbolic, or otherwise constrained by context.
+| <math>x^{\dfrac{1}{2}}</math> || The base is positive, zero, symbolic, or otherwise constrained by context.
 |-
-| <math>-x^{1/2}</math> || The sign is external to the root unless grouping says otherwise.
+| <math>-x^{\dfrac{1}{2}}</math> || The sign is external to the root unless grouping says otherwise.
 |-
-| <math>(-x)^{1/2}</math> || The grouped signed quantity is under the fractional exponent.
+| <math>(-x)^{\dfrac{1}{2}}</math> || The grouped signed quantity is under the fractional exponent.
 |}
 
 == Relation to imaginary numbers ==

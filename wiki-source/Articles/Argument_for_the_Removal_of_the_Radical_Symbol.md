@@ -18,25 +18,25 @@ The argument is not that the radical symbol fails in every ordinary use. It is t
 |+ Radical notation and canonical exponent notation
 ! Radical form !! Canonical exponent form
 |-
-| <math>\sqrt{x}</math> || <math>x^{1/2}</math>
+| <math>\sqrt{x}</math> || <math>x^{\dfrac{1}{2}}</math>
 |-
-| <math>\sqrt[3]{x}</math> || <math>x^{1/3}</math>
+| <math>\sqrt[3]{x}</math> || <math>x^{\dfrac{1}{3}}</math>
 |-
-| <math>\sqrt[n]{x}</math> || <math>x^{1/n}</math>
+| <math>\sqrt[n]{x}</math> || <math>x^{\dfrac{1}{n}}</math>
 |-
-| <math>\sqrt{x^m}</math> || <math>x^{m/2}</math>
+| <math>\sqrt{x^m}</math> || <math>x^{\dfrac{m}{2}}</math>
 |-
-| <math>\sqrt[n]{x^m}</math> || <math>x^{m/n}</math>
+| <math>\sqrt[n]{x^m}</math> || <math>x^{\dfrac{m}{n}}</math>
 |-
-| <math>1/\sqrt{x}</math> || <math>x^{-1/2}</math>
+| <math>\dfrac{1}{\sqrt{x}}</math> || <math>x^{-\dfrac{1}{2}}</math>
 |}
 
 == Main rationale ==
-The radical symbol makes roots look separate from powers. A learner may therefore treat <math>\sqrt{x}</math> and <math>x^{1/2}</math> as different conceptual objects, even though they are normally equivalent in standard algebraic notation.
+The radical symbol makes roots look separate from powers. A learner may therefore treat <math>\sqrt{x}</math> and <math>x^{\dfrac{1}{2}}</math> as different conceptual objects, even though they are normally equivalent in standard algebraic notation.
 
 COO argues that replacing radicals with fractional exponents produces one notation family:
 
-<math display="block">x^a</math>, <math>x^{-a}</math>, <math>x^{1/n}</math>, and <math>x^{m/n}</math>
+<math display="block">x^a</math>, <math>x^{-a}</math>, <math>x^{\dfrac{1}{n}}</math>, and <math>x^{\dfrac{m}{n}}</math>
 
 This unifies positive powers, negative powers, roots, and reciprocal roots.
 
@@ -44,13 +44,13 @@ This unifies positive powers, negative powers, roots, and reciprocal roots.
 {| class="wikitable"
 ! Problem !! Radical-based expression !! Canonical rewrite
 |-
-| Square root of a product || <math>\sqrt{ab}</math> || <math>(ab)^{1/2}</math>
+| Square root of a product || <math>\sqrt{ab}</math> || <math>(ab)^{\dfrac{1}{2}}</math>
 |-
-| Cube root of a square || <math>\sqrt[3]{x^2}</math> || <math>x^{2/3}</math>
+| Cube root of a square || <math>\sqrt[3]{x^2}</math> || <math>x^{\dfrac{2}{3}}</math>
 |-
-| Fourth root of a reciprocal || <math>1/\sqrt[4]{x}</math> || <math>x^{-1/4}</math>
+| Fourth root of a reciprocal || <math>\dfrac{1}{\sqrt[4]{x}}</math> || <math>x^{-\dfrac{1}{4}}</math>
 |-
-| Nested square root || <math>\sqrt{\sqrt{x}}</math> || <math>(x^{1/2})^{1/2}=x^{1/4}</math>
+| Nested square root || <math>\sqrt{\sqrt{x}}</math> || <math>(x^{\dfrac{1}{2}})^{\dfrac{1}{2}}=x^{\dfrac{1}{4}}</math>
 |}
 
 == Negative radicands ==

@@ -54,7 +54,7 @@ Reuse only.<ref name="same"/>
 
 
 == Mathematics ==
-Use inline KaTeX-compatible math with <code>&lt;math&gt;</code>. Use display math for larger centered equations.
+Use inline MathJax-compatible math with <code>&lt;math&gt;</code>. Use display math for larger centered equations.
 
 {| class="wikitable"
 ! Source !! Result

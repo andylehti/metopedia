@@ -34,9 +34,7 @@ The Canonical Order of Operations is built around three principles:
 
 The result is a convention in which expressions such as negative powers and nested roots are handled by one family of index rules.
 
-<math display="block">
-(-x)^2 \ne -x^2
-</math>
+<math display="block">(-x)^2 \ne -x^2</math>
 
 Under COO, the first expression explicitly squares the negative base. The second expression places a negation outside the square. The distinction is not treated as a matter of memory, but as a matter of written structure.
 
@@ -50,13 +48,9 @@ These issues are old notation problems. Modern notation developed over centuries
 
 The central claim of COO is that a visible arithmetic unit should not be split by an operation unless the notation explicitly separates it. This is the function of the [[Law_of_Implicit_Unity|Law of Implicit Unity]].
 
-<math display="block">
-(-2)^2 = 4
-</math>
+<math display="block">(-2)^2=4</math>
 
-<math display="block">
--(2^2) = -4
-</math>
+<math display="block">-(2^2)=-4</math>
 
 In standard notation, the expression <math>-2^2</math> is often interpreted as <math>-(2^2)</math>. COO treats that convention as avoidable shorthand. In canonical notation, the writer must choose one structure and write it clearly.
 
@@ -64,13 +58,9 @@ In standard notation, the expression <math>-2^2</math> is often interpreted as <
 
 The [[Canonical_Law_of_Indices|Canonical Law of Indices]] is the index rule set used by COO. It keeps powers, roots, reciprocal powers, and reciprocal roots in one notation family.
 
-<math display="block">
-x^{m/n}=\left(x^m\right)^{1/n}
-</math>
+<math display="block">x^{\dfrac{m}{n}}=\left(x^m\right)^{\dfrac{1}{n}}</math>
 
-<math display="block">
-\sqrt[n]{x^m}\equiv x^{m/n}
-</math>
+<math display="block">\sqrt[n]{x^m}\equiv x^{\dfrac{m}{n}}</math>
 
 The use of a fractional exponent is not presented as a new operation. It is presented as a clearer spelling of an old one.
 
@@ -81,20 +71,18 @@ One of the more visible proposals in COO is the [[Argument_for_the_Removal_of_th
 {| class="wikitable"
 ! Standard form !! Canonical form !! Meaning
 |-
-| <math>\sqrt{x}</math> || <math>x^{1/2}</math> || square root
+| <math>\sqrt{x}</math> || <math>x^{\dfrac{1}{2}}</math> || square root
 |-
-| <math>\sqrt[3]{x}</math> || <math>x^{1/3}</math> || cube root
+| <math>\sqrt[3]{x}</math> || <math>x^{\dfrac{1}{3}}</math> || cube root
 |-
-| <math>\sqrt{x^5}</math> || <math>x^{5/2}</math> || fifth power under a square root
+| <math>\sqrt{x^5}</math> || <math>x^{\dfrac{5}{2}}</math> || fifth power under a square root
 |-
-| <math>1/\sqrt{x}</math> || <math>x^{-1/2}</math> || reciprocal square root
+| <math>\dfrac{1}{\sqrt{x}}</math> || <math>x^{-\dfrac{1}{2}}</math> || reciprocal square root
 |}
 
 This rewrite gives roots the same syntax as powers and reciprocals. It also makes nested roots easier to combine.
 
-<math display="block">
-\sqrt{\sqrt{x}} = \left(x^{1/2}\right)^{1/2}=x^{1/4}
-</math>
+<math display="block">\sqrt{\sqrt{x}}=\left(x^{\dfrac{1}{2}}\right)^{\dfrac{1}{2}}=x^{\dfrac{1}{4}}</math>
 
 == Negative bases ==
 

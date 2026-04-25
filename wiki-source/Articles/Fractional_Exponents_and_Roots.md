@@ -13,63 +13,49 @@ ogImage: "https://metopedia.com/Assets/metopedia-og.png"
 
 == Basic rule ==
 
-<math display="block">
-x^{m/n}=\sqrt[n]{x^m}
-</math>
+<math display="block">x^{\dfrac{m}{n}}=\sqrt[n]{x^m}</math>
 
 In canonical notation, the radical form is rewritten as an index form.
 
-<math display="block">
-\sqrt[n]{x^m}\;\longrightarrow\;x^{m/n}
-</math>
+<math display="block">\sqrt[n]{x^m}\;\longrightarrow\;x^{\dfrac{m}{n}}</math>
 
 == Examples ==
 
 {| class="wikitable"
 ! Root expression !! Canonical expression !! Reading
 |-
-| <math>\sqrt{x}</math> || <math>x^{1/2}</math> || square root of <math>x</math>
+| <math>\sqrt{x}</math> || <math>x^{\dfrac{1}{2}}</math> || square root of <math>x</math>
 |-
-| <math>\sqrt[3]{x}</math> || <math>x^{1/3}</math> || cube root of <math>x</math>
+| <math>\sqrt[3]{x}</math> || <math>x^{\dfrac{1}{3}}</math> || cube root of <math>x</math>
 |-
-| <math>\sqrt{x^5}</math> || <math>x^{5/2}</math> || fifth power under a square root
+| <math>\sqrt{x^5}</math> || <math>x^{\dfrac{5}{2}}</math> || fifth power under a square root
 |-
-| <math>\sqrt[7]{x^3}</math> || <math>x^{3/7}</math> || seventh root with a third power
+| <math>\sqrt[7]{x^3}</math> || <math>x^{\dfrac{3}{7}}</math> || seventh root with a third power
 |-
-| <math>1/\sqrt{x}</math> || <math>x^{-1/2}</math> || reciprocal square root
+| <math>\dfrac{1}{\sqrt{x}}</math> || <math>x^{-\dfrac{1}{2}}</math> || reciprocal square root
 |}
 
 == Combined power and root ==
 
-In <math>x^{3/5}</math>, the numerator <math>3</math> is the power and the denominator <math>5</math> is the root. The canonical form keeps both instructions attached to one base.
+In <math>x^{\dfrac{3}{5}}</math>, the numerator <math>3</math> is the power and the denominator <math>5</math> is the root. The canonical form keeps both instructions attached to one base.
 
-<math display="block">
-x^{3/5}=\sqrt[5]{x^3}
-</math>
+<math display="block">x^{\dfrac{3}{5}}=\sqrt[5]{x^3}</math>
 
 == Nested roots ==
 
 Nested roots become powers of powers.
 
-<math display="block">
-\sqrt{\sqrt{x}}=\left(x^{1/2}\right)^{1/2}=x^{1/4}
-</math>
+<math display="block">\sqrt{\sqrt{x}}=\left(x^{\dfrac{1}{2}}\right)^{\dfrac{1}{2}}=x^{\dfrac{1}{4}}</math>
 
-<math display="block">
-\sqrt[3]{\sqrt{x}}=\left(x^{1/2}\right)^{1/3}=x^{1/6}
-</math>
+<math display="block">\sqrt[3]{\sqrt{x}}=\left(x^{\dfrac{1}{2}}\right)^{\dfrac{1}{3}}=x^{\dfrac{1}{6}}</math>
 
 == Negative and reciprocal roots ==
 
 Negative exponents and fractional exponents can be combined.
 
-<math display="block">
-x^{-1/2}=\frac{1}{x^{1/2}}
-</math>
+<math display="block">x^{-\dfrac{1}{2}}=\dfrac{1}{x^{\dfrac{1}{2}}}</math>
 
-<math display="block">
-x^{-m/n}=\frac{1}{x^{m/n}}
-</math>
+<math display="block">x^{-\dfrac{m}{n}}=\dfrac{1}{x^{\dfrac{m}{n}}}</math>
 
 This gives one notation family for powers, roots, reciprocal powers, and reciprocal roots.
 
