@@ -476,6 +476,10 @@ function toTsv(rows){if(!rows || !rows.length) return ""; const keys = Array.fro
 function tableHtml(rows, maxRows=500){if(!rows || !rows.length) return `<p class="small">No rows.</p>`; const keys = Object.keys(rows[0]); const body = rows.slice(0,maxRows).map(r=>`<tr>${keys.map(k=>`<td class="${k==='text'||k==='textPreview'?'scrollText':''}">${safeText(r[k])}</td>`).join("")}</tr>`).join(""); const note = rows.length > maxRows ? `<p class="small">Showing ${maxRows} of ${rows.length} rows.</p>` : ""; return `${note}<div class="tableWrap"><table><thead><tr>${keys.map(k=>`<th>${safeText(k)}</th>`).join("")}</tr></thead><tbody>${body}</tbody></table></div>`;}
 function barsHtml(rows, labelKey="Personality", valueKey="Percentage", max=8){return rows.slice(0,max).map(r=>`<div class="barRow"><div class="mono">${safeText(r[labelKey])}</div><div class="barBox"><div class="bar" style="width:${Math.max(0,Math.min(100,Number(r[valueKey]||0)))}%"></div></div><div>${round(Number(r[valueKey]||0),3)}%</div></div>`).join("");}
 
+function modelLabel(fileName, data){return data.datasetName || data.name || fileName.replace(/\.json$/i,"");}
+function isAggregate(label, data){return /aggregate/i.test(label) || /aggregate/i.test(data.datasetName||"") || /aggregate/i.test(data.comment||"");}
+function prepModel(fileName, data){if(!data || !data.groups || !Array.isArray(data.mbtiTypes)) throw new Error(`${fileName}: not a compact model JSON`); const model = {fileName, label:modelLabel(fileName,data), data, typeCount:data.mbtiTypes.length, isFull16:data.mbtiTypes.length===16 && data.mbtiTypes.every(t=>t.length===4), isNoIE:data.mbtiTypes.every(t=>t.length===3), aggregate:isAggregate(modelLabel(fileName,data), data)}; for(const groupName of data.groupOrder || Object.keys(data.groups)){const g = data.groups[groupName]; if(!g || !g.tokens || !g.probabilityMatrix) continue; g.index = Object.fromEntries(g.tokens.map((t,i)=>[t,i])); g.norms = {}; for(const type of data.mbtiTypes){const vals = g.probabilityMatrix[type] || []; g.norms[type] = Math.sqrt(vals.reduce((a,b)=>a+b*b,0));}} return model;}
+function renderModelList(){const box=$("modelList"); if(!box) return; if(!models.length){box.textContent = "No models loaded."; return;} box.innerHTML = models.map((m,i)=>`<span class="pill ${m.isFull16?'good':'info'}">${i+1}. ${safeText(m.label)} · ${m.isFull16?'16-type':'8-family'}${m.aggregate?' · aggregate':''}</span>`).join(" ");}
 function loadBuiltInModels(){
   const loaded = [];
   setStatus("Initializing built-in analysis models...");
@@ -489,7 +493,7 @@ function loadBuiltInModels(){
   }
   models = loaded;
   renderModelList();
-  log("Built-in analysis models are active.");
+  log(`Built-in analysis models are active: ${models.length} model(s) loaded silently.`);
 }
 
 function normalizeLowerSpace(text){text = String(text).normalize("NFKC").toLowerCase(); let out="", lastSpace=false; for(const ch of text){if(ch>="a"&&ch<="z"){out+=ch; lastSpace=false;} else if(/\s/.test(ch) && !lastSpace){out+=" "; lastSpace=true;}} return out.trim();}
