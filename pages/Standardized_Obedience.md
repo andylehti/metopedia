@@ -5,7 +5,7 @@ description: "A framework describing conformity-driven educational conditioning 
 keywords: "Standardized Obedience, educational conditioning, conformity, intellectual inertia, critical thinking"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/Assets/metopedia-og.png"
+og_image: "https://metopedia.com/assets/metopedia-og.png"
 permalink: "/Standardized_Obedience/"
 canonical_url: "/Standardized_Obedience/"
 wiki_page: true
