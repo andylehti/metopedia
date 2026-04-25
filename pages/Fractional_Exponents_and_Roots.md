@@ -5,7 +5,7 @@ description: "A page explaining the canonical treatment of roots as fractional e
 keywords: "fractional exponents, roots, radical symbol, square root, cube root, canonical arithmetic"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/assets/metopedia-og.png"
+og_image: "https://metopedia.com/Assets/metopedia-og.png"
 permalink: "/Fractional_Exponents_and_Roots/"
 canonical_url: "/Fractional_Exponents_and_Roots/"
 wiki_page: true

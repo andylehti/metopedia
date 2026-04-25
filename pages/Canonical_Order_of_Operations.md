@@ -5,7 +5,7 @@ description: "A proposed convention in arithmetic notation intended to make expo
 keywords: "Canonical Order of Operations, order of operations, arithmetic notation, exponents, roots, radical symbol, mathematical convention"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/assets/metopedia-og.png"
+og_image: "https://metopedia.com/Assets/metopedia-og.png"
 permalink: "/Canonical_Order_of_Operations/"
 canonical_url: "/Canonical_Order_of_Operations/"
 wiki_page: true

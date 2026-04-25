@@ -5,7 +5,7 @@ description: "A practical guide to the wiki markup supported by Metopedia."
 keywords: "wiki markup help, Metopedia syntax, wiki formatting guide, help page"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/assets/metopedia-og.png"
+og_image: "https://metopedia.com/Assets/metopedia-og.png"
 permalink: "/Help/Wiki_markup/"
 canonical_url: "/Help/Wiki_markup/"
 wiki_page: true

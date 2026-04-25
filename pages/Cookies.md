@@ -5,7 +5,7 @@ description: "Cookie and client-side storage notes for Metopedia."
 keywords: "cookie statement, cookies, client-side storage, Metopedia policy"
 author: "Metopedia Editorial"
 robots: "index,follow"
-og_image: "https://metopedia.com/assets/metopedia-og.png"
+og_image: "https://metopedia.com/Assets/metopedia-og.png"
 permalink: "/Cookies/"
 canonical_url: "/Cookies/"
 wiki_page: true

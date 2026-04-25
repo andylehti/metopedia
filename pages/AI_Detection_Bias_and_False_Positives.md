@@ -5,7 +5,7 @@ description: "A 2026 comparative study of AI-detection tools, false positives, s
 keywords: "AI detection, AI detector false positives, AI detection bias, authorship detection, academic integrity, polish penalty, detector reliability"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/assets/metopedia-og.png"
+og_image: "https://metopedia.com/Assets/metopedia-og.png"
 permalink: "/AI_Detection_Bias_and_False_Positives/"
 canonical_url: "/AI_Detection_Bias_and_False_Positives/"
 wiki_page: true

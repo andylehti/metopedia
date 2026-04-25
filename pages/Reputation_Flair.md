@@ -5,7 +5,7 @@ description: "A Reddit Devvit application associated with Metopedia for subreddi
 keywords: "Reputation Flair, Reddit Devvit, subreddit moderation, user flair, reputation scoring, Bot Shield, human verification, Metopedia applications"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/assets/metopedia-og.png"
+og_image: "https://metopedia.com/Assets/metopedia-og.png"
 permalink: "/Reputation_Flair/"
 canonical_url: "/Reputation_Flair/"
 wiki_page: true
