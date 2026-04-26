@@ -39,15 +39,13 @@
     }
     window.MathJax.startup.promise.then(() => {
       sourceNodes.forEach(el => {
+        if(el.getAttribute('data-rendering') === '1') return;
         const tex = (el.getAttribute('data-tex') || el.textContent || '').trim();
         if(!tex) return;
+        el.setAttribute('data-rendering', '1');
         const displayMode = el.getAttribute('data-display') === 'block' || el.getAttribute('display') === 'block' || el.classList.contains('math-display-source');
-        const rendered = document.createElement(displayMode ? 'div' : 'span');
-        rendered.className = displayMode ? 'math-display math-rendered' : 'math-inline math-rendered';
-        rendered.setAttribute('data-rendered', '1');
         const parent = el.parentElement;
-        if(displayMode && parent && parent.tagName === 'P' && parent.textContent.trim() === el.textContent.trim()) parent.replaceWith(rendered);
-        else el.replaceWith(rendered);
+        const replaceTarget = (displayMode && parent && parent.tagName === 'P' && parent.textContent.trim() === el.textContent.trim()) ? parent : el;
 
         const renderPromise = window.MathJax.tex2svgPromise
           ? window.MathJax.tex2svgPromise(tex, { display: displayMode })
@@ -55,18 +53,29 @@
 
         renderPromise
           .then(node => {
+            const rendered = document.createElement(displayMode ? 'div' : 'span');
+            rendered.className = displayMode ? 'math-display math-rendered' : 'math-inline math-rendered';
+            rendered.setAttribute('data-rendered', '1');
             if(node){
-              rendered.textContent = '';
               rendered.appendChild(node);
             }else{
               rendered.textContent = displayMode ? '\\[' + tex + '\\]' : '\\(' + tex + '\\)';
-              return window.MathJax.typesetPromise ? window.MathJax.typesetPromise([rendered]) : null;
+              const fallbackTypeset = window.MathJax.typesetPromise ? window.MathJax.typesetPromise([rendered]) : Promise.resolve();
+              return fallbackTypeset.then(() => rendered);
             }
-            return null;
+            return rendered;
+          })
+          .then(rendered => {
+            if(!rendered) return;
+            replaceTarget.replaceWith(rendered);
           })
           .catch(() => {
+            const rendered = document.createElement(displayMode ? 'div' : 'span');
+            rendered.className = (displayMode ? 'math-display math-rendered' : 'math-inline math-rendered') + ' math-failed';
+            rendered.setAttribute('data-rendered', '1');
             rendered.classList.add('math-failed');
             rendered.textContent = tex;
+            replaceTarget.replaceWith(rendered);
           });
       });
     });
