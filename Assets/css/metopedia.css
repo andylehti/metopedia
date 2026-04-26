@@ -467,7 +467,46 @@ body.theme-dark #mobile-logo-img {
     margin-top: 0.35em;
 }
 
+.cookie-banner {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 60;
+    border: 1px solid var(--border-color);
+    background: var(--content-bg);
+    color: var(--text-color);
+    padding: 0.8rem 0.9rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.cookie-banner p { margin: 0; font-size: 0.92em; }
+.cookie-banner-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex: 0 0 auto;
+}
+.cookie-banner button {
+    appearance: none;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    color: var(--text-color);
+    font: inherit;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 0.45rem 0.7rem;
+}
+body.theme-dark .cookie-banner button {
+    background: #151b21;
+    color: var(--text-color);
+}
+
 @media (max-width: 640px) {
   #mw-head-base { height: auto; }
   #simpleSearch input { min-height: 1.8em; }
+  .cookie-banner { flex-direction: column; align-items: flex-start; }
+  .cookie-banner-actions { width: 100%; }
 }

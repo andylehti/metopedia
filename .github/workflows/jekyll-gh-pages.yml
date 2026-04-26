@@ -36,6 +36,12 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Submit IndexNow URLs
+        env:
+          INDEXNOW_KEY: 1ddac2578af640b5a3d20440db8e7f66
+          INDEXNOW_SITE_URL: https://metopedia.com
+        run: node tools/indexnow-submit.mjs
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
