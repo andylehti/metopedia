@@ -1,0 +1,381 @@
+/* Metopedia MB3I Prediction Lab page skin
+   This stylesheet is intentionally scoped to pages containing .mb3i-lab. */
+
+body.mb3i-lab-page {
+  --mb3i-page-max: 1760px;
+}
+
+body.mb3i-lab-page #mw-head-base {
+  margin-left: 0;
+  padding-left: 1.1rem;
+  transition: margin-left 180ms ease;
+}
+
+body.mb3i-lab-page #content {
+  margin-left: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  padding: 1.15rem clamp(0.9rem, 1.8vw, 1.8rem) 2rem;
+  transition: margin-left 180ms ease;
+}
+
+body.mb3i-lab-page #mw-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 80;
+  width: 11em;
+  overflow-y: auto;
+  background: var(--bg-color);
+  border-right: 1px solid var(--border-color);
+  transform: translateX(-100%);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+body.mb3i-lab-page.mb3i-sitebar-open #mw-panel {
+  transform: translateX(0);
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.18), 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+body.mb3i-lab-page .mb3i-sitebar-control {
+  position: fixed;
+  left: 0.72rem;
+  bottom: 0.72rem;
+  z-index: 120;
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+body.mb3i-lab-page .mb3i-sitebar-toggle {
+  appearance: none;
+  border: 1px solid var(--border-color);
+  background: var(--content-bg);
+  color: var(--text-color);
+  border-radius: 999px;
+  padding: 0.46rem 0.78rem;
+  font: 700 0.86rem/1 var(--body-font);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+body.mb3i-lab-page .mb3i-sitebar-toggle:hover,
+body.mb3i-lab-page .mb3i-sitebar-toggle:focus {
+  outline: none;
+  background: #eef3ff;
+  border-color: #3366cc;
+  text-decoration: none;
+}
+
+body.theme-dark.mb3i-lab-page .mb3i-sitebar-toggle {
+  background: #11171f;
+  border-color: #303b48;
+  color: var(--text-color);
+}
+
+body.theme-dark.mb3i-lab-page .mb3i-sitebar-toggle:hover,
+body.theme-dark.mb3i-lab-page .mb3i-sitebar-toggle:focus {
+  background: #1d2733;
+  border-color: #6b8fd6;
+}
+
+body.mb3i-lab-page #firstHeading,
+body.mb3i-lab-page #siteSub {
+  max-width: var(--mb3i-page-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb3i-lab {
+  --lab-panel: #f8f9fb;
+  --lab-panel-2: #ffffff;
+  --lab-panel-3: #f1f4f8;
+  --lab-border: #a2a9b1;
+  --lab-border-soft: #d4dbe4;
+  --lab-muted: #54595d;
+  --lab-blue: #3366cc;
+  --lab-blue-dark: #0645ad;
+  --lab-blue-bg: #eef5ff;
+  --lab-green-bg: #ecf8f0;
+  --lab-yellow-bg: #fff8e3;
+  --lab-red-bg: #fff0f0;
+  max-width: var(--mb3i-page-max);
+  margin: 0 auto;
+  color: var(--text-color);
+}
+
+.mb3i-lab .lab-lead {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--lab-border);
+  border-left: 5px solid var(--lab-blue);
+  background:
+    radial-gradient(circle at 95% 0%, rgba(51, 102, 204, 0.13), transparent 30rem),
+    linear-gradient(180deg, var(--lab-panel-2), var(--lab-panel));
+  border-radius: 6px;
+  padding: 1.1rem 1.2rem;
+  margin: 0.9rem 0 1.1rem;
+}
+
+.mb3i-lab .lab-lead h2 {
+  font-family: var(--heading-font);
+  font-size: clamp(1.55rem, 2.4vw, 2.2rem);
+  font-weight: normal;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--lab-border-soft);
+}
+
+.mb3i-lab .lab-feature-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.mb3i-lab .lab-feature-list li {
+  border: 1px solid var(--lab-border-soft);
+  background: var(--lab-panel-2);
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.035);
+}
+
+.mb3i-lab .compact-lab-grid {
+  gap: 1rem;
+}
+
+.mb3i-lab .card,
+.mb3i-lab .miniCard,
+.mb3i-lab .chartBox,
+.mb3i-lab .hintBox,
+.mb3i-lab .barBox {
+  border: 1px solid var(--lab-border-soft);
+  border-radius: 6px;
+  background: linear-gradient(180deg, var(--lab-panel-2), var(--lab-panel));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.045);
+}
+
+.mb3i-lab .card {
+  padding: 1rem;
+}
+
+.mb3i-lab .card h2,
+.mb3i-lab .chartBox h3,
+.mb3i-lab .card h3 {
+  color: var(--text-color);
+}
+
+.mb3i-lab .card h2 {
+  font-family: var(--heading-font);
+  font-weight: normal;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  border-bottom: 1px solid var(--lab-border-soft);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.85rem;
+}
+
+.mb3i-lab .small,
+.mb3i-lab label,
+.mb3i-lab .hintBox {
+  color: var(--lab-muted);
+}
+
+.mb3i-lab input,
+.mb3i-lab select,
+.mb3i-lab textarea {
+  border: 1px solid var(--lab-border-soft);
+  border-radius: 4px;
+  background: var(--lab-panel-2);
+  color: var(--text-color);
+  padding: 0.5rem 0.55rem;
+}
+
+.mb3i-lab textarea {
+  min-height: 13rem;
+  resize: vertical;
+}
+
+.mb3i-lab button {
+  border-radius: 4px;
+  border: 1px solid var(--lab-border-soft);
+  background: #eef1f5;
+  color: var(--text-color);
+  font-weight: 700;
+  padding: 0.48rem 0.78rem;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.mb3i-lab button:hover:not(:disabled) {
+  background: #e5ecf7;
+  border-color: #9bb1d2;
+  transform: translateY(-1px);
+}
+
+.mb3i-lab button.primary {
+  background: #3366cc;
+  border-color: #2f5fb8;
+  color: #ffffff;
+}
+
+.mb3i-lab button.primary:hover:not(:disabled) {
+  background: #2a5bbd;
+}
+
+.mb3i-lab button.ghost {
+  background: transparent;
+}
+
+.mb3i-lab .option-check {
+  background: var(--lab-panel-2);
+  border: 1px solid var(--lab-border-soft);
+  border-radius: 5px;
+  margin: 0.42rem 0;
+}
+
+.mb3i-lab .status,
+.mb3i-lab pre,
+.mb3i-lab .tableWrap {
+  background: var(--lab-panel-2);
+  border-color: var(--lab-border-soft);
+  border-radius: 5px;
+}
+
+.mb3i-lab .tableWrap {
+  max-height: 560px;
+}
+
+.mb3i-lab table {
+  font-size: 0.86rem;
+}
+
+.mb3i-lab th {
+  background: var(--lab-panel-3);
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.mb3i-lab td {
+  background: var(--lab-panel-2);
+}
+
+.mb3i-lab tr:hover td {
+  background: var(--lab-blue-bg);
+}
+
+.mb3i-lab .miniGrid {
+  gap: 0.7rem;
+}
+
+.mb3i-lab .miniCard {
+  padding: 0.78rem;
+}
+
+.mb3i-lab .miniCard .big {
+  font-family: var(--heading-font);
+  font-size: 1.45rem;
+  font-weight: normal;
+  color: var(--lab-blue-dark);
+}
+
+.mb3i-lab .chartGrid {
+  gap: 1rem;
+}
+
+.mb3i-lab .chartBox {
+  padding: 0.85rem;
+}
+
+.mb3i-lab .svgChart {
+  background: #fbfcfe;
+  border: 1px solid var(--lab-border-soft);
+  border-radius: 5px;
+}
+
+.mb3i-lab .legend {
+  gap: 0.5rem 0.8rem;
+  flex-wrap: wrap;
+}
+
+.mb3i-lab .legendItem {
+  font-weight: 700;
+}
+
+.mb3i-lab .legendDot {
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.mb3i-lab .downloads-bar {
+  position: sticky;
+  bottom: 0.5rem;
+  z-index: 15;
+}
+
+body.theme-dark.mb3i-lab-page #mw-panel {
+  background: var(--bg-color);
+  border-right-color: var(--border-color);
+}
+
+body.theme-dark .mb3i-lab {
+  --lab-panel: #151b22;
+  --lab-panel-2: #10161d;
+  --lab-panel-3: #1b2430;
+  --lab-border: #465260;
+  --lab-border-soft: #303b48;
+  --lab-muted: #b4beca;
+  --lab-blue: #8ab4ff;
+  --lab-blue-dark: #a8c7ff;
+  --lab-blue-bg: #172438;
+  --lab-green-bg: #13281a;
+  --lab-yellow-bg: #332914;
+  --lab-red-bg: #321b1b;
+}
+
+body.theme-dark .mb3i-lab .lab-lead,
+body.theme-dark .mb3i-lab .card,
+body.theme-dark .mb3i-lab .miniCard,
+body.theme-dark .mb3i-lab .chartBox,
+body.theme-dark .mb3i-lab .hintBox,
+body.theme-dark .mb3i-lab .barBox {
+  background: linear-gradient(180deg, #151c24, #10161d);
+  border-color: var(--lab-border-soft);
+}
+
+body.theme-dark .mb3i-lab input,
+body.theme-dark .mb3i-lab select,
+body.theme-dark .mb3i-lab textarea,
+body.theme-dark .mb3i-lab .status,
+body.theme-dark .mb3i-lab pre,
+body.theme-dark .mb3i-lab .tableWrap,
+body.theme-dark .mb3i-lab table,
+body.theme-dark .mb3i-lab td {
+  background: var(--lab-panel-2);
+  border-color: var(--lab-border-soft);
+  color: var(--text-color);
+}
+
+body.theme-dark .mb3i-lab th {
+  background: var(--lab-panel-3);
+  color: var(--text-color);
+}
+
+body.theme-dark .mb3i-lab tr:hover td {
+  background: #172438;
+}
+
+body.theme-dark .mb3i-lab .svgChart {
+  background: #0c1219;
+  border-color: var(--lab-border-soft);
+}
+
+body.theme-dark .mb3i-lab .miniCard .big {
+  color: #a8c7ff;
+}
+
+@media (max-width: 900px) {
+  body.mb3i-lab-page #content {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .mb3i-lab .lab-feature-list {
+    grid-template-columns: 1fr;
+  }
+}
