@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% seo %}
   {% feed_meta %}
-  <link rel="icon" type="image/svg+xml" href="{{ '/Assets/favicon.svg' | relative_url }}">
-  <link rel="apple-touch-icon" href="{{ '/Assets/apple-touch-icon.png' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/Assets/css/metopedia.css' | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/metoblack-icon.svg' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/metopedia.css' | relative_url }}">
   {% if site.google_analytics %}
   <script>
     window.METOPEDIA_GA_ID = '{{ site.google_analytics }}';
@@ -25,18 +25,14 @@
     (function () {
       try {
         var consent = localStorage.getItem('metopedia-cookie-consent');
-        if (consent === 'accept') {
-          gtag('consent', 'update', {
-            analytics_storage: 'granted',
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied'
-          });
-        }
       } catch (e) {}
     })();
     gtag('js', new Date());
-    gtag('config', window.METOPEDIA_GA_ID, { anonymize_ip: true });
+    gtag('config', window.METOPEDIA_GA_ID, {
+      anonymize_ip: true,
+      page_path: '{{ page.url | relative_url }}',
+      page_title: {{ page.title | jsonify }}
+    });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   {% endif %}
@@ -51,10 +47,10 @@
     </div>
   </div>
   <div id="mw-panel">
-    <a id="p-logo" href="{{ '/' | relative_url }}" aria-label="Metopedia home"><img id="p-logo-img" src="{{ '/Assets/metopedia-logo.png' | relative_url }}" alt="Metopedia"></a>
+    <a id="p-logo" href="{{ '/' | relative_url }}" aria-label="Metopedia home"><img id="p-logo-img" src="{{ '/assets/metopedia-logo.png' | relative_url }}" alt="Metopedia"></a>
     <div id="sidebar-content">{% include sidebar.html %}</div>
   </div>
-  <div id="mobile-panel-overlay" aria-hidden="true"><div id="mobile-panel-backdrop"></div><aside id="mobile-panel"><div class="mobile-panel-header"><a id="mobile-logo" href="{{ '/' | relative_url }}" aria-label="Metopedia home"><img id="mobile-logo-img" src="{{ '/Assets/metopedia-logo.png' | relative_url }}" alt="Metopedia"></a><button type="button" id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu" title="Close menu">✕</button></div><div id="mobile-sidebar-content">{% include sidebar.html %}</div></aside></div>
+  <div id="mobile-panel-overlay" aria-hidden="true"><div id="mobile-panel-backdrop"></div><aside id="mobile-panel"><div class="mobile-panel-header"><a id="mobile-logo" href="{{ '/' | relative_url }}" aria-label="Metopedia home"><img id="mobile-logo-img" src="{{ '/assets/metopedia-logo.png' | relative_url }}" alt="Metopedia"></a><button type="button" id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu" title="Close menu">✕</button></div><div id="mobile-sidebar-content">{% include sidebar.html %}</div></aside></div>
   <div id="content">
     <h1 id="firstHeading">{{ page.title }}</h1>
     <div id="siteSub">{{ site.tagline }}</div>
@@ -63,12 +59,11 @@
   <div id="footer"><div id="footer-license">Text is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 License</a>; additional terms may apply. By using this site, you agree to the <a href="{{ '/Terms_of_Use/' | relative_url }}">Terms of Use</a> and <a href="{{ '/Privacy_Policy/' | relative_url }}">Privacy Policy</a>.</div><ul>{% for item in site.data.footer %}<li><a href="{{ item.url | relative_url }}">{{ item.label }}</a></li>{% endfor %}</ul></div>
   <div id="cookie-consent-banner" class="cookie-banner" hidden>
     <p>
-      We use essential cookies and, with your consent, analytics cookies (Google Analytics) to improve Metopedia.
+      This website uses only essential cookies required for core functionality.
       See our <a href="{{ '/Cookies/' | relative_url }}">Cookies</a> and <a href="{{ '/Privacy_Policy/' | relative_url }}">Privacy Policy</a>.
     </p>
     <div class="cookie-banner-actions">
-      <button type="button" id="cookie-accept">Accept analytics</button>
-      <button type="button" id="cookie-reject">Reject analytics</button>
+      <button type="button" id="cookie-ok">Okay</button>
     </div>
   </div>
   <script type="application/json" id="metopedia-page-index">[
@@ -90,6 +85,6 @@
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-  <script defer src="{{ '/Assets/js/site.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@ description: "Terms governing use of the Reputation Flair Metopedia service and 
 keywords: "Reputation Flair terms, Metopedia service terms, Reddit Devvit app terms, moderation app terms"
 author: "Metopedia Policy"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|Terms governing use of the Reputation Flair Metopedia service.}}
 <div class="hatnote">This is an official service page for Reputation Flair. It is written in wiki form for readability, but it functions as service terms rather than an encyclopedia article.</div>

@@ -4,7 +4,7 @@ description: "About the structure, editorial purpose, and repository-backed publ
 keywords: "about Metopedia, editorial structure, static reference site, repository-backed publishing"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|About the structure and purpose of the Metopedia repository.}}
 = About Metopedia =

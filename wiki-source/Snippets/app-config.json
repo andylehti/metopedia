@@ -17,13 +17,13 @@
     "description": "Metopedia is an interdisciplinary reference project focused on cognitive rigidity, textual study, mathematical logic, and institutional analysis.",
     "keywords": "Metopedia, interdisciplinary research, cognitive rigidity, cognitive bias, textual study, philology, mathematical logic, institutional analysis",
     "author": "Metopedia Editorial",
-    "image": "https://metopedia.com/Assets/metopedia-og.png",
+    "image": "https://metopedia.com/assets/metopedia-og.png",
     "robots": "index,follow,max-image-preview:large"
   },
   "collections": {
     "articlesFolder": "./Articles",
-    "imagesFolder": "./Images",
-    "assetsFolder": "./Assets",
+    "imagesFolder": "./images",
+    "assetsFolder": "./assets",
     "footerFolder": "./Footer",
     "toolsFolder": "./Tools",
     "contributeFolder": "./Contribute",

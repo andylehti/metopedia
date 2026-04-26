@@ -4,7 +4,7 @@ description: "Reputation Flair is a Reddit Devvit application associated with Me
 keywords: "Reputation Flair, Reddit Devvit, subreddit moderation, user flair, reputation scoring, Bot Shield, human verification, Metopedia applications"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|Reddit Devvit application for subreddit reputation scoring, flair, dashboards, moderation assistance, and optional human verification.}}
 <div class="hatnote">This article is about the Reddit Devvit application. For official application documentation, see [[Metopedia:Reputation_Flair|Metopedia:Reputation Flair]].</div>

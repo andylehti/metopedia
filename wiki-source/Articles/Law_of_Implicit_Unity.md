@@ -4,7 +4,7 @@ description: "A rule in the Canonical Order of Operations stating that a term ca
 keywords: "Law of Implicit Unity, implicit exponent, exponentiation, canonical arithmetic, order of operations"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|Canonical rule stating that a term carries an implicit first power.}}
 {{Main|Canonical_Order_of_Operations}}

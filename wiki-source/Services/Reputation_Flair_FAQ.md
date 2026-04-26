@@ -4,7 +4,7 @@ description: "Frequently asked questions for the Reputation Flair Metopedia serv
 keywords: "Reputation Flair FAQ, reputation scoring, flair, Reddit Devvit, Bot Shield, human verification, moderation app"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|Frequently asked questions for the Reputation Flair Metopedia service.}}
 <div class="hatnote">This is a service help page for Reputation Flair. It explains the application for users and moderators rather than presenting a neutral encyclopedia article.</div>

@@ -4,7 +4,7 @@ description: "Editorial standards for tone, structure, sourcing, and cross-linki
 keywords: "editorial guide, style guide, reference writing, sourcing standards, Metopedia editorial"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|Basic editorial guidance for writing and organizing pages in Metopedia.}}
 = Editorial guide =

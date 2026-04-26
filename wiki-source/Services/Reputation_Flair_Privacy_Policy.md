@@ -4,7 +4,7 @@ description: "Privacy policy for the Reputation Flair Metopedia service and Redd
 keywords: "Reputation Flair privacy policy, Metopedia service privacy, Reddit Devvit app privacy, moderation app data"
 author: "Metopedia Policy"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|Privacy policy for the Reputation Flair Metopedia service.}}
 <div class="hatnote">This is an official service page for Reputation Flair. It describes service data handling rather than serving as a general encyclopedia article.</div>

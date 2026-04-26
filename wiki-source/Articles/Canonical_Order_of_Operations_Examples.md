@@ -4,7 +4,7 @@ description: "Worked examples illustrating canonical rewrites of roots, exponent
 keywords: "Canonical Order of Operations examples, exponent examples, radical examples, implicit unity examples, mathematical notation"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|Worked examples illustrating canonical rewrites of roots, exponents, signs, and grouping.}}
 {{Main|Canonical_Order_of_Operations}}

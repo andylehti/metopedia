@@ -4,7 +4,7 @@ description: "A reference page listing common misconceptions about multiplicatio
 keywords: "mathematical misconceptions, order of operations, exponentiation, roots, negative signs, canonical arithmetic"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|List of common misconceptions about multiplication, exponentiation, roots, signs, and grouping.}}
 {{Main|Canonical_Order_of_Operations}}

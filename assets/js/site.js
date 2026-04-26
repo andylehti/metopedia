@@ -108,7 +108,7 @@
     }
   }
   function applyCookieConsent(consent){
-    const status = consent === 'accept' ? 'granted' : 'denied';
+    const status = 'denied';
     if(typeof window.gtag === 'function'){
       window.gtag('consent', 'update', {
         analytics_storage: status,
@@ -123,21 +123,15 @@
     if(!banner) return;
     let stored = null;
     try{ stored = localStorage.getItem('metopedia-cookie-consent'); }catch(e){}
-    if(stored === 'accept' || stored === 'reject'){
+    if(stored === 'ok'){
       applyCookieConsent(stored);
       return;
     }
     banner.hidden = false;
-    const accept = document.getElementById('cookie-accept');
-    const reject = document.getElementById('cookie-reject');
-    accept?.addEventListener('click', () => {
-      try{ localStorage.setItem('metopedia-cookie-consent', 'accept'); }catch(e){}
-      applyCookieConsent('accept');
-      banner.hidden = true;
-    });
-    reject?.addEventListener('click', () => {
-      try{ localStorage.setItem('metopedia-cookie-consent', 'reject'); }catch(e){}
-      applyCookieConsent('reject');
+    const ok = document.getElementById('cookie-ok');
+    ok?.addEventListener('click', () => {
+      try{ localStorage.setItem('metopedia-cookie-consent', 'ok'); }catch(e){}
+      applyCookieConsent('ok');
       banner.hidden = true;
     });
   }

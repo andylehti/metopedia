@@ -4,7 +4,7 @@ description: "Methodological principles used in Metopedia, including independent
 keywords: "methodology, extrapolative trial by error, Lehti-Feynman Method, research method, bias reassessment, independent modeling"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|Methodological principles used in Metopedia, including extrapolative trial by error and bias reassessment.}}
 = Methodology =

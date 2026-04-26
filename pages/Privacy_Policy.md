@@ -5,7 +5,7 @@ description: "Privacy and data-handling information for Metopedia."
 keywords: "privacy policy, data handling, Metopedia privacy"
 author: "Metopedia Editorial"
 robots: "index,follow"
-og_image: "https://metopedia.com/Assets/metopedia-og.png"
+og_image: "https://metopedia.com/assets/metopedia-og.png"
 permalink: "/Privacy_Policy/"
 canonical_url: "/Privacy_Policy/"
 wiki_page: true

@@ -5,7 +5,7 @@ description: "A social-psychological framework describing the defense of mediocr
 keywords: "Kardashian By-Product Effect, mediocrity, social psychology, competence aversion, status defense"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/Assets/metopedia-og.png"
+og_image: "https://metopedia.com/assets/metopedia-og.png"
 permalink: "/Kardashian_By-Product_Effect/"
 canonical_url: "/Kardashian_By-Product_Effect/"
 wiki_page: true

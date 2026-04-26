@@ -5,7 +5,7 @@ description: "A rule in the Canonical Order of Operations stating that a term ca
 keywords: "Law of Implicit Unity, implicit exponent, exponentiation, canonical arithmetic, order of operations"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/Assets/metopedia-og.png"
+og_image: "https://metopedia.com/assets/metopedia-og.png"
 permalink: "/Law_of_Implicit_Unity/"
 canonical_url: "/Law_of_Implicit_Unity/"
 wiki_page: true
