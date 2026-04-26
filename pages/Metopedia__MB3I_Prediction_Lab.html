@@ -380,11 +380,50 @@ body.theme-dark .mb3i-lab th { background: #1d2733; }
 @media (max-width: 950px) { .mb3i-lab .lab-feature-list { grid-template-columns: 1fr; } }
 
 </style>
+<link rel="stylesheet" href="{{ '/Assets/css/mb3i-lab.css' | relative_url }}">
+<div class="mb3i-sitebar-control" aria-label="Metopedia navigation controls">
+  <button type="button" id="mb3iSitebarToggle" class="mb3i-sitebar-toggle" aria-expanded="false" aria-controls="mw-panel">☰ Metopedia menu</button>
+</div>
+<script>
+(function(){
+  document.body.classList.add('mb3i-lab-page');
+  const key = 'metopediaMb3iSidebarOpen';
+  const openSaved = localStorage.getItem(key) === '1';
+  if(openSaved) document.body.classList.add('mb3i-sitebar-open');
+  function sync(){
+    const btn = document.getElementById('mb3iSitebarToggle');
+    if(!btn) return;
+    const open = document.body.classList.contains('mb3i-sitebar-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? '✕ Hide Metopedia menu' : '☰ Metopedia menu';
+  }
+  window.addEventListener('DOMContentLoaded', function(){
+    const btn = document.getElementById('mb3iSitebarToggle');
+    if(btn){
+      btn.addEventListener('click', function(){
+        document.body.classList.toggle('mb3i-sitebar-open');
+        localStorage.setItem(key, document.body.classList.contains('mb3i-sitebar-open') ? '1' : '0');
+        sync();
+      });
+    }
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && document.body.classList.contains('mb3i-sitebar-open')){
+        document.body.classList.remove('mb3i-sitebar-open');
+        localStorage.setItem(key, '0');
+        sync();
+      }
+    });
+    sync();
+  });
+  sync();
+})();
+</script>
 
 <div class="mb3i-lab">
   <section class="lab-lead">
     <h2>Metopedia: MB3I / MBTI Prediction Lab</h2>
     <p>A client-side analysis utility for MBTI pattern recognition. It utilizes JSON models to score TXT data. All processing is performed locally within the browser.</p>
+    <p><strong>Built-in models:</strong> the lab ships with the MB3I and MBTI datasets hardcoded in the page, so visitors only need to upload or paste text.</p>
     <p><strong>Features:</strong></p>
     <ul class="lab-feature-list">
       <li><strong>Scoring and Charts:</strong> Analyze text files and chart vote patterns.</li>
@@ -394,7 +433,7 @@ body.theme-dark .mb3i-lab th { background: #1d2733; }
   </section>
 <div class="grid compact-lab-grid">
     <section class="card col-6">
-      <h2>2. Source</h2>
+      <h2>Source text</h2>
       <input id="sourceMode" type="hidden" value="txt">
       <div id="txtPanel">
         <label>TXT process mode</label>
@@ -412,7 +451,7 @@ body.theme-dark .mb3i-lab th { background: #1d2733; }
     </section>
 
     <section class="card col-6">
-      <h2>3. Options</h2>
+      <h2>Analysis options</h2>
       <div class="two">
         <div><label>Min text chars</label><input id="minChars" type="number" min="0" value="20"></div>
         <div><label>Sharpness</label><input id="sharpness" type="number" min="1" value="250"></div>
@@ -440,7 +479,7 @@ body.theme-dark .mb3i-lab th { background: #1d2733; }
       <div id="status" class="status">Ready.</div>
     </section>
 
-    <section id="downloadsCard" class="card col-12 hidden">
+    <section id="downloadsCard" class="card col-12 hidden downloads-bar">
       <h2>Downloads</h2>
       <div class="row">
         <button id="saveSummaryJsonBtn">Save summary JSON</button>
