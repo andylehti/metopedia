@@ -5,7 +5,7 @@ description: "Research, application, forensic, mathematical, and academic projec
 keywords: "Metopedia research, applications, forensics, mathematics, cognitive psychology, academic writing, textual study, institutional analysis"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-og_image: "https://metopedia.com/Assets/metopedia-og.png"
+og_image: "https://metopedia.com/assets/metopedia-og.png"
 permalink: "/Metopedia/Research/"
 canonical_url: "/Metopedia/Research/"
 wiki_page: true

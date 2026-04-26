@@ -4,7 +4,7 @@ description: "A recursive research method centered on independent modeling, late
 keywords: "Lehti-Feynman Method, extrapolative trial by error, research method, iterative refinement, bias reassessment"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|A shorthand title for extrapolative trial by error as used in Metopedia.}}
 = Lehti-Feynman Method =

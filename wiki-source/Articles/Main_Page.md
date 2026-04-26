@@ -4,7 +4,7 @@ description: "Metopedia is an interdisciplinary reference project examining cogn
 keywords: "Metopedia, interdisciplinary reference, cognitive rigidity, cognitive bias, textual criticism, mathematical logic, institutional analysis"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|An interdisciplinary reference project devoted to difficult questions in cognition, language, logic, and institutions.}}
 <div class="wiki-col-container">

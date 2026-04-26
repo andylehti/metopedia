@@ -4,7 +4,7 @@ description: "A proposed convention in arithmetic notation intended to make expo
 keywords: "Canonical Order of Operations, order of operations, arithmetic notation, exponents, roots, radical symbol, mathematical convention"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|A proposed convention in arithmetic notation intended to make exponentiation, roots, negative signs, and implicit grouping more explicit.}}
 {{About|the proposed arithmetic convention|the inherited convention|Standard_Order_of_Operations}}

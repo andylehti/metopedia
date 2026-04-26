@@ -5,7 +5,7 @@ description: "Notes on the responsive mobile view and navigation behavior in Met
 keywords: "mobile view, responsive design, Metopedia mobile navigation"
 author: "Metopedia Editorial"
 robots: "index,follow"
-og_image: "https://metopedia.com/Assets/metopedia-og.png"
+og_image: "https://metopedia.com/assets/metopedia-og.png"
 permalink: "/Mobile/"
 canonical_url: "/Mobile/"
 wiki_page: true

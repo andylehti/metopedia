@@ -72,5 +72,10 @@ if (response.ok || response.status === 202) {
 }
 
 const body = await response.text();
+if (response.status === 403) {
+  console.warn(`IndexNow skipped: authorization failed (403). Verify key ownership and keyLocation (${payload.keyLocation}). Body: ${body}`);
+  process.exit(0);
+}
+
 console.error(`IndexNow failed. Status: ${response.status}. Body: ${body}`);
 process.exit(1);

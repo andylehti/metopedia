@@ -4,7 +4,7 @@ description: "Research, application, forensic, mathematical, and academic projec
 keywords: "Metopedia research, applications, forensics, mathematics, cognitive psychology, academic writing, textual study, institutional analysis"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|A project index for Metopedia research, applications, forensics, mathematics, and academic documentation.}}
 <div class="hatnote">This is a Metopedia project-index page. It organizes research areas, applications, forensic methods, mathematical frameworks, and related documentation.</div>

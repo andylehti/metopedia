@@ -4,7 +4,7 @@ description: "The featured entry in Metopedia, selected for broad methodological
 keywords: "Metopedia featured page, featured article, reference entry"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|The current featured page in Metopedia.}}
 = Featured page =

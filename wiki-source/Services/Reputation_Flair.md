@@ -4,7 +4,7 @@ description: "A Metopedia service page for Reputation Flair, a Reddit Devvit app
 keywords: "Reputation Flair, Metopedia service, Reddit Devvit, subreddit moderation, human verification, bot shield, reputation scoring"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|A Metopedia service page for the Reputation Flair Reddit Devvit application.}}
 <div class="hatnote">This page is application documentation for a Metopedia-associated application. It is not a general encyclopedia article.</div>

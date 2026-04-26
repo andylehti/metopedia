@@ -4,7 +4,7 @@ description: "A proposed formulation of index laws inside the Canonical Order of
 keywords: "Canonical Law of Indices, index laws, exponent laws, canonical arithmetic, implicit unity, fractional exponents"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|Proposed formulation of index laws inside the Canonical Order of Operations.}}
 {{Main|Canonical_Order_of_Operations}}

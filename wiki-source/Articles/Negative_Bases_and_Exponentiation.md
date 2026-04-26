@@ -4,7 +4,7 @@ description: "A canonical-mathematics page on signs, bases, and powers in expres
 keywords: "negative bases, exponentiation, unary minus, order of operations, canonical order of operations"
 author: "Metopedia Editorial"
 robots: "index,follow,max-image-preview:large"
-ogImage: "https://metopedia.com/Assets/metopedia-og.png"
+ogImage: "https://metopedia.com/assets/metopedia-og.png"
 ---
 {{short description|Canonical-mathematics treatment of signs, bases, and powers in expressions containing negative quantities.}}
 {{Main|Canonical_Order_of_Operations}}
