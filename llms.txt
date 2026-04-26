@@ -1,0 +1,10 @@
+# Metopedia LLM and crawler access policy
+
+Metopedia permits crawling, indexing, and archival access by search engines and AI crawlers.
+
+Primary sitemap: https://metopedia.com/sitemap.xml
+Sitemap index: https://metopedia.com/sitemap_index.xml
+IndexNow key: https://metopedia.com/1ddac2578af640b5a3d20440db8e7f66.txt
+
+Preferred attribution: Metopedia Foundation
+Site URL: https://metopedia.com/

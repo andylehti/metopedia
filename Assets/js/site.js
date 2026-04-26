@@ -107,6 +107,40 @@
       searchPageInput.addEventListener('input', render); render();
     }
   }
+  function applyCookieConsent(consent){
+    const status = consent === 'accept' ? 'granted' : 'denied';
+    if(typeof window.gtag === 'function'){
+      window.gtag('consent', 'update', {
+        analytics_storage: status,
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+    }
+  }
+  function setupCookieConsent(){
+    const banner = document.getElementById('cookie-consent-banner');
+    if(!banner) return;
+    let stored = null;
+    try{ stored = localStorage.getItem('metopedia-cookie-consent'); }catch(e){}
+    if(stored === 'accept' || stored === 'reject'){
+      applyCookieConsent(stored);
+      return;
+    }
+    banner.hidden = false;
+    const accept = document.getElementById('cookie-accept');
+    const reject = document.getElementById('cookie-reject');
+    accept?.addEventListener('click', () => {
+      try{ localStorage.setItem('metopedia-cookie-consent', 'accept'); }catch(e){}
+      applyCookieConsent('accept');
+      banner.hidden = true;
+    });
+    reject?.addEventListener('click', () => {
+      try{ localStorage.setItem('metopedia-cookie-consent', 'reject'); }catch(e){}
+      applyCookieConsent('reject');
+      banner.hidden = true;
+    });
+  }
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     document.getElementById('theme-toggle')?.addEventListener('click', () => applyTheme(document.body.classList.contains('theme-dark') ? 'light' : 'dark'));
@@ -114,6 +148,7 @@
     document.getElementById('mobile-menu-close')?.addEventListener('click', () => setMobileMenu(false));
     document.getElementById('mobile-panel-backdrop')?.addEventListener('click', () => setMobileMenu(false));
     setupSearch();
+    setupCookieConsent();
     renderMath();
   });
 })();

@@ -15,6 +15,25 @@ The site also uses Liquid loops to auto-build:
 - `/Special/Sitemap/`
 - the browser search index embedded into each page
 
+## IndexNow automation
+
+GitHub Actions now submits generated pages to IndexNow on each production build.
+
+### Key file hosted at root
+
+- `1ddac2578af640b5a3d20440db8e7f66.txt` is committed at the repository root.
+- The public verification URL is:
+  `https://metopedia.com/1ddac2578af640b5a3d20440db8e7f66.txt`.
+
+### What the workflow does
+
+1. Builds the site into `_site/`.
+2. Scans every generated `.html` page in `_site`.
+3. Converts each output path to its public URL under `https://metopedia.com`.
+4. Sends all discovered URLs in one batch POST to `https://api.indexnow.org/indexnow` using key `1ddac2578af640b5a3d20440db8e7f66`.
+
+This makes IndexNow submission dynamic for every generated page in the build output.
+
 ## Adding a new page
 
 Create a new file in `pages/`, for example:
