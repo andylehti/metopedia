@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: "Metopedia: MB3I / MBTI Browser Lab"
-description: "Client-side MB3I and MBTI browser lab for scoring TXT data with external model JSON files."
+description: "Client-side MB3I and MBTI browser lab for scoring TXT data with site-hosted compact JSON models."
 permalink: "/Metopedia/MB3I_Prediction_Lab/"
 wiki_page: true
 slug_name: "Metopedia:MB3I_Prediction_Lab"
@@ -432,6 +432,31 @@ body.theme-dark .mb3i-lab th { background: #1d2733; }
     </ul>
   </section>
 <div class="grid compact-lab-grid">
+    <section class="card col-12">
+      <h2>Model data</h2>
+      <p class="small">Models load from the site JSON folder first. If the page is being tested locally or a deploy path changes, use the manual manifest/JSON URL loader below.</p>
+      <div class="row">
+        <button id="reloadModelsBtn" class="primary">Load built-in JSON models</button>
+        <button id="clearModelsBtn" class="ghost">Clear models</button>
+      </div>
+      <div class="two" style="margin-top:0.75em">
+        <div>
+          <label>Manifest URL</label>
+          <input id="manifestUrl" type="text" value="/assets/json/mbti/manifest.json" placeholder="/assets/json/mbti/manifest.json">
+        </div>
+        <div>
+          <label>Single JSON URL</label>
+          <input id="singleJsonUrl" type="text" placeholder="/assets/json/mbti/mb3i-core-8-family.json">
+        </div>
+      </div>
+      <div class="row" style="margin-top:0.55em">
+        <button id="loadManifestUrlBtn">Load manifest URL</button>
+        <button id="loadSingleJsonUrlBtn">Add single JSON URL</button>
+      </div>
+      <h3>Loaded models</h3>
+      <div id="modelList" class="status small">No models loaded yet.</div>
+    </section>
+
     <section class="card col-6">
       <h2>Source text</h2>
       <input id="sourceMode" type="hidden" value="txt">
@@ -497,41 +522,80 @@ let models = [];
 let rawRows = [];
 let processedSamples = [];
 let lastResult = null;
-const MODEL_MANIFEST_PATH = "{% endraw %}{{ '/assets/json/mbti/manifest.json' | relative_url }}{% raw %}";
-const MODEL_BASE_PATH = MODEL_MANIFEST_PATH.replace(/[^/]+$/, "");
-function renderModelList(){const box=$("modelList"); if(!box) return; if(!models.length){box.textContent = "No models loaded."; return;} box.innerHTML = models.map((m,i)=>`<span class="pill ${m.isFull16?'good':'info'}">${i+1}. ${safeText(m.label)} · ${m.isFull16?'16-type':'8-family'}${m.aggregate?' · aggregate':''}</span>`).join(" ");}
-async function loadBuiltInModels(){
-  const loaded = [];
-  setStatus("Loading analysis models from assets/json/mbti...");
-  try{
-    const manifestResponse = await fetch(MODEL_MANIFEST_PATH, {cache:"no-store"});
-    if(!manifestResponse.ok) throw new Error(`manifest HTTP ${manifestResponse.status}`);
-    const manifest = await manifestResponse.json();
-    const entries = Array.isArray(manifest) ? manifest : (manifest.models || []);
-    for(const entry of entries){
-      const file = entry.file || entry.path || entry.name;
-      if(!file) continue;
-      try{
-        const modelUrl = /^https?:\/\//i.test(file) ? file : MODEL_BASE_PATH + file;
-        const response = await fetch(modelUrl, {cache:"no-store"});
-        if(!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
+const eightFamilies = ["NTJ","NTP","NFJ","NFP","STJ","SFJ","STP","SFP"];
+const mbti16 = ["INTJ","INTP","ENTJ","ENTP","INFJ","INFP","ENFJ","ENFP","ISTJ","ISFJ","ESTJ","ESFJ","ISTP","ISFP","ESTP","ESFP"];
+function log(msg){const box=$("status"); if(!box) return; box.textContent += "\n" + msg; box.scrollTop = box.scrollHeight;}
+function setStatus(msg){const box=$("status"); if(box) box.textContent = msg;}
+function round(n,d=3){return Number.isFinite(Number(n)) ? Number(Number(n).toFixed(d)) : 0;}
+function pct(n,d=3){return round(Number(n)*100,d);}
+function sum(arr){return arr.reduce((a,b)=>a+Number(b||0),0);}
+function safeText(v){return String(v ?? "").replace(/[&<>]/g, s => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[s]));}
+function downloadFile(name, text, type="text/plain;charset=utf-8"){const blob = new Blob([text], {type}); const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); URL.revokeObjectURL(a.href); a.remove();}
+function toTsv(rows){if(!rows || !rows.length) return ""; const keys = Array.from(rows.reduce((s,r)=>{Object.keys(r).forEach(k=>s.add(k)); return s;}, new Set())); const esc = v => String(v ?? "").replace(/\t/g," ").replace(/\r?\n/g," "); return [keys.join("\t"), ...rows.map(r=>keys.map(k=>esc(r[k])).join("\t"))].join("\n");}
+function tableHtml(rows, maxRows=500){if(!rows || !rows.length) return '<p class="small">No rows.</p>'; const keys = Object.keys(rows[0]); const body = rows.slice(0,maxRows).map(r=>'<tr>'+keys.map(k=>'<td class="'+(k==='text'||k==='textPreview'?'scrollText':'')+'">'+safeText(r[k])+'</td>').join('')+'</tr>').join(''); const note = rows.length > maxRows ? '<p class="small">Showing '+maxRows+' of '+rows.length+' rows.</p>' : ''; return note+'<div class="tableWrap"><table><thead><tr>'+keys.map(k=>'<th>'+safeText(k)+'</th>').join('')+'</tr></thead><tbody>'+body+'</tbody></table></div>';}
+function barsHtml(rows, labelKey="Personality", valueKey="Percentage", max=8){return rows.slice(0,max).map(r=>'<div class="barRow"><div class="mono">'+safeText(r[labelKey])+'</div><div class="barBox"><div class="bar" style="width:'+Math.max(0,Math.min(100,Number(r[valueKey]||0)))+'%"></div></div><div>'+round(Number(r[valueKey]||0),3)+'%</div></div>').join('');}
+function modelLabel(fileName, data){return data.datasetName || data.displayTitle || data.name || String(fileName).split(/[\/]/).pop().replace(/\.json$/i,"");}
+function isAggregate(label, data){return /aggregate/i.test(label) || /aggregate/i.test(data.datasetName||"") || /aggregate/i.test(data.displayTitle||"") || /aggregate/i.test(data.comment||"");}
+function prepModel(fileName, data){if(!data || !data.groups || !Array.isArray(data.mbtiTypes)) throw new Error(fileName+': not a compact model JSON'); const model = {fileName, label:modelLabel(fileName,data), data, typeCount:data.mbtiTypes.length, isFull16:data.mbtiTypes.length===16 && data.mbtiTypes.every(t=>t.length===4), isNoIE:data.mbtiTypes.every(t=>t.length===3), aggregate:isAggregate(modelLabel(fileName,data), data)}; for(const groupName of data.groupOrder || Object.keys(data.groups)){const g = data.groups[groupName]; if(!g || !g.tokens || !g.probabilityMatrix) continue; g.index = Object.fromEntries(g.tokens.map((t,i)=>[t,i])); g.norms = {}; for(const type of data.mbtiTypes){const vals = g.probabilityMatrix[type] || []; g.norms[type] = Math.sqrt(vals.reduce((a,b)=>a+b*b,0));}} return model;}
+const DEFAULT_MANIFEST_PATHS = [
+  "{% endraw %}{{ '/assets/json/mbti/manifest.json' | relative_url }}{% raw %}",
+  "/assets/json/mbti/manifest.json",
+  "../assets/json/mbti/manifest.json",
+  "../../assets/json/mbti/manifest.json",
+  "/Assets/json/mbti/manifest.json",
+  "../Assets/json/mbti/manifest.json",
+  "../../Assets/json/mbti/manifest.json"
+];
+function renderModelList(){const box=$("modelList"); if(!box) return; if(!models.length){box.textContent = "No models loaded."; return;} box.innerHTML = models.map((m,i)=>'<span class="pill '+(m.isFull16?'good':'info')+'">'+(i+1)+'. '+safeText(m.label)+' · '+(m.isFull16?'16-type':'8-family')+(m.aggregate?' · aggregate':'')+'</span>').join(' ');}
+function absolutizeUrl(url, base){try{return new URL(url, base || window.location.href).href;}catch(e){return url;}}
+async function fetchJson(url){const response = await fetch(url, {cache:"no-store"}); if(!response.ok) throw new Error('HTTP '+response.status); return await response.json();}
+async function loadModelsFromManifest(manifestUrl, append=false){
+  const loaded = append ? [...models] : [];
+  const manifest = await fetchJson(manifestUrl);
+  const entries = Array.isArray(manifest) ? manifest : (manifest.models || []);
+  const base = manifestUrl.replace(/[^/]+$/, "");
+  let count = 0;
+  for(const entry of entries){
+    const file = typeof entry === "string" ? entry : (entry.file || entry.path || entry.name || entry.url);
+    if(!file) continue;
+    try{
+      const modelUrl = /^https?:///i.test(file) || String(file).startsWith("/") ? absolutizeUrl(file) : absolutizeUrl(file, base);
+      const data = await fetchJson(modelUrl);
+      if(typeof entry !== "string"){
         if(entry.title && !data.datasetName) data.datasetName = entry.title;
         if(entry.title && !data.displayTitle) data.displayTitle = entry.title;
         if(entry.description && !data.datasetDescription) data.datasetDescription = entry.description;
-        loaded.push(prepModel(file, data));
-      }catch(e){
-        log(`Skipped model ${file}: ${e.message}`);
       }
-    }
-  }catch(e){
-    log(`Model manifest load failed: ${e.message}`);
-    log(`Expected manifest: ${MODEL_MANIFEST_PATH}`);
+      loaded.push(prepModel(file, data)); count++;
+    }catch(e){log('Skipped model '+file+': '+e.message);}
   }
   models = loaded;
   renderModelList();
-  log(`Analysis models loaded from assets/json/mbti: ${models.length} model(s).`);
+  return count;
 }
+async function loadBuiltInModels(){
+  setStatus("Loading analysis models from site JSON...");
+  const manual = ($("manifestUrl") && $("manifestUrl").value || "").trim();
+  const candidates = [];
+  if(manual) candidates.push(manual);
+  for(const p of DEFAULT_MANIFEST_PATHS) if(p && !candidates.includes(p)) candidates.push(p);
+  let lastErr = null;
+  for(const path of candidates){
+    try{
+      const url = absolutizeUrl(path);
+      const n = await loadModelsFromManifest(url, false);
+      log('Loaded '+n+' model(s) from manifest: '+url);
+      if($("manifestUrl")) $("manifestUrl").value = path;
+      return;
+    }catch(e){lastErr = e; log('Manifest failed '+path+': '+e.message);}
+  }
+  models = [];
+  renderModelList();
+  throw new Error('No manifest could be loaded. Last error: '+(lastErr ? lastErr.message : 'unknown'));
+}
+async function loadManifestFromField(){const url = ($("manifestUrl") && $("manifestUrl").value || "").trim(); if(!url) throw new Error("Enter a manifest URL."); setStatus("Loading manifest URL..."); const n=await loadModelsFromManifest(absolutizeUrl(url), false); log('Loaded '+n+' model(s) from manifest URL.');}
+async function addSingleJsonFromField(){const url = ($("singleJsonUrl") && $("singleJsonUrl").value || "").trim(); if(!url) throw new Error("Enter a JSON URL."); setStatus("Loading JSON URL..."); const data=await fetchJson(absolutizeUrl(url)); models.push(prepModel(url, data)); renderModelList(); log('Added JSON model: '+url);}
+
 
 function normalizeLowerSpace(text){text = String(text).normalize("NFKC").toLowerCase(); let out="", lastSpace=false; for(const ch of text){if(ch>="a"&&ch<="z"){out+=ch; lastSpace=false;} else if(/\s/.test(ch) && !lastSpace){out+=" "; lastSpace=true;}} return out.trim();}
 function countKeyboard(text, tokens){const vocab = new Set(tokens); const hasOther = vocab.has("OTHER"); const c = {}; for(const ch of String(text)){if(vocab.has(ch)) c[ch]=(c[ch]||0)+1; else if(hasOther) c.OTHER=(c.OTHER||0)+1;} return c;}
@@ -631,6 +695,9 @@ function bindClick(id, fn){const el=$(id); if(el) el.onclick=fn;}
 function bindChange(id, fn){const el=$(id); if(el) el.onchange=fn;}
 
 bindClick("reloadModelsBtn",()=>{loadBuiltInModels().catch(e=>log("ERROR: "+e.message));});
+bindClick("loadManifestUrlBtn",()=>{loadManifestFromField().catch(e=>log("ERROR: "+e.message));});
+bindClick("loadSingleJsonUrlBtn",()=>{addSingleJsonFromField().catch(e=>log("ERROR: "+e.message));});
+bindClick("clearModelsBtn",()=>{models=[]; renderModelList(); setStatus("Models cleared.");});
 window.addEventListener("DOMContentLoaded",()=>loadBuiltInModels().catch(e=>log("ERROR: "+e.message)));
 bindClick("processBtn",()=>process().catch(e=>{log("ERROR: "+e.message); console.error(e);}));
 bindClick("resetOutputBtn",()=>{$("results").innerHTML=""; lastResult=null; $("downloadsCard").classList.add("hidden"); updateDownloadButtons(); setStatus("Output cleared.");});
