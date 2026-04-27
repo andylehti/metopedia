@@ -143,6 +143,82 @@
     const overlay = document.getElementById('mobile-panel-overlay');
     if(overlay){ overlay.classList.toggle('open', open); overlay.setAttribute('aria-hidden', String(!open)); }
   }
+
+  function slugifyHeading(text){
+    return (text || '')
+      .toString()
+      .trim()
+      .replace(/<[^>]+>/g, '')
+      .replace(/&[^;]+;/g, '')
+      .replace(/[^A-Za-z0-9\s_-]/g, '')
+      .replace(/\s+/g, '_')
+      .replace(/_+/g, '_')
+      .replace(/^_+|_+$/g, '') || 'Section';
+  }
+  function enhanceWikiTables(){
+    const root = document.getElementById('bodyContent');
+    if(!root) return;
+    root.querySelectorAll('table').forEach(table => {
+      if(table.closest('.toc, .infobox, .navbox, .language-menu')) return;
+      if(table.classList.contains('infobox') || table.classList.contains('navbox')) return;
+      table.classList.add('wikitable');
+      if(table.parentElement && table.parentElement.classList.contains('wikitable-wrap')) return;
+      const wrap = document.createElement('div');
+      wrap.className = 'wikitable-wrap';
+      table.parentNode.insertBefore(wrap, table);
+      wrap.appendChild(table);
+    });
+  }
+  function buildAutoToc(){
+    const root = document.getElementById('bodyContent');
+    if(!root || root.querySelector('.toc')) return;
+    const headings = Array.from(root.querySelectorAll('h2, h3')).filter(h => !h.closest('.infobox, .navbox, .toc, .footnotes'));
+    if(headings.length < 4) return;
+    const seen = new Map();
+    headings.forEach(h => {
+      if(!h.id){
+        const base = slugifyHeading(h.textContent);
+        const next = (seen.get(base) || 0) + 1;
+        seen.set(base, next);
+        h.id = next === 1 ? base : base + '_' + next;
+      }
+    });
+    const toc = document.createElement('div');
+    toc.className = 'toc';
+    toc.setAttribute('role', 'navigation');
+    toc.setAttribute('aria-label', 'Contents');
+    const title = document.createElement('div');
+    title.className = 'toc-title';
+    title.innerHTML = '<h2>Contents</h2>';
+    const list = document.createElement('ul');
+    let n2 = 0;
+    let n3 = 0;
+    headings.forEach(h => {
+      if(h.tagName === 'H2'){
+        n2 += 1;
+        n3 = 0;
+      }else{
+        n3 += 1;
+      }
+      const li = document.createElement('li');
+      li.className = h.tagName === 'H2' ? 'toc-level-2' : 'toc-level-3';
+      const a = document.createElement('a');
+      a.href = '#' + encodeURIComponent(h.id).replace(/%20/g, '_');
+      const number = h.tagName === 'H2' ? String(n2) : n2 + '.' + n3;
+      const span = document.createElement('span');
+      span.className = 'toc-number';
+      span.textContent = number;
+      a.appendChild(span);
+      a.appendChild(document.createTextNode(h.textContent.trim()));
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+    toc.appendChild(title);
+    toc.appendChild(list);
+    const firstH2 = root.querySelector('h2');
+    if(firstH2) firstH2.parentNode.insertBefore(toc, firstH2);
+  }
+
   function renderMath(attempt){
     attempt = attempt || 0;
     const sourceNodes = Array.from(document.querySelectorAll('.tex-math, math')).filter(el => el.getAttribute('data-rendered') !== '1');
@@ -282,6 +358,8 @@
     setupCookieConsent();
     setupLanguageMenu();
     upgradeWikiLinks();
+    enhanceWikiTables();
+    buildAutoToc();
     markDeadInternalLinks();
     renderMath();
   });

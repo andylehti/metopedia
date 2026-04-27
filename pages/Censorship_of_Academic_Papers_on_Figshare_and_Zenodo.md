@@ -56,7 +56,7 @@ wiki_categories:
   </tr>
 </table>
 
-'''Censorship of Academic Papers on Figshare and Zenodo''' is a Metopedia investigative evidence page concerning the removal, disappearance, or practical inaccessibility of DOI-linked research records on Figshare and Zenodo after publication of works critical of NASA's Apollo Moon-landing record. The page examines whether repository actions were ordinary moderation, spam enforcement, research-integrity enforcement, repository-scope enforcement, or a form of viewpoint-sensitive academic censorship.
+**Censorship of Academic Papers on Figshare and Zenodo** is a Metopedia investigative evidence page concerning the removal, disappearance, or practical inaccessibility of DOI-linked research records on Figshare and Zenodo after publication of works critical of NASA's Apollo Moon-landing record. The page examines whether repository actions were ordinary moderation, spam enforcement, research-integrity enforcement, repository-scope enforcement, or a form of viewpoint-sensitive academic censorship.
 
 The inquiry is not whether every Apollo-critical claim is correct. The inquiry is whether open-research repositories that advertise preservation, DOI persistence, and accountability should remove controversial research with vague labels such as "spam," "inappropriate content," or "terms violation" without providing an itemized explanation for each affected work.
 
@@ -185,7 +185,7 @@ Without that specificity, the public cannot inspect the decision. The author can
 
 Figshare's response to Andrew Lehti illustrates the central transparency issue. The response refers to broad policy categories but does not identify which item violated which clause, what content was considered inappropriate, whether the concern involved copyright, duplication, research integrity, authorship, factuality, platform abuse, or any external complaint.
 
-<div class="quote-box">
+<div class="quote-box" markdown="1">
 
 **Figshare response to Andrew Lehti**
 

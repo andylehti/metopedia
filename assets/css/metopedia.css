@@ -535,3 +535,64 @@ body.theme-dark .cookie-banner button {
   .cookie-banner { flex-direction: column; align-items: flex-start; }
   .cookie-banner-actions { width: 100%; }
 }
+
+/* Wiki page normalization for Jekyll-rendered Markdown tables and footnotes. */
+.wikitable-wrap {
+    clear: both;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin: 1em 0;
+}
+.wikitable-wrap > .wikitable {
+    margin: 0;
+    min-width: 42rem;
+}
+.mw-parser-output .wikitable code {
+    white-space: nowrap;
+}
+.footnotes,
+.mw-parser-output .footnotes {
+    clear: both;
+    border-top: 1px solid var(--border-color);
+    margin-top: 1.2em;
+    padding-top: 0.4em;
+    font-size: 90%;
+}
+.footnotes ol,
+.mw-parser-output .footnotes ol {
+    margin-left: 2.4em;
+}
+.footnotes li,
+.mw-parser-output .footnotes li {
+    margin-bottom: 0.35em;
+}
+.footnotes li:target,
+.mw-parser-output .footnotes li:target {
+    background-color: #def;
+}
+.footnotes .reversefootnote,
+.mw-parser-output .footnotes .reversefootnote {
+    padding-left: 0.25em;
+}
+.quote-box > :first-child { margin-top: 0; }
+.quote-box > :last-child { margin-bottom: 0; }
+body.theme-dark .mw-parser-output blockquote,
+body.theme-dark .quote-box {
+    background-color: #151b21;
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+body.theme-dark .footnotes li:target,
+body.theme-dark .mw-parser-output .footnotes li:target {
+    background-color: #1d2833;
+}
+@media (max-width: 1080px) {
+    .wikitable-wrap > .wikitable { min-width: 38rem; }
+}
+@media (max-width: 640px) {
+    .wikitable-wrap > .wikitable { min-width: 34rem; }
+}
