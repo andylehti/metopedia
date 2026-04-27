@@ -132,7 +132,6 @@
 {% endfor %}
 ]</script>
   <script type="application/ld+json">
-    {% capture search_action_target %}{{ site.url }}/Special/Search/?q={% raw %}{search_term_string}{% endraw %}{% endcapture %}
     {
       "@context":"https://schema.org",
       "@type":"WebSite",
@@ -141,7 +140,7 @@
       "description":{{ site.description | jsonify }},
       "potentialAction":{
         "@type":"SearchAction",
-        "target":{{ search_action_target | jsonify }},
+        "target":{{ site.url | append: '/Special/Search/?q={search_term_string}' | jsonify }},
         "query-input":"required name=search_term_string"
       }
     }
