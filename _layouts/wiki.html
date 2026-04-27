@@ -126,7 +126,8 @@
       <button type="button" id="cookie-ok">Okay</button>
     </div>
   </div>
-<script type="application/json" id="metopedia-page-index">[
+
+  <script type="application/json" id="metopedia-page-index">[
 {% assign wiki_pages = site.pages | where: "wiki_page", true | sort: "title" %}
 {% for p in wiki_pages %}
   {
@@ -143,7 +144,9 @@
 {% endfor %}
 ]</script>
 
-<script type="application/ld+json">
+{% capture metopedia_search_target %}{{ site.url }}{{ site.baseurl }}/Special/Search/?q={% raw %}{search_term_string}{% endraw %}{% endcapture %}
+
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -152,11 +155,12 @@
   "description": {{ site.description | jsonify }},
   "potentialAction": {
     "@type": "SearchAction",
-    "target": {{ site.url | append: site.baseurl | append: '/Special/Search/?q={search_term_string}' | jsonify }},
+    "target": {{ metopedia_search_target | jsonify }},
     "query-input": "required name=search_term_string"
   }
 }
-</script>
+  </script>
+
   {% if page.wiki_page %}
   <script type="application/ld+json">
     {
