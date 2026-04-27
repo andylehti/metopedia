@@ -1,8 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 <head>
+  {% assign current_slug = page.slug_name | default: page.slug | default: page.name | replace: '.md', '' %}
+  {% assign page_variants = site.pages | where: "wiki_page", true %}
+  {% assign has_language_variants = false %}
+  {% for variant in page_variants %}
+    {% assign variant_slug = variant.slug_name | default: variant.slug | default: variant.name | replace: '.md', '' %}
+    {% if variant_slug == current_slug and variant.url != page.url %}
+      {% assign has_language_variants = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% assign canonical_absolute = page.canonical_url | default: page.url | absolute_url %}
+  {% assign page_description = page.description | default: site.description | strip_html | strip_newlines %}
+  {% assign page_robots = page.robots | default: 'index,follow,max-image-preview:large' %}
+  {% assign page_image = page.og_image | default: page.image | default: site.image | absolute_url %}
+  {% assign is_article = page.wiki_page | default: false %}
+  {% if is_article %}
+    {% assign og_type = 'article' %}
+  {% else %}
+    {% assign og_type = 'website' %}
+  {% endif %}
+  <meta name="description" content="{{ page_description | escape }}">
+  <meta name="robots" content="{{ page_robots }}">
+  <link rel="canonical" href="{{ canonical_absolute }}">
+  {% if has_language_variants %}
+    {% for variant in page_variants %}
+      {% assign variant_slug = variant.slug_name | default: variant.slug | default: variant.name | replace: '.md', '' %}
+      {% if variant_slug == current_slug %}
+  <link rel="alternate" hreflang="{{ variant.lang | default: 'en' }}" href="{{ variant.url | absolute_url }}">
+      {% endif %}
+    {% endfor %}
+  {% else %}
+  <link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="{{ canonical_absolute }}">
+  {% endif %}
+  <meta property="og:type" content="{{ og_type }}">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ page_description | escape }}">
+  <meta property="og:url" content="{{ canonical_absolute }}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:image" content="{{ page_image }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
+  <meta name="twitter:description" content="{{ page_description | escape }}">
+  <meta name="twitter:image" content="{{ page_image }}">
   {% seo %}
   {% feed_meta %}
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/metoblack-icon.svg' | relative_url }}">
@@ -43,7 +86,24 @@
     <div id="left-navigation"><div class="vectorTabs"><ul><li class="selected"><a href="{{ page.url | relative_url }}">Read</a></li><li><a href="{{ site.github_repository }}/blob/main/{{ page.source_path | default: page.path | remove_first: './' }}">View source</a></li></ul></div></div>
     <div id="right-navigation">
       <div id="p-search"><form id="search-form"><div id="simpleSearch"><input type="search" id="searchInput" placeholder="Search Metopedia" autocomplete="off"><button type="submit" aria-label="Search">⌕</button></div></form></div>
-      <div id="header-actions"><button type="button" id="theme-toggle" class="header-icon-button" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button><button type="button" id="mobile-menu-toggle" class="header-icon-button" aria-label="Open menu" title="Open menu">☰</button></div>
+      <div id="header-actions">
+        {% if has_language_variants %}
+        <div class="language-switcher">
+          <button type="button" id="language-toggle" class="header-icon-button" aria-label="Change language" title="Change language" aria-expanded="false" aria-haspopup="true">🌐</button>
+          <ul id="language-menu" class="language-menu" hidden>
+            {% for variant in page_variants %}
+              {% assign variant_slug = variant.slug_name | default: variant.slug | default: variant.name | replace: '.md', '' %}
+              {% if variant_slug == current_slug %}
+                {% assign variant_lang_code = variant.lang | default: 'en' %}
+                {% assign variant_lang_name = site.data.languages[variant_lang_code] | default: variant_lang_code %}
+                <li><a href="{{ variant.url | relative_url }}" hreflang="{{ variant_lang_code }}" lang="{{ variant_lang_code }}"{% if variant.url == page.url %} aria-current="page"{% endif %}>{{ variant_lang_name }} ({{ variant_lang_code }})</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        <button type="button" id="theme-toggle" class="header-icon-button" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button><button type="button" id="mobile-menu-toggle" class="header-icon-button" aria-label="Open menu" title="Open menu">☰</button>
+      </div>
     </div>
   </div>
   <div id="mw-panel">
@@ -71,6 +131,51 @@
 {% for p in wiki_pages %}{"title":{{ p.title | jsonify }},"url":{{ p.url | relative_url | jsonify }},"slug":{{ p.slug_name | default: p.slug | default: p.name | replace: '.md', '' | jsonify }},"description":{{ p.description | default: '' | strip_html | jsonify }},"categories":[{% for cat in p.wiki_categories %}{{ cat | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]</script>
+  <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "name":{{ site.title | jsonify }},
+      "url":{{ site.url | append: site.baseurl | jsonify }},
+      "description":{{ site.description | jsonify }},
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":{{ site.url | append: '/Special/Search/?q={search_term_string}' | jsonify }},
+        "query-input":"required name=search_term_string"
+      }
+    }
+  </script>
+  {% if page.wiki_page %}
+  <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Article",
+      "headline":{{ page.title | jsonify }},
+      "name":{{ page.title | jsonify }},
+      "description":{{ page_description | jsonify }},
+      "url":{{ canonical_absolute | jsonify }},
+      "mainEntityOfPage":{{ canonical_absolute | jsonify }},
+      "dateModified":{{ page.last_modified | default: site.time | date_to_xmlschema | jsonify }},
+      "inLanguage":{{ page.lang | default: site.lang | default: 'en' | jsonify }},
+      "author":{"@type":"Organization","name":{{ page.author | default: site.author | jsonify }}},
+      "publisher":{"@type":"Organization","name":{{ site.author | default: site.title | jsonify }},"logo":{"@type":"ImageObject","url":{{ site.logo | absolute_url | jsonify }}}},
+      "image":[{{ page_image | jsonify }}]
+      {% if page.wiki_categories and page.wiki_categories.size > 0 %}
+      ,"about":[{% for cat in page.wiki_categories %}{"@type":"Thing","name":{{ cat | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
+      {% endif %}
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Metopedia","item":{{ '/' | absolute_url | jsonify }}},
+        {"@type":"ListItem","position":2,"name":{{ page.title | jsonify }},"item":{{ canonical_absolute | jsonify }}}
+      ]
+    }
+  </script>
+  {% endif %}
   <script>try{window.METOPEDIA_PAGES=JSON.parse(document.getElementById('metopedia-page-index').textContent)}catch(e){window.METOPEDIA_PAGES=[]}</script>
   <script>
     window.MathJax = {
