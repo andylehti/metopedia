@@ -382,7 +382,7 @@ body.theme-dark .mb3i-lab th { background: #1d2733; }
 </style>
 <link rel="stylesheet" href="{{ '/assets/css/mb3i-lab.css' | relative_url }}">
 <div class="mb3i-sitebar-control" aria-label="Metopedia navigation controls">
-  <button type="button" id="mb3iSitebarToggle" class="mb3i-sitebar-toggle" aria-expanded="false" aria-controls="mw-panel">☰ Metopedia menu</button>
+  <button type="button" id="mb3iSitebarToggle" class="mb3i-sitebar-toggle" aria-expanded="false" aria-controls="mw-panel" aria-label="Open Metopedia menu" title="Open Metopedia menu">☰</button>
 </div>
 <script>
 (function(){
@@ -395,7 +395,9 @@ body.theme-dark .mb3i-lab th { background: #1d2733; }
     if(!btn) return;
     const open = document.body.classList.contains('mb3i-sitebar-open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.textContent = open ? '✕ Hide Metopedia menu' : '☰ Metopedia menu';
+    btn.textContent = open ? '✕' : '☰';
+    btn.setAttribute('aria-label', open ? 'Hide Metopedia menu' : 'Open Metopedia menu');
+    btn.setAttribute('title', open ? 'Hide Metopedia menu' : 'Open Metopedia menu');
   }
   window.addEventListener('DOMContentLoaded', function(){
     const btn = document.getElementById('mb3iSitebarToggle');
@@ -421,15 +423,8 @@ body.theme-dark .mb3i-lab th { background: #1d2733; }
 
 <div class="mb3i-lab">
   <section class="lab-lead">
-    <h2>Metopedia: MB3I / MBTI Browser Lab</h2>
-    <p>A client-side analysis utility for MBTI pattern recognition. It uses local JSON model files from <code>assets/json/mbti/</code> to score TXT data. All processing is performed locally within the browser.</p>
-    <p><strong>Built-in models:</strong> the lab loads MB3I and MBTI datasets from <code>assets/json/mbti/manifest.json</code>, so the HTML stays small and models can be updated without editing the page.</p>
-    <p><strong>Features:</strong></p>
-    <ul class="lab-feature-list">
-      <li><strong>Scoring and Charts:</strong> Analyze text files and chart vote patterns.</li>
-      <li><strong>Testing Suite:</strong> Compare models and evaluate NFJ mirror/turbulence.</li>
-      <li><strong>Axis Helpers:</strong> Use 16-type reference sets for I/E or J/P mapping.</li>
-    </ul>
+    <p>Metopedia: MB3I / MBTI Browser Lab</p>
+    <p>A client-side analysis utility for MBTI pattern recognition. It uses local JSON model files to score TXT data. All processing is performed locally within the browser.</p>
   </section>
 <div class="grid compact-lab-grid">
 
