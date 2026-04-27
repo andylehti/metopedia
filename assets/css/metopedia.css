@@ -255,6 +255,7 @@
         body.theme-dark .vectorTabs li.selected button { color: var(--text-color); }
         body.theme-dark .header-icon-button,
         body.theme-dark .mobile-menu-close { background-color: #151b21; color: var(--text-color); border-color: var(--border-color); }
+        body.theme-dark .language-menu a:hover { background: #1d2833; }
         body.theme-dark #mobile-panel-backdrop { background: rgba(0, 0, 0, 0.6); }
 
         #mw-head-base {
@@ -317,6 +318,30 @@
         .header-icon-button:hover, .mobile-menu-close:hover { text-decoration: none; background: #f8f9fa; }
         #theme-toggle { min-width: 2.7em; font-size: 1em; }
         #mobile-menu-toggle { display: none; font-size: 1.15em; }
+        .language-switcher { position: relative; }
+        .language-menu {
+            position: absolute;
+            right: 0;
+            top: calc(100% + 0.3em);
+            z-index: 12;
+            min-width: 12.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0.25em 0;
+            border: 1px solid var(--border-color);
+            background: var(--content-bg);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        }
+        .language-menu li { margin: 0; padding: 0; }
+        .language-menu a {
+            display: block;
+            padding: 0.42em 0.72em;
+            color: var(--text-color);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .language-menu a:hover { background: #f8f9fa; text-decoration: none; }
+        .language-menu a[aria-current="page"] { font-weight: 700; }
 
         #mobile-panel-overlay {
             position: fixed;

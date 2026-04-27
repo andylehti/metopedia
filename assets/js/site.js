@@ -1,11 +1,125 @@
 
 (function(){
   const pages = window.METOPEDIA_PAGES || [];
+  const pageBySlug = new Map();
+  const pageByTitle = new Map();
+  const knownPaths = new Set(['/']);
+  function normalizeSlug(value){
+    return (value || '')
+      .toString()
+      .trim()
+      .replace(/^\/+|\/+$/g, '')
+      .replace(/\s+/g, '_')
+      .replace(/%20/g, '_')
+      .replace(/_/g, '_');
+  }
+  function normalizePath(path){
+    if(!path) return '/';
+    let next = path;
+    try{
+      next = new URL(path, location.origin).pathname;
+    }catch(e){}
+    next = next.replace(/\/+/g, '/');
+    if(next.length > 1) next = next.replace(/\/+$/g, '');
+    return next || '/';
+  }
+  pages.forEach(p => {
+    const slug = normalizeSlug(p.slug).toLowerCase();
+    const title = (p.title || '').trim().toLowerCase();
+    if(slug) pageBySlug.set(slug, p);
+    if(title) pageByTitle.set(title, p);
+    knownPaths.add(normalizePath(p.url));
+  });
+  knownPaths.add('/Main_Page');
+  knownPaths.add('/Special/Search');
   function legacyPath(slug){
     if(!slug || slug === 'Main_Page') return '/';
     if(slug.startsWith('Special:')) return '/' + slug.replace(/^Special:/,'Special/') + '/';
     if(slug.includes(':')){ const parts = slug.split(':'); return '/' + parts[0] + '/' + parts.slice(1).join(':').replace(/^\//,'') + '/'; }
     return '/' + slug + '/';
+  }
+  function resolveWikiTarget(target){
+    const raw = (target || '').trim();
+    if(!raw) return null;
+    const normalized = normalizeSlug(raw);
+    const bySlug = pageBySlug.get(normalized.toLowerCase());
+    if(bySlug) return { exists: true, page: bySlug, href: bySlug.url };
+    const byTitle = pageByTitle.get(raw.toLowerCase());
+    if(byTitle) return { exists: true, page: byTitle, href: byTitle.url };
+    return { exists: false, href: legacyPath(normalized), slug: normalized };
+  }
+  function convertWikiTextNode(node){
+    const text = node.nodeValue;
+    if(!text || text.indexOf('[[') === -1) return;
+    const frag = document.createDocumentFragment();
+    const re = /\[\[([^[\]]+?)\]\]/g;
+    let last = 0;
+    let changed = false;
+    let match;
+    while((match = re.exec(text))){
+      const start = match.index;
+      if(start > last) frag.appendChild(document.createTextNode(text.slice(last, start)));
+      const token = (match[1] || '').trim();
+      const parts = token.split('|');
+      const target = (parts[0] || '').trim();
+      const label = (parts[1] || parts[0] || '').trim();
+      const resolved = resolveWikiTarget(target);
+      if(resolved && label){
+        const link = document.createElement('a');
+        link.textContent = label;
+        link.href = resolved.href;
+        if(!resolved.exists){
+          link.classList.add('redlink');
+          link.dataset.missing = '1';
+          link.title = `${label} (page does not exist)`;
+          link.setAttribute('aria-label', `${label} (missing page)`);
+        }
+        frag.appendChild(link);
+      }else{
+        frag.appendChild(document.createTextNode(match[0]));
+      }
+      last = re.lastIndex;
+      changed = true;
+    }
+    if(!changed) return;
+    if(last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    node.parentNode.replaceChild(frag, node);
+  }
+  function upgradeWikiLinks(){
+    const root = document.getElementById('bodyContent');
+    if(!root) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode(node){
+        const parent = node.parentElement;
+        if(!parent) return NodeFilter.FILTER_REJECT;
+        const tag = parent.tagName;
+        if(['A', 'SCRIPT', 'STYLE', 'CODE', 'PRE', 'TEXTAREA', 'NOSCRIPT'].includes(tag)) return NodeFilter.FILTER_REJECT;
+        if(parent.closest('a, code, pre, textarea, script, style, noscript')) return NodeFilter.FILTER_REJECT;
+        return node.nodeValue && node.nodeValue.includes('[[') ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    const nodes = [];
+    while(walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(convertWikiTextNode);
+  }
+  function markDeadInternalLinks(){
+    const root = document.getElementById('bodyContent');
+    if(!root) return;
+    root.querySelectorAll('a[href]').forEach(link => {
+      let url;
+      try{
+        url = new URL(link.getAttribute('href'), location.origin);
+      }catch(e){
+        return;
+      }
+      if(url.origin !== location.origin) return;
+      const path = normalizePath(url.pathname);
+      const isKnown = knownPaths.has(path);
+      if(!isKnown){
+        link.classList.add('redlink');
+        if(!link.title) link.title = `${(link.textContent || 'Link').trim()} (page does not exist)`;
+      }
+    });
   }
   if(location.hash && location.hash.startsWith('#/')){
     const slug = decodeURIComponent(location.hash.slice(2));
@@ -135,6 +249,29 @@
       banner.hidden = true;
     });
   }
+  function setupLanguageMenu(){
+    const toggle = document.getElementById('language-toggle');
+    const menu = document.getElementById('language-menu');
+    if(!toggle || !menu) return;
+    const close = () => {
+      menu.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const nextOpen = menu.hidden;
+      menu.hidden = !nextOpen;
+      toggle.setAttribute('aria-expanded', String(nextOpen));
+    });
+    document.addEventListener('click', (e) => {
+      if(menu.hidden) return;
+      if(e.target === toggle || menu.contains(e.target)) return;
+      close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape') close();
+    });
+  }
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     document.getElementById('theme-toggle')?.addEventListener('click', () => applyTheme(document.body.classList.contains('theme-dark') ? 'light' : 'dark'));
@@ -143,6 +280,9 @@
     document.getElementById('mobile-panel-backdrop')?.addEventListener('click', () => setMobileMenu(false));
     setupSearch();
     setupCookieConsent();
+    setupLanguageMenu();
+    upgradeWikiLinks();
+    markDeadInternalLinks();
     renderMath();
   });
 })();
