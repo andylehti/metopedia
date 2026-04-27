@@ -1,0 +1,68 @@
+{
+  "schema": "metopedia.mbtiModelManifest.v1",
+  "models": [
+    {
+      "file": "mb3i-core-8-family.json",
+      "title": "MB3I Core · 8-family",
+      "description": "Core MB3I family model with I/E collapsed into 8 type-families.",
+      "sourceFile": "mb3iMaster.json",
+      "typeCount": 8,
+      "kind": "8-family",
+      "aggregate": false
+    },
+    {
+      "file": "mb3i-aggregate-8-family.json",
+      "title": "MB3I Aggregate · 8-family",
+      "description": "Aggregate MB3I family model combining the core and auxiliary no-I/E datasets.",
+      "sourceFile": "mb3i_aggregate.json",
+      "typeCount": 8,
+      "kind": "8-family",
+      "aggregate": true
+    },
+    {
+      "file": "mbti-a-flair-8-family.json",
+      "title": "MBTI-A Flair · 8-family",
+      "description": "Flair-derived MBTI-A model collapsed into 8 no-I/E type-families.",
+      "sourceFile": "mbtiA_flaired_noIE.json",
+      "typeCount": 8,
+      "kind": "8-family",
+      "aggregate": false
+    },
+    {
+      "file": "mbti-a-flair-16-type.json",
+      "title": "MBTI-A Flair · 16-type",
+      "description": "Full 16-type flair-derived MBTI-A helper model for I/E and J/P axis checks.",
+      "sourceFile": "full_mbtiA_flaired.json",
+      "typeCount": 16,
+      "kind": "16-type",
+      "aggregate": true
+    },
+    {
+      "file": "mbti-b-subreddit-16-type.json",
+      "title": "MBTI-B Subreddit · 16-type",
+      "description": "Full 16-type subreddit-derived MBTI-B helper model for I/E and J/P axis checks.",
+      "sourceFile": "full_mbtiB_all.json",
+      "typeCount": 16,
+      "kind": "16-type",
+      "aggregate": true
+    },
+    {
+      "file": "mbti-master-16-type.json",
+      "title": "MBTI Master · 16-type",
+      "description": "Full 16-type master model used as a reference axis helper.",
+      "sourceFile": "full_mbtiMaster_unalt.json",
+      "typeCount": 16,
+      "kind": "16-type",
+      "aggregate": false
+    },
+    {
+      "file": "mbti-master-original-16-type.json",
+      "title": "MBTI Master Original · 16-type",
+      "description": "Original full 16-type compact master dataset used as a reference axis helper.",
+      "sourceFile": "full_mbtiMasterDataset.compact.json",
+      "typeCount": 16,
+      "kind": "16-type",
+      "aggregate": false
+    }
+  ]
+}
